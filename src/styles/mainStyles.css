@@ -1,0 +1,14 @@
+@import url("./fonts.css");
+@import url("./reset.css");
+@import url("./variable.css");
+
+body {
+  direction: rtl;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body,
+* {
+  font-family: var(--main-font) !important;
+  color: var(--dark-color);
+}
