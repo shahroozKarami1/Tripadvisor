@@ -1,7 +1,7 @@
 import { Box, Container, Divider, List, Typography } from "@mui/material";
 import  Grid from "@mui/material/Grid2";
 import DarkBtn from "../DarkBtn/DarkBtn";
-import LanguageIcon from "@mui/icons-material/Language";
+// import LanguageIcon from "@mui/icons-material/Language";
 import TopBarMenu from "../ComHomePage/TopBarMenu";
 import InpSearch from "../InpSearch/InpSearch";
 import { CusStickyMenu } from "../../elements/CusComponets";
@@ -19,7 +19,7 @@ const MainHeader = () => {
           sx={{ margin: "1rem  0" }}
         >
           <DarkBtn>ورود </DarkBtn>
-          <Box
+          {/* <Box
             sx={{ cursor: "pointer" }}
             display={"flex"}
             alignItems={"center"}
@@ -29,7 +29,7 @@ const MainHeader = () => {
             </Typography>
             <Divider>|</Divider>
             <LanguageIcon />
-          </Box>
+          </Box> */}
           <Box
             display={"flex"}
             alignItems={"center"}

@@ -5,7 +5,14 @@ import CircleIcon from "@mui/icons-material/Circle";
 import styled from "@emotion/styled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { CusBoxIconHeart } from "../../elements/CusComponets";
-const TourWaysCard: FC<ITourWaysCardProps> = ({ disc, img, price, score }) => {
+import { Link } from "react-router-dom";
+const TourWaysCard: FC<ITourWaysCardProps> = ({
+  disc,
+  img,
+  price,
+  score,
+  isDetails,
+}) => {
   const CusCircleIcon = styled(CircleIcon)({
     width: "17px",
     fill: `var(--primary-color)`,
@@ -13,15 +20,29 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({ disc, img, price, score }) => {
 
   return (
     <Box>
-      <Box sx={{ position: "relative" }}>
-        <img src={img} alt="" className="rounded-lg" />
+ <Link  to={"/"}>
+ <Box sx={{ position: "relative" }}>
+        <img
+          src={img}
+          alt=""
+          className="rounded-lg  "
+          style={{
+            height: "255px",
+            width: "100%",
+          }}
+        />
         <CusBoxIconHeart>
           <FavoriteBorderIcon />
         </CusBoxIconHeart>
       </Box>
       <Box>
         <Typography
-          sx={{ fontSize: "1rem", fontWeight: "bold", margin: "0.25rem  0" }}
+          sx={{
+            fontSize: "0.90rem",
+            fontWeight: "bold",
+            margin: "0.25rem  0",
+            lineHeight: 2,
+          }}
         >
           {disc}
         </Typography>
@@ -32,10 +53,14 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({ disc, img, price, score }) => {
           <CusCircleIcon />
           <Typography sx={{ marginRight: "0.25rem" }}>{score}</Typography>
         </Box>
-        <Typography sx={{ fontWeight: "bold", fontSize: "0.80rem" }}>
-          از {price} دلار برای هر بزرگسال
-        </Typography>
+        {isDetails && (
+          <Typography sx={{ fontWeight: "bold", fontSize: "0.80rem" }}>
+            از {price} دلار برای هر بزرگسال
+          </Typography>
+        )}
       </Box>
+ 
+ </Link>
     </Box>
   );
 };

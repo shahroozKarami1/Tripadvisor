@@ -62,10 +62,55 @@ const ThingsToDo = () => {
             title="کمترین قیمت تضمینی"
           />
         </Grid>
+        {/* section */}
         <Box sx={{ marginBottom: "1rem" }}>
           <TitleSection isSubTitle={false} mainTitle="برای شما توصیه می شود" />
         </Box>
-      
+        <Grid container spacing={2}>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+        </Grid>
+        {/* section */}
+        <Box sx={{ marginBottom: "1rem" }}>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="جاذبه های برتر در پونتا کانا"
+          />
+        </Box>
         <Grid container spacing={2}>
           <Grid size={{ md: 3 }}>
             <TourWaysCard
@@ -100,8 +145,54 @@ const ThingsToDo = () => {
             />
           </Grid>
         </Grid>
+        {/* section */}
         <Box sx={{ marginBottom: "1rem" }}>
-          <TitleSection isSubTitle={false} mainTitle="تجربیات برتر در پونتا کانا" />
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="تجربیات برتر در پونتا کانا"
+          />
+        </Box>
+        <Grid container spacing={2}>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={true}
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+        </Grid>
+        {/* section */}
+        <Box sx={{ marginBottom: "1rem" }}>
+          <TitleSection isSubTitle={false} mainTitle="مقاصد برتر جهانی" />
         </Box>
         <Grid container spacing={2}>
           <Grid size={{ md: 3 }}>
@@ -131,6 +222,90 @@ const ThingsToDo = () => {
           <Grid size={{ md: 3 }}>
             <TourWaysCard
               price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+        </Grid>
+        {/* section */}
+        <Box sx={{ marginBottom: "1rem" }}>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="تجربیات برتر در سراسر جهان"
+          />
+        </Box>
+        <Grid container spacing={2}>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+              isDetails={true}
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+              isDetails={true}
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              price={134}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+              isDetails={true}
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              price={134}
+              score={935}
+              isDetails={true}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+        </Grid>
+
+        {/* section */}
+        <Box sx={{ marginBottom: "1rem" }}>
+          <TitleSection isSubTitle={false} mainTitle="برترین جاذبه های جهانی" />
+        </Box>
+        <Grid container spacing={2}>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={false}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={false}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={false}
+              score={935}
+              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
+              img="/public/images/frankfordDistination/img4.jpg"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <TourWaysCard
+              isDetails={false}
               score={935}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/frankfordDistination/img4.jpg"
@@ -138,6 +313,7 @@ const ThingsToDo = () => {
           </Grid>
         </Grid>
       </Container>
+      
       <br />
       <br />
       <br />

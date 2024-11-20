@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { Box, Button, Input, Typography } from "@mui/material";
 import FirstBannerImg from "../../public/images/HomePage/FirstBanner.jpg";
 import MainBanner from "/public/images/ThingsToDoPage/Banner.jpg";
-
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
@@ -49,8 +48,9 @@ export const CusFirstBanner = styled(Box)({
 export const CusSectionTitle = styled(Box)({
   marginTop: "3rem ",
   display: "flex",
+  justifyContent :"space-between"  ,  
+  width :"100%"  ,  
   gap: 4,
-  flexDirection: "column",
 });
 export const CusTPSimpleCard = styled(Typography)({
   position: "absolute",
@@ -79,6 +79,7 @@ export const CusCard = styled(Box)({
 export const CusStickyMenu = styled(Box)({
   backgroundColor: "#fff",
   position: "sticky",
+  display : "block" ,
   top: 0,
   zIndex: 999,
   padding: "0.5rem  0",
@@ -91,3 +92,5 @@ export const CusThingsToDoPage = styled(Box)({
   height: "70vh",
   width: "100vw",
 });
+
+

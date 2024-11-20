@@ -12,13 +12,13 @@ const App = () => {
     <Box>
       {location.pathname !== "/" && <MainHeader />}
       {router}
-   {/* <Stack>
-   <Box  bgcolor={"#F2F2F2"} sx={{ marginTop: "20rem", padding: "2rem  0"  ,  display :"block" }}>
+   <Stack>
+   <Box  bgcolor={"#F2F2F2"} sx={{ marginTop: "2rem", padding: "2rem  0"  ,  display :"block"  }}>
         <Container>
           <Footer />
         </Container>
       </Box>
-   </Stack> */}
+   </Stack>
       <br />
       <br />
       <br />

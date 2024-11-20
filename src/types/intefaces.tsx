@@ -20,12 +20,13 @@ export interface INavbarMenuProps {
     icon?: React.ReactNode;
     link?: string;
   }[];
-  fontSize  : string
+  fontSize: string;
 }
 export interface ITitleSectionProps {
   mainTitle: string;
   subTitle?: string;
   isSubTitle: boolean;
+  isSeeAll?: boolean;
 }
 export interface IBestFoodsCardProps {
   name: string;
@@ -40,8 +41,9 @@ export interface IDistinationCardProps {
 export interface ITourWaysCardProps {
   disc: string;
   score: number;
-  price: number;
+  price?: number;
   img: string;
+  isDetails?: boolean;
 }
 
 export interface IMoreExploreCardProps {
@@ -56,12 +58,26 @@ interface IdataNextTrip {
 
 export type IPorpsNextTrip = {
   dataNextTripArr: IdataNextTrip[];
-  mainTitle: string;
+  mainTitle?: string;
 };
 
+export interface IPlanCardProps {
+  icon: React.ReactNode;
+  title: string;
+  disc: string;
+}
 
-export interface IPlanCardProps  {
-  icon : React.ReactNode ,  
-  title : string  ,  
-  disc : string
+export interface IMainCardsRestaurant {
+  logo: string;
+  title: string;
+  disc: string;
+}
+export interface IMainBannerProps {
+  children: React.ReactNode;
+  bannerUrl: string;
+}
+export interface ICardTopDistinationProps {
+  img: string;
+  title: string;
+  diec: string;
 }

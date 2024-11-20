@@ -96,7 +96,7 @@ function Footer() {
         </Grid>
         <Grid size={{ md: 4 }} alignContent={"center"}  >
           <Box display={"flex"} flexDirection={"column"}>
-            <Box display={"flex"} alignItems={"center"} gap={2} width={"100%"}>
+            {/* <Box display={"flex"} alignItems={"center"} gap={2} width={"100%"}>
               <CusAutoComplete
                 disablePortal
                 fullWidth
@@ -111,8 +111,8 @@ function Footer() {
                 value={"USD$"}
                 renderInput={(params) => <TextField {...params} />}
               />
-            </Box>
-            <Box display={"flex"} gap={3} sx={{ marginTop: "1rem" }}>
+            </Box> */}
+            <Box  justifyContent={"center"} display={"flex"} gap={3} sx={{ marginTop: "1rem" }}>
               <PinterestIcon />
               <FacebookOutlinedIcon />
               <InstagramIcon />
