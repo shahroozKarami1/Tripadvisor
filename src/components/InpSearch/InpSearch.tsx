@@ -1,22 +1,25 @@
 import { SearchOutlined } from "@mui/icons-material";
-import { Button, Input, InputAdornment } from "@mui/material";
+import { InputAdornment } from "@mui/material";
 import { FC } from "react";
 import { CusSearchBtn, CusSearchInp } from "../../elements/CusComponets";
 
 interface IInpSearchProps {
-  isBtnSearch :  boolean
+  isBtnSearch: boolean;
+  textPlaceHolder: string;
 }
 
-const InpSearch: FC<IInpSearchProps> = ({isBtnSearch}) => {
+const InpSearch: FC<IInpSearchProps> = ({ isBtnSearch, textPlaceHolder }) => {
   return (
     <CusSearchInp
-      placeholder="جست و جو کنید ..."
+      placeholder={textPlaceHolder}
       endAdornment={
         <InputAdornment position="end">
           <SearchOutlined />
         </InputAdornment>
       }
-      startAdornment={  isBtnSearch ? <CusSearchBtn> جست و جو </CusSearchBtn> :  null}
+      startAdornment={
+        isBtnSearch ? <CusSearchBtn> جست و جو </CusSearchBtn> : null
+      }
     />
   );
 };

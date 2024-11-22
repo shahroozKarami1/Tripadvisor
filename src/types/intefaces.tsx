@@ -1,5 +1,4 @@
-import { SvgIconProps } from "@mui/material";
-import React, { ElementType } from "react";
+import React from "react";
 
 export interface IDarkBtnProps {
   children: string;
@@ -15,12 +14,17 @@ export interface ICusManuProps {
   subMenuArray: TSubMenu[];
 }
 export interface INavbarMenuProps {
+
   NavBarMenuArr: {
     title: string;
     icon?: React.ReactNode;
     link?: string;
+    textTitle: string;
+    placeholder: string;
   }[];
   fontSize: string;
+  HandlerBtn: (a: string, b: string  ,  c ?: boolean) => void;
+  isFlight ?: boolean
 }
 export interface ITitleSectionProps {
   mainTitle: string;
@@ -82,19 +86,23 @@ export interface ICardTopDistinationProps {
   diec: string;
 }
 
-export interface IReviewsCardProps   {
-  title  : string  ,  
-  score  : number  ,  
-  link : string  ,  
-  profile   : string  ,  
-  comment : string ,
-  topRateIn : string
+export interface IReviewsCardProps {
+  title: string;
+  score: number;
+  link: string;
+  profile: string;
+  comment: string;
+  topRateIn: string;
 }
-export  interface IParagraphProps  {
-  header : string   , 
-  textBody : string
+export interface IParagraphProps {
+  header: string;
+  textBody: string;
 }
-export  interface ICardRentalProps  {
-  TopCover : string   , 
-  textBody : string
+export interface ICardRentalProps {
+  TopCover: string;
+  textBody: string;
+}
+export interface ICardSingleTextProps {
+  TopCover: string;
+  textBody: string;
 }

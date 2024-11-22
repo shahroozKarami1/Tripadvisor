@@ -109,3 +109,15 @@ export const CusReviewCard = styled(Box)({
   width: "17px",
   fill: `var(--primary-color)`,
 });
+
+
+export  const  CusInput  = styled(Input)({
+    border : "1px solid #ccc"  ,  
+    borderRadius : "1rem" , 
+    padding : "0.5rem" ,  
+    width : "100%" ,
+
+    "&.MuiInputBase-root::before" :{
+      display :"none !important",
+    }
+})

@@ -3,6 +3,7 @@ import MainBanner from "../../components/MainBanner/MainBanner";
 import Grid from "@mui/material/Grid2";
 import InpSearch from "../../components/InpSearch/InpSearch";
 import CardRental from "../../components/CompVacationRental/CardRental";
+import CardSingleText from "../../components/CardSingleText/CardSingleText";
 const Vacations = () => {
   return (
     <Box>
@@ -49,8 +50,31 @@ const Vacations = () => {
           </Grid>
         </Grid>
 
-        <Grid  container>
-          
+        <Grid container spacing={2}  sx={{marginTop : "3rem"}}>
+          <Grid size={{ md: 3 }}>
+            <CardSingleText
+              TopCover="/public/images/RentalFile/img1.jpg"
+              textBody="اجاره تعطیلات منطقه خرس بزرگ"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <CardSingleText
+              TopCover="/public/images/RentalFile/img2.jpg"
+              textBody="اجاره تعطیلات منطقه خرس بزرگ"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <CardSingleText
+              TopCover="/public/images/RentalFile/img3.jpg"
+              textBody="اجاره تعطیلات منطقه خرس بزرگ"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <CardSingleText
+              TopCover="/public/images/RentalFile/img4.jpg"
+              textBody="اجاره تعطیلات منطقه خرس بزرگ"
+            />
+          </Grid>
         </Grid>
       </Container>
     </Box>
