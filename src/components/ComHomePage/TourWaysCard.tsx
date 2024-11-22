@@ -1,10 +1,8 @@
 import { FC } from "react";
 import { ITourWaysCardProps } from "../../types/intefaces";
 import { Box, Typography } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
-import styled from "@emotion/styled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { CusBoxIconHeart } from "../../elements/CusComponets";
+import { CusBoxIconHeart, CusCircleIcon } from "../../elements/CusComponets";
 import { Link } from "react-router-dom";
 const TourWaysCard: FC<ITourWaysCardProps> = ({
   disc,
@@ -13,10 +11,6 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
   score,
   isDetails,
 }) => {
-  const CusCircleIcon = styled(CircleIcon)({
-    width: "17px",
-    fill: `var(--primary-color)`,
-  });
 
   return (
     <Box>

@@ -81,3 +81,20 @@ export interface ICardTopDistinationProps {
   title: string;
   diec: string;
 }
+
+export interface IReviewsCardProps   {
+  title  : string  ,  
+  score  : number  ,  
+  link : string  ,  
+  profile   : string  ,  
+  comment : string ,
+  topRateIn : string
+}
+export  interface IParagraphProps  {
+  header : string   , 
+  textBody : string
+}
+export  interface ICardRentalProps  {
+  TopCover : string   , 
+  textBody : string
+}

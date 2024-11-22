@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import { Box, Button, Input, Typography } from "@mui/material";
 import FirstBannerImg from "../../public/images/HomePage/FirstBanner.jpg";
 import MainBanner from "/public/images/ThingsToDoPage/Banner.jpg";
+import CircleIcon from "@mui/icons-material/Circle";
+
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
@@ -93,4 +95,17 @@ export const CusThingsToDoPage = styled(Box)({
   width: "100vw",
 });
 
+export const CusReviewCard = styled(Box)({
+  backgroundColor  : `#fff` ,  
+  borderRadius : "0.75rem"  ,  
+  padding : "1.2rem"  , 
+  border : "1px  solid  #ccc"
 
+
+});
+
+ 
+  export const CusCircleIcon = styled(CircleIcon)({
+  width: "17px",
+  fill: `var(--primary-color)`,
+});
