@@ -10,7 +10,7 @@ const NavbarMenu: FC<INavbarMenuProps> = ({NavBarMenuArr ,  fontSize  , HandlerB
   return  (
     <>
         {
-        NavBarMenuArr.map(({icon   ,  title ,  link    ,  placeholder  ,  textTitle    }) =>  {
+        NavBarMenuArr.map(({icon   ,  title ,  link    ,  placeholder  ,  textTitle   }) =>  {
             return (
                 <ListItem  > 
                   <Link  to ={link  ? link  : "/"} >

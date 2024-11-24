@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
-import React from "react";
 import BestFoodsCard from "./BestFoodsCard";
+import SliderWrapper from "../SliderWraper/SliderWrapper";
 
 const TheBestFoodSection = () => {
   return (
-    <Box display={"flex"}  gap={2} sx={{marginTop :"2rem"}}>
+    // <Box display={"flex"} gap={2} sx={{ marginTop: "2rem" }}>
+    <SliderWrapper  numberOfShowSlider={4}>
       <BestFoodsCard
         img="/public/images/TheBastFood/image1.jpg"
         name="ماکارونی"
@@ -21,7 +21,8 @@ const TheBestFoodSection = () => {
         img="/public/images/TheBastFood/image4.jpg"
         name="ماکارونی"
       />
-    </Box>
+    </SliderWrapper>
+    // </Box>
   );
 };
 

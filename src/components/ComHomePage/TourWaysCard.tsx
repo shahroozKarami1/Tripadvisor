@@ -13,9 +13,9 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
 }) => {
 
   return (
-    <Box>
+    <Box  sx={{direction :"rtl"}}>
  <Link  to={"/"}>
- <Box sx={{ position: "relative" }}>
+ <Box sx={{ position: "relative" ,  margin : "0 0.70rem" }}>
         <img
           src={img}
           alt=""
@@ -29,7 +29,7 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
           <FavoriteBorderIcon />
         </CusBoxIconHeart>
       </Box>
-      <Box>
+      <Box  sx={{marginRight :"0.70rem"}}>
         <Typography
           sx={{
             fontSize: "0.90rem",

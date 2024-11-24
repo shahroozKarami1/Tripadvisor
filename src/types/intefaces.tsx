@@ -14,7 +14,6 @@ export interface ICusManuProps {
   subMenuArray: TSubMenu[];
 }
 export interface INavbarMenuProps {
-
   NavBarMenuArr: {
     title: string;
     icon?: React.ReactNode;
@@ -23,8 +22,8 @@ export interface INavbarMenuProps {
     placeholder: string;
   }[];
   fontSize: string;
-  HandlerBtn: (a: string, b: string  ,  c ?: boolean) => void;
-  isFlight ?: boolean
+  HandlerBtn: (a: string, b: string, c?: boolean) => void;
+  isFlight?: boolean;
 }
 export interface ITitleSectionProps {
   mainTitle: string;
@@ -105,4 +104,39 @@ export interface ICardRentalProps {
 export interface ICardSingleTextProps {
   TopCover: string;
   textBody: string;
+}
+
+export interface ITravelerBoxProps {}
+
+export interface IRangeOfPeopleProps {
+  range: string;
+  age: string;
+}
+export interface IBtnMenusProps {
+  icon: React.ReactNode;
+  textOnBtn: string;
+  isWhereToInp: boolean;
+  children: React.ReactNode;
+}
+
+export interface ICardDetailsProps {
+  coverImg: string;
+  title: string;
+  disc: string;
+}
+
+export interface ICardDealsProps {
+  beforeDisCount: number;
+  AfterDisCount: number;
+  nameShip: string;
+  date: string;
+  departs: string;
+  countDay: number;
+  distination: string;
+}
+
+export interface ICardWhiteBottomProps {
+  coverImg: string;
+  name: string;
+  link: string;
 }

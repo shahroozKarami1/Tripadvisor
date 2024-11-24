@@ -17,7 +17,7 @@ export const CusTitleHomePage = styled(Typography)({
 export const CusSearchInp = styled(Input)({
   border: 0,
   padding: "0.5rem",
-  backgroundColor  : "#fff" ,  
+  backgroundColor: "#fff",
   boxShadow: `var(--main-shadow)`,
   borderRadius: "2rem",
   width: "100%",
@@ -50,8 +50,8 @@ export const CusFirstBanner = styled(Box)({
 export const CusSectionTitle = styled(Box)({
   marginTop: "3rem ",
   display: "flex",
-  justifyContent :"space-between"  ,  
-  width :"100%"  ,  
+  justifyContent: "space-between",
+  width: "100%",
   gap: 4,
 });
 export const CusTPSimpleCard = styled(Typography)({
@@ -68,7 +68,7 @@ export const CusTPSimpleCard = styled(Typography)({
 export const CusBoxIconHeart = styled(Box)({
   position: "absolute",
   top: "10px",
-  right: "10px",
+  left: "10px",
   backgroundColor: "#fff",
   borderRadius: "50%",
   padding: "0.5rem",
@@ -77,11 +77,13 @@ export const CusBoxIconHeart = styled(Box)({
 export const CusCard = styled(Box)({
   position: "relative",
   overflow: "hidden",
+  margin: "0  0.5rem",
+  direction: "rtl",
 });
 export const CusStickyMenu = styled(Box)({
   backgroundColor: "#fff",
   position: "sticky",
-  display : "block" ,
+  display: "block",
   top: 0,
   zIndex: 999,
   padding: "0.5rem  0",
@@ -96,28 +98,44 @@ export const CusThingsToDoPage = styled(Box)({
 });
 
 export const CusReviewCard = styled(Box)({
-  backgroundColor  : `#fff` ,  
-  borderRadius : "0.75rem"  ,  
-  padding : "1.2rem"  , 
-  border : "1px  solid  #ccc"
-
-
+  backgroundColor: `#fff`,
+  borderRadius: "0.75rem",
+  padding: "1.2rem",
+  border: "1px  solid  #ccc",
 });
 
- 
-  export const CusCircleIcon = styled(CircleIcon)({
+export const CusCircleIcon = styled(CircleIcon)({
   width: "17px",
   fill: `var(--primary-color)`,
 });
 
+export const CusInput = styled(Input)({
+  border: "1px solid #000",
+  borderRadius: "2rem",
+  padding: "0.70rem",
+  width: "100%",
 
-export  const  CusInput  = styled(Input)({
-    border : "1px solid #ccc"  ,  
-    borderRadius : "1rem" , 
-    padding : "0.5rem" ,  
-    width : "100%" ,
+  "&.MuiInputBase-root::before": {
+    display: "none !important",
+  },
+});
+export const CusTravelerBox = styled(Box)({
+  backgroundColor: "#fff",
+  boxShadow: `var(--main-shadow)`,
+  width: "400px",
+  borderRadius: "0.5rem",
+  marginTop: "1rem",
+  padding: "1rem",
+  position: "absolute",
+  zIndex: 99,
+});
 
-    "&.MuiInputBase-root::before" :{
-      display :"none !important",
-    }
-})
+export const CusCardDeals = styled(Box)({
+  backgroundColor: "#fff",
+  padding: "1rem",
+  borderRadius: "0.5rem",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems :"center"  ,  
+  marginTop : "1rem"
+});

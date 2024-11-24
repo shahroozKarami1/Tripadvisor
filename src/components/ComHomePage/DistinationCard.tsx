@@ -21,6 +21,7 @@ const DistinationCard: FC<IDistinationCardProps> = ({
       flexDirection={"column"}
       alignItems={"center"}
       gap={2}
+      margin={"0  0.70rem"}
     >
       <Link to={"/"}>
         <img src={img} alt="" className="rounded-lg  "  style={{height : "300px"}}  />

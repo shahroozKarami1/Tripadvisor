@@ -12,3 +12,8 @@ body,
   font-family: var(--main-font) !important;
   color: var(--dark-color);
 }
+/* @media (min-width: 1200px) {
+  .css-wbysu7-MuiContainer-root {
+      max-width: 1400px !important;
+  }
+} */

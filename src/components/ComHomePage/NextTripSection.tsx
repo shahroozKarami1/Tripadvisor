@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { FC } from "react";
 import { IPorpsNextTrip } from "../../types/intefaces";
 import { CusCard, CusTPSimpleCard } from "../../elements/CusComponets";
-import Grid from "@mui/material/Grid2";
+import SliderWrapper from "../SliderWraper/SliderWrapper";
 const NextTripSection: FC<IPorpsNextTrip> = ({
   dataNextTripArr,
   mainTitle,
@@ -12,20 +12,18 @@ const NextTripSection: FC<IPorpsNextTrip> = ({
       <Typography sx={{ fontSize: "1rem", fontWeight: "bold"  ,  marginBottom : "1rem"}}>
         {mainTitle}
       </Typography>
-      <Grid container spacing={2}>
-        {dataNextTripArr.map(({ img, title }) => {
+      <SliderWrapper numberOfShowSlider={4}>
+      {dataNextTripArr.map(({ img, title }) => {
           return (
             <>
-              <Grid size={{ md: 3 }}>
                 <CusCard>
                   <img src={img} alt="" className="rounded-lg" />
                   <CusTPSimpleCard>{title}</CusTPSimpleCard>
                 </CusCard>
-              </Grid>
             </>
           );
         })}
-      </Grid>
+      </SliderWrapper>
     </Box>
   );
 };

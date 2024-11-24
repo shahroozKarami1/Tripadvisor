@@ -1,4 +1,4 @@
-import { Box, Container, List, ListItem } from "@mui/material";
+import { Box, Container, List, ListItem, useMediaQuery } from "@mui/material";
 import { CusTitleHomePage } from "../../elements/CusComponets";
 import NavbarMenu from "./NavBarMenu";
 import CottageOutlinedIcon from "@mui/icons-material/CottageOutlined";
@@ -8,13 +8,14 @@ import RestaurantOutlinedIcon from "@mui/icons-material/RestaurantOutlined";
 import HouseboatOutlinedIcon from "@mui/icons-material/HouseboatOutlined";
 import Grid from "@mui/material/Grid2";
 import InpSearch from "../InpSearch/InpSearch";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FlightInp from "./FlightInp/FlightInp";
 const NavBarHome = () => {
-  let [textPlaceholder, setPlaceHolder] = useState<string>("جاهایی برای رفتن و کارهایی برای انجام دادن و هتل ها و...");
+  let [textPlaceholder, setPlaceHolder] = useState<string>(
+    "جاهایی برای رفتن و کارهایی برای انجام دادن و هتل ها و..."
+  );
   let [textHomeTitle, setTextHomeTitle] = useState<string>("کجا میخوای بری");
   let [isFlightSearch, setIsFlightSearch] = useState<boolean>(false);
-
 
   function handleBtnClick(
     mainTitle: string,
@@ -31,6 +32,8 @@ const NavBarHome = () => {
       setIsFlightSearch(false);
     }
   }
+
+  let isXs = useMediaQuery("(max-width: 800px)");
 
   return (
     <Box sx={{ marginTop: "4rem" }}>
@@ -125,10 +128,10 @@ const NavBarHome = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid size={{md  :  isFlightSearch ?  12  :  9 }}>
+          <Grid size={{ md: isFlightSearch ? 12 : 9 }}>
             <Box sx={{ marginTop: "2rem" }}>
               {isFlightSearch ? (
-                <FlightInp/>
+                <FlightInp />
               ) : (
                 <InpSearch
                   isBtnSearch={true}
