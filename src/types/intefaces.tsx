@@ -140,3 +140,19 @@ export interface ICardWhiteBottomProps {
   name: string;
   link: string;
 }
+export interface IListOfForumProps {
+  title: string;
+  DataArrListFormus: { text: string; link: string }[];
+}
+
+export interface IPopularFourmsCardProps {
+  name: string;
+  numberTopics: number;
+  coverImg: string;
+}
+
+export interface ITabItemCompProps {
+  children: React.ReactNode;
+  index: number;
+  value: number;
+}

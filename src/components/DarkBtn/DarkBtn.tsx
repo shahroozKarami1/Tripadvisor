@@ -11,7 +11,8 @@ const DarkBtn: FC<IDarkBtnProps> = ({ children }) => {
         backgroundColor :  `var(--dark-color)`  ,
         color : "#fff"  , 
         borderRadius : "1.2rem"  , 
-        padding :  "0.5rem" , 
+        whiteSpace :"nowrap"  ,  
+        padding :  "0.5rem  2rem  " , 
         fontSize : "1rem" ,
         fontWeight  : "bold"
     }
