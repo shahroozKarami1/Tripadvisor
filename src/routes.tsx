@@ -7,6 +7,8 @@ import Cruises from "./Pages/Cruises/Cruises";
 import RentalCars from "./Pages/RentalCars/RentalCars";
 import Home from "./Pages/Home/Home";
 import Formus from "./Pages/Forums/Formus";
+import UserReview from "./Pages/UserReview/UserReview";
+import PostPhotos from "./Pages/PostPhotos/PostPhotos";
 
 let routes = [
   {
@@ -37,14 +39,22 @@ let routes = [
     element: <Formus />,
     path: "/ForumHome",
   },
-  {
-    element: <RentalCars />,
-    path: "/RentalCars",
-  },
+  // {
+  //   element: <RentalCars />,
+  //   path: "/RentalCars",
+  // },
   {
     element: <Cruises />,
     path: "/Cruises",
   },
+  {
+    element  : <UserReview/>  ,   
+    path  : "/UserReview",
+  } , 
+  {
+    element  : <PostPhotos/>  ,   
+    path  : "/PostPhotos",
+  } , 
 ];
 
 export default routes;
