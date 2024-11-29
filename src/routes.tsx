@@ -9,6 +9,7 @@ import Home from "./Pages/Home/Home";
 import Formus from "./Pages/Forums/Formus";
 import UserReview from "./Pages/UserReview/UserReview";
 import PostPhotos from "./Pages/PostPhotos/PostPhotos";
+import CreateingListing from "./Pages/CreateingListing/CreateingListing";
 
 let routes = [
   {
@@ -54,6 +55,10 @@ let routes = [
   {
     element  : <PostPhotos/>  ,   
     path  : "/PostPhotos",
+  } , 
+  {
+    element  : <CreateingListing/>  ,   
+    path  : "/CreateListing",
   } , 
 ];
 

@@ -156,3 +156,14 @@ export interface ITabItemCompProps {
   index: number;
   value: number;
 }
+
+
+   export  interface IInpsForAddProps {
+  label: string;
+  isOptional: boolean;
+  isSelectBox: boolean;
+  icon ?: React.ReactNode;
+  position : "end" | "start";
+  isIcon: boolean;
+}
+
