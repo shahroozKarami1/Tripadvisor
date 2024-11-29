@@ -4,6 +4,7 @@ import FirstBannerImg from "../../public/images/HomePage/FirstBanner.jpg";
 import MainBanner from "/public/images/ThingsToDoPage/Banner.jpg";
 import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
+import { Padding } from "@mui/icons-material";
 
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
@@ -106,11 +107,10 @@ export const CusReviewCard = styled(Box)({
 });
 
 export const CusCircleIcon = styled(CircleIcon)({
-    "&.MuiSvgIcon-root" : {
-      fill: `var(--primary-color)`,
-      fontSize : "2rem"
-    }
-
+  "&.MuiSvgIcon-root": {
+    fill: `var(--primary-color)`,
+    fontSize: "2rem",
+  },
 });
 
 export const CusInput = styled(Input)({
@@ -153,7 +153,16 @@ export const CusCircleOutLine = styled(PanoramaFishEyeIcon)({
     //   backgroundColor: `var(--primary-color)`,
     //   border: 0,
     // },
-    fontSize : "2rem" ,  
+    fontSize: "2rem",
     fill: `var(--primary-color)`,
   },
+});
+export const CusStartAndBuildCardTrip = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  padding: "5rem ",
+  borderRadius: "1rem",
+
+  height: "100%",
 });

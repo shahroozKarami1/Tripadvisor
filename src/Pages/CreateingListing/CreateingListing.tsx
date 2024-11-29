@@ -1,4 +1,11 @@
-import { Box, Button, Container, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Checkbox,
+  Container,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import React, { FC, useState } from "react";
 import RestaurantMenuOutlinedIcon from "@mui/icons-material/RestaurantMenuOutlined";
@@ -10,6 +17,8 @@ import { Link } from "react-router-dom";
 import InpsForAdd from "../../components/CompCreateListing/InpsForAdd";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import DarkBtn from "../../components/DarkBtn/DarkBtn";
 type TCatContentBtn = "thingsToDo" | "restaurant" | "accommodation";
 const MainTPText: FC<{ text: string }> = ({ text }) => {
   return (
@@ -44,6 +53,9 @@ const CreateingListing = () => {
   let [activeBtnCat, setActiveBtnCat] = useState<TCatContentBtn | null>(
     "thingsToDo"
   );
+  let [isOpenNewAddressBox, setIsOpenNewAddressBox] = useState(false);
+  let [IsOpenInpsAddress, setIsOpenInpsAddress] = useState(false);
+  let [isRepresentative, setIsRepresentative] = useState(false);
   let listOfContentCat = {
     thingsToDo: <h1>1</h1>,
     restaurant: <h1>2</h1>,
@@ -181,45 +193,115 @@ const CreateingListing = () => {
                 </Box>
 
                 <Box sx={{ marginTop: "4rem" }}>
-                  <InpsForAdd
-                    icon={<LocationOnOutlinedIcon />}
-                    isIcon={true}
-                    isOptional={false}
-                    isSelectBox={false}
-                    label="آدرس"
-                    position="start"
-                  />
-                  <InpsForAdd
-                    isIcon={false}
-                    isOptional={true}
-                    isSelectBox={false}
-                    label=" آدرس دوم"
-                    position="start"
-                  />
-                  <InpsForAdd
-                    icon={<SearchOutlinedIcon />}
-                    isIcon={true}
-                    isOptional={false}
-                    isSelectBox={false}
-                    label="شهر/ شهرک"
-                    position="end"
-                  />
-                  <InpsForAdd
-                    icon={<SearchOutlinedIcon />}
-                    isIcon={true}
-                    isOptional={false}
-                    isSelectBox={false}
-                    label="کشور"
-                    position="end"
-                  />
-                  <InpsForAdd
-                    isIcon={false}
-                    isOptional={true}
-                    isSelectBox={false}
-                    label="کد پستی"
-                    position="end"
-                  />
+                  <Box sx={{ position: "relative" }}>
+                    <InpsForAdd
+                      icon={<LocationOnOutlinedIcon />}
+                      isIcon={true}
+                      isOptional={false}
+                      isSelectBox={false}
+                      label="آدرس"
+                      position="start"
+                      setIsOpenNewAddressBox={setIsOpenNewAddressBox}
+                    />
+                    <Box
+                      sx={{
+                        width: "100%",
+                        boxShadow: `var(--main-shadow)`,
+                        display:
+                          isOpenNewAddressBox && !IsOpenInpsAddress
+                            ? "block"
+                            : "none",
+                        bgcolor: "#fff",
+                        padding: "1rem ",
+                        borderRadius: "0.75rem",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      <Button
+                        sx={{ width: "100%" }}
+                        onClick={() => (
+                          setIsOpenInpsAddress(true),
+                          setIsOpenNewAddressBox(false)
+                        )}
+                      >
+                        <Typography>
+                          <AddBoxIcon
+                            sx={{
+                              fontSize: "2.2rem",
+                              "&.MuiSvgIcon-root  path": {
+                                color: `var(--primary-color)`,
+                              },
+                            }}
+                          />
+                        </Typography>
+                        <MainTPText text="به صورت دستی اضافه کنید" />
+                      </Button>
+                    </Box>
+                  </Box>
+                  <Box display={IsOpenInpsAddress ? "block" : "none"}>
+                    <InpsForAdd
+                      isIcon={false}
+                      isOptional={true}
+                      isSelectBox={false}
+                      label=" آدرس دوم"
+                      position="start"
+                    />
+                    <InpsForAdd
+                      icon={<SearchOutlinedIcon />}
+                      isIcon={true}
+                      isOptional={false}
+                      isSelectBox={false}
+                      label="شهر/ شهرک"
+                      position="end"
+                    />
+                    <InpsForAdd
+                      icon={<SearchOutlinedIcon />}
+                      isIcon={true}
+                      isOptional={false}
+                      isSelectBox={false}
+                      label="کشور"
+                      position="end"
+                    />
+                    <InpsForAdd
+                      isIcon={false}
+                      isOptional={true}
+                      isSelectBox={false}
+                      label="کد پستی"
+                      position="end"
+                    />
+                  </Box>
                 </Box>
+
+                <Typography sx={{ fontWeight: "bold" }}>
+                  آیا مالک، کارمند یا نماینده رسمی این مکان هستید؟
+                </Typography>
+
+                <Box display={"flex"} alignItems={"center"} marginTop={"1rem"}>
+                  <Checkbox
+                    onChange={() => setIsRepresentative(!isRepresentative)}
+                  />
+                  <Typography sx={{ fontWeight: "light" }}>
+                    بله من نماینده این مکان هسنم
+                  </Typography>
+                </Box>
+                {isRepresentative && (
+                  <Box display={"flex"} alignItems={"center"}>
+                    <Checkbox />
+                    <Typography sx={{ fontWeight: "light" }}>
+                      نظرات جدید درباره این مکان، راه‌های بهبود حضور آن در
+                      Tripadvisor و موارد دیگر را برای من ایمیل کنید.{" "}
+                    </Typography>
+                  </Box>
+                )}
+              </Box>
+              <Box
+                gap={3}
+                alignItems={"center"}
+                display={"flex"}
+                sx={{ marginTop: "2rem" }}
+              >
+                <DarkBtn>ذخیره و ادامه دادن</DarkBtn>
+                
               </Box>
             </Box>
           </Grid>

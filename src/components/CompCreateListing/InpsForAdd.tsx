@@ -10,6 +10,7 @@ const InpsForAdd: FC<IInpsForAddProps> = ({
   label,
   isIcon,
   position,
+  setIsOpenNewAddressBox,
 }) => {
   const CusInp = styled(Input)({
     width: "100%",
@@ -40,6 +41,12 @@ const InpsForAdd: FC<IInpsForAddProps> = ({
         isIcon ? (
           position === "start" ? (
             <CusInp
+              onFocus= {  ()  =>  setIsOpenNewAddressBox ?.(true)}
+              onBlur={()  =>  {
+                if (setIsOpenNewAddressBox) {
+                  setIsOpenNewAddressBox(false)
+                }
+              }}
               startAdornment={
                 <InputAdornment position={position}>{icon}</InputAdornment>
               }

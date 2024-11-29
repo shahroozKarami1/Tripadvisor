@@ -157,13 +157,29 @@ export interface ITabItemCompProps {
   value: number;
 }
 
-
-   export  interface IInpsForAddProps {
+export interface IInpsForAddProps {
   label: string;
   isOptional: boolean;
   isSelectBox: boolean;
-  icon ?: React.ReactNode;
-  position : "end" | "start";
+  icon?: React.ReactNode;
+  position: "end" | "start";
   isIcon: boolean;
+  setIsOpenNewAddressBox ?: React.Dispatch<React.SetStateAction<boolean>> | null  ;
 }
 
+export interface  IBoxOfHeaderProps {
+  icon : React.ReactNode
+  text : string  ;   
+} 
+  export interface IStartAndBuildCardProps {
+  title  :  string  ;  
+  cover :  string  ;  
+  disc  : string ;
+  textBtn  :  string ;  
+  colorBack  :  string ;  
+  colorBtn   :    {
+    colorText   : string  ;  
+    colorBack : string
+  } ;   
+
+}
