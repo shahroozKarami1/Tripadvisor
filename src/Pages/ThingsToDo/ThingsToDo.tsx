@@ -30,7 +30,7 @@ const ThingsToDo = () => {
               >
                 کارهایی را برای انجام هر کجا پیدا کنید
               </Typography>
-              <InpSearch isBtnSearch={false} />
+              <InpSearch  textPlaceHolder="بگرد..." isBtnSearch={false} />
             </Box>
           </Grid>
         </Grid>

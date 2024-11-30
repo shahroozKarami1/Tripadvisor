@@ -18,11 +18,11 @@ export interface INavbarMenuProps {
     title: string;
     icon?: React.ReactNode;
     link?: string;
-    textTitle: string;
-    placeholder: string;
+    textTitle?: string;
+    placeholder?: string;
   }[];
   fontSize: string;
-  HandlerBtn: (a: string, b: string, c?: boolean) => void;
+  HandlerBtn ?: (a: string, b: string, c?: boolean) => void;
   isFlight?: boolean;
 }
 export interface ITitleSectionProps {

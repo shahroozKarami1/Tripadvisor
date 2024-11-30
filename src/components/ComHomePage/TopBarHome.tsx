@@ -28,19 +28,30 @@ const TopBarHome = () => {
           <Box display={"flex"} alignItems={"center"} justifyContent={"center"}>
             <TopBarMenu
               titleMenu="کشف  کنید"
-              subMenuArray={[{ link: "/", text: "تصاویر از سفرها" }]}
+              subMenuArray={[
+                { link: "/Articles", text: "داستان های سفر" },
+                { link: "/TravelersChoice", text: "انتخاب مسافران" },
+              ]}
             />
             <TopBarMenu
               titleMenu="سفر ها"
-              subMenuArray={[{ link: "/", text: "تصاویر از سفرها" }  ,  { link: "/", text: "شروع  یک سفر جدید !" }]}
+              subMenuArray={[
+                { link: "/Trips", text: "مشاهده سفرهای من" },
+                { link: "/Trips", text: "شروع  یک سفر جدید !" },
+                { link: "/TripBuilder", text: "ساهت سفر باهوش مصنوعی" },
+              ]}
             />
             <TopBarMenu
               titleMenu="بررسی کنید "
-              subMenuArray={[{ link: "/", text: "تصاویر از سفرها" }]}
+              subMenuArray={[
+                { link: "/UserReview", text: "نوشتن بررسی" },
+                { link: "/PostPhotos", text: "ارسال تصاویر" },
+                { link: "/CreateListing", text: "اضافه کردن مکان" },
+              ]}
             />
             <TopBarMenu
               titleMenu="بیشتر"
-              subMenuArray={[{ link: "/", text: "تصاویر از سفرها" }]}
+              subMenuArray={[{ link: "/Cruises", text: "کروز ها" } ,  { link: "/ForumHome", text: "انجمن ها" }]}
             />
           </Box>
         </Grid>

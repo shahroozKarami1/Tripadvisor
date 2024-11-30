@@ -35,7 +35,7 @@ const TopBarMenu: FC<ICusManuProps> = ({ titleMenu, subMenuArray }) => {
       >
         {subMenuArray.map((items) => {
           return (
-            <MenuItem onClick={handleClose}  sx={{fontSize : "0.80rem"  ,  fontWeight : 'bold'}}>
+            <MenuItem onClick={handleClose}  sx={{fontSize : "0.80rem"  ,  fontWeight : 'bold'    }}>
               <Link to={items.link}>{items.text}</Link>
             </MenuItem>
           );

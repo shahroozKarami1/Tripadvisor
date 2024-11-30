@@ -12,6 +12,8 @@ import PostPhotos from "./Pages/PostPhotos/PostPhotos";
 import CreateingListing from "./Pages/CreateingListing/CreateingListing";
 import NotFound from "./Pages/NotFound/NotFound";
 import Trips from "./Pages/Trips/Trips";
+import TravelersChoice from "./Pages/TravelersChoice/TravelersChoice";
+import TravelersChoiceHotels from "./Pages/TravelersChoiceHotels/TravelersChoiceHotels";
 
 let routes = [
   {
@@ -51,25 +53,33 @@ let routes = [
     path: "/Cruises",
   },
   {
-    element  : <UserReview/>  ,   
-    path  : "/UserReview",
-  } , 
+    element: <UserReview />,
+    path: "/UserReview",
+  },
   {
-    element  : <PostPhotos/>  ,   
-    path  : "/PostPhotos",
-  } , 
+    element: <PostPhotos />,
+    path: "/PostPhotos",
+  },
   {
-    element  : <CreateingListing/>  ,   
-    path  : "/CreateListing",
-  } , 
+    element: <CreateingListing />,
+    path: "/CreateListing",
+  },
   {
-    element  : <Trips/>  ,   
-    path  : "/Trips",
-  } , 
+    element: <Trips />,
+    path: "/Trips",
+  },
   {
-    element  : <NotFound/>  ,   
-    path  : "/*",
-  } , 
+    element: <TravelersChoice />,
+    path: "/TravelersChoice",
+  },
+  {
+    element: <TravelersChoiceHotels />,
+    path: "TravelersChoice/TravelersChoice-Hotels",
+  },
+  {
+    element: <NotFound />,
+    path: "/*",
+  },
 ];
 
 export default routes;

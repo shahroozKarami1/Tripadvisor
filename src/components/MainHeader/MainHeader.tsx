@@ -1,5 +1,5 @@
 import { Box, Container, Divider, List, Typography } from "@mui/material";
-import  Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid2";
 import DarkBtn from "../DarkBtn/DarkBtn";
 // import LanguageIcon from "@mui/icons-material/Language";
 import TopBarMenu from "../ComHomePage/TopBarMenu";
@@ -38,21 +38,29 @@ const MainHeader = () => {
           >
             <TopBarMenu
               titleMenu="کشف  کنید"
-              subMenuArray={[{ link: "/", text: "تصاویر از سفرها" }]}
+              subMenuArray={[
+                { link: "/Articles", text: "داستان های سفر" },
+                { link: "/TravelersChoice", text: "انتخاب مسافران" },
+              ]}
             />
             <TopBarMenu
               titleMenu="سفر ها"
               subMenuArray={[
-                { link: "/", text: "تصاویر از سفرها" },
-                { link: "/", text: "شروع  یک سفر جدید !" },
+                { link: "/Trips", text: "مشاهده سفرهای من" },
+                { link: "/Trips", text: "شروع  یک سفر جدید !" },
+                { link: "/TripBuilder", text: "ساهت سفر باهوش مصنوعی" },
               ]}
             />
             <TopBarMenu
               titleMenu="بررسی کنید "
-              subMenuArray={[{ link: "/", text: "تصاویر از سفرها" }]}
+              subMenuArray={[
+                { link: "/UserReview", text: "نوشتن بررسی" },
+                { link: "/PostPhotos", text: "ارسال تصاویر" },
+                { link: "/CreateListing", text: "اضافه کردن مکان" },
+              ]}
             />
           </Box>
-          <InpSearch isBtnSearch={false} />
+          <InpSearch textPlaceHolder="جست و جو..." isBtnSearch={false} />
 
           <Link to={"/"}>
             <img src="/public/images/logo.svg" alt="" width={"400px"} />
@@ -60,71 +68,69 @@ const MainHeader = () => {
         </Box>
         ‌
         <Grid container>
-            <Box>
-              <List sx={{ display: "flex" }}>
-                <NavbarMenu
+          <Box>
+            <List sx={{ display: "flex" }}>
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[{ title: "هتل ها  ", link: "/Hotels" }]}
-                />
-                <NavbarMenu
+                NavBarMenuArr={[{ title: "هتل ها  ", link: "/Hotels" }]}
+              />
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[
-                    {
-                      title: "کارهایی برای انجام ",
-                      link: "/Attractions",
-                    },
-                  ]}
-                />
-                <NavbarMenu
+                NavBarMenuArr={[
+                  {
+                    title: "کارهایی برای انجام ",
+                    link: "/Attractions",
+                  },
+                ]}
+              />
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[
-                    { title: "رستوران ها ", link: "/Restaurants" },
-                  ]}
-                />
-                <NavbarMenu
+                NavBarMenuArr={[{ title: "رستوران ها ", link: "/Restaurants" }]}
+              />
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[
-                    { title: "پرواز ها ", link: "/CheapFlightsHome" },
-                  ]}
-                />
-                <NavbarMenu
+                NavBarMenuArr={[
+                  { title: "پرواز ها ", link: "/CheapFlightsHome" },
+                ]}
+              />
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[
-                    {
-                      title: " تعطیلات اجاره ها ",
-                      link: "/Rentals",
-                    },
-                  ]}
-                />
-                <NavbarMenu
+                NavBarMenuArr={[
+                  {
+                    title: " تعطیلات اجاره ها ",
+                    link: "/Rentals",
+                  },
+                ]}
+              />
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[
-                    {
-                      title: "صفحه اصلی انجمن ",
-                      link: "/ForumHome",
-                    },
-                  ]}
-                />
-                <NavbarMenu
+                NavBarMenuArr={[
+                  {
+                    title: "صفحه اصلی انجمن ",
+                    link: "/ForumHome",
+                  },
+                ]}
+              />
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[
-                    {
-                      title: "ماشین های اجاره ای ",
-                      link: "/RentalCars",
-                    },
-                  ]}
-                />
-                <NavbarMenu
+                NavBarMenuArr={[
+                  {
+                    title: "ماشین های اجاره ای ",
+                    link: "/RentalCars",
+                  },
+                ]}
+              />
+              <NavbarMenu
                 fontSize="0.80rem"
-                  NavBarMenuArr={[
-                    {
-                      title: "سفرهای دریایی ",
-                      link: "/Cruises",
-                    },
-                  ]}
-                />
-              </List>
-            </Box>
+                NavBarMenuArr={[
+                  {
+                    title: "سفرهای دریایی ",
+                    link: "/Cruises",
+                  },
+                ]}
+              />
+            </List>
+          </Box>
         </Grid>
       </Container>
     </CusStickyMenu>
