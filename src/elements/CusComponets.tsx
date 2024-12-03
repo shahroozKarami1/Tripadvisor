@@ -122,6 +122,12 @@ export const CusInput = styled(Input)({
   "&.MuiInputBase-root::before": {
     display: "none !important",
   },
+  "&.MuiInputBase-root::after": { border: 0, display: "none !important" },
+  "&.MuiInputAdornment-root": {
+    "& ::after": {
+      display: "none",
+    },
+  },
 });
 export const CusTravelerBox = styled(Box)({
   backgroundColor: "#fff",
@@ -166,3 +172,19 @@ export const CusStartAndBuildCardTrip = styled(Box)({
 
   height: "100%",
 });
+
+export const DarkOverlay = () => {
+  return (
+    <Box
+      sx={{
+        position: "absolute",
+        inset: 0,
+        background:
+          "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%)",
+        zIndex: 0,
+        borderRadius: "0.5rem",
+ 
+      }}
+    />
+  );
+};

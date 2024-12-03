@@ -1,3 +1,4 @@
+import { Interests } from "@mui/icons-material";
 import React from "react";
 
 export interface IDarkBtnProps {
@@ -22,7 +23,7 @@ export interface INavbarMenuProps {
     placeholder?: string;
   }[];
   fontSize: string;
-  HandlerBtn ?: (a: string, b: string, c?: boolean) => void;
+  HandlerBtn?: (a: string, b: string, c?: boolean) => void;
   isFlight?: boolean;
 }
 export interface ITitleSectionProps {
@@ -164,22 +165,40 @@ export interface IInpsForAddProps {
   icon?: React.ReactNode;
   position: "end" | "start";
   isIcon: boolean;
-  setIsOpenNewAddressBox ?: React.Dispatch<React.SetStateAction<boolean>> | null  ;
+  setIsOpenNewAddressBox?: React.Dispatch<React.SetStateAction<boolean>> | null;
 }
 
-export interface  IBoxOfHeaderProps {
-  icon : React.ReactNode
-  text : string  ;   
-} 
-  export interface IStartAndBuildCardProps {
-  title  :  string  ;  
-  cover :  string  ;  
-  disc  : string ;
-  textBtn  :  string ;  
-  colorBack  :  string ;  
-  colorBtn   :    {
-    colorText   : string  ;  
-    colorBack : string
-  } ;   
+export interface IBoxOfHeaderProps {
+  icon: React.ReactNode;
+  text: string;
+}
+export interface IStartAndBuildCardProps {
+  title: string;
+  cover: string;
+  disc: string;
+  textBtn: string;
+  colorBack: string;
+  colorBtn: {
+    colorText: string;
+    colorBack: string;
+  };
+}
 
+export interface ICardInsideText {
+  cover: string;
+  text: string;
+  link: string;
+  isBigImage?: boolean;
+}
+
+export interface ICardTextFooterProps {
+  subTitle: string;
+  title: string;
+  img: string;
+  link  :  string;
+}
+export interface  ITitleCenterProps {
+  isSubTitle  : boolean  ; 
+  title  : string ; 
+  subTitle  ?: string ; 
 }
