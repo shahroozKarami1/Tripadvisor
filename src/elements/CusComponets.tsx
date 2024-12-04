@@ -4,7 +4,6 @@ import FirstBannerImg from "../../public/images/HomePage/FirstBanner.jpg";
 import MainBanner from "/public/images/ThingsToDoPage/Banner.jpg";
 import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
-import { Padding } from "@mui/icons-material";
 
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
@@ -109,7 +108,7 @@ export const CusReviewCard = styled(Box)({
 export const CusCircleIcon = styled(CircleIcon)({
   "&.MuiSvgIcon-root": {
     fill: `var(--primary-color)`,
-    fontSize: "2rem",
+    fontSize: "1.2rem",
   },
 });
 

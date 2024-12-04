@@ -195,10 +195,24 @@ export interface ICardTextFooterProps {
   subTitle: string;
   title: string;
   img: string;
-  link  :  string;
+  link: string;
 }
-export interface  ITitleCenterProps {
-  isSubTitle  : boolean  ; 
-  title  : string ; 
-  subTitle  ?: string ; 
+export interface ITitleCenterProps {
+  isSubTitle: boolean;
+  title: string;
+  subTitle?: string;
+}
+
+export interface IBadgeBoxesProps {
+  bgColor ?: string;
+  text: string;
+  icon: React.ReactNode;
+}
+
+
+ export interface ICardCommentProps {
+  CommentBody: string;
+  email: string;
+  profile: string;
+  date: string;
 }

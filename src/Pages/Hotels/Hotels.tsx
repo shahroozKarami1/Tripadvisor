@@ -30,7 +30,7 @@ const Hotels = () => {
               >
                 آخرین بررسی ها پایین ترین قیمت ها.{" "}
               </Typography>
-              <InpSearch isBtnSearch={false} />
+              <InpSearch textPlaceHolder="جست و جو" isBtnSearch={false} />
             </Grid>
           </Grid>
         </Container>

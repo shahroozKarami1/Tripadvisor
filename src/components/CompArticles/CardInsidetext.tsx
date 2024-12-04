@@ -33,7 +33,7 @@ const CardInsidetext: FC<ICardInsideText> = ({
     <Link to={link}>
       <CusCardWrapper>
         <DarkOverlay />
-        <img src={cover} alt="" className="rounded-lg  object-cover  object-center" />
+        <img src={cover} alt="" className="rounded-lg  " />
         <CusCardTextBox>
           <Typography className="CardText">{text}</Typography>
         </CusCardTextBox>

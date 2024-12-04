@@ -40,20 +40,20 @@ const CardTopDistination: FC<ICardTopDistinationProps> = ({
           {diec}
         </Typography>
         {diec && diec.split(" ").length > 50 && (
-  <Box>
-              <Button
-            sx={{
-              color: "#000",
-              textAlign: "right",
-              fontWeight: "bold",
-              borderBottom : "3px  solid #000"
-            }}
-            variant="text"
-            onClick={toggleReadMore}
-          >
-            {isExpended ? "نمایش کمتر" : "نمایش بیشتر"}{" "}
-          </Button>
-  </Box>
+          <Box>
+            <Button
+              sx={{
+                color: "#000",
+                textAlign: "right",
+                fontWeight: "bold",
+                borderBottom: "3px  solid #000",
+              }}
+              variant="text"
+              onClick={toggleReadMore}
+            >
+              {isExpended ? "نمایش کمتر" : "نمایش بیشتر"}{" "}
+            </Button>
+          </Box>
         )}
       </Box>
     </Box>

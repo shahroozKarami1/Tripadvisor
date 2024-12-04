@@ -119,10 +119,10 @@ function Article() {
           subTitle="هیجان‌انگیزترین مقاصد، تجربیات، جواهرات پنهان و علاقه‌مندی‌های مسافران برای بررسی هم‌اکنون."
           title="مکان هایی برای بازدید"
         />
-        {/* <Grid container  spacing={1} style={{ height: "100%" }} alignItems="stretch">
-          <Grid size={{ md: 6 }}>
+        <Grid container spacing={1}   justifyContent={"center"}  alignItems={"center"}>
+          <Grid size={{ md: 4 }}>
             <Grid container  spacing={1} >
-              <Grid size={{ md: 6 }}>
+              <Grid size={{ md: 6 }}  >
                 <CardInsidetext
                   cover="/public/images/Articles/PlaceToVisitImg/img1.jpg"
                   link="/"
@@ -148,43 +148,39 @@ function Article() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid size={{ md: 6 }}>
-            <Grid container spacing={1}  alignItems={"center"} height={"100%"}  >
-              <Grid size={{ md: 4 }}>
-                <CardInsidetext
-                  cover="/public/images/Articles/PlaceToVisitImg/img4.jpg"
-                  link="/"
-                  text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
-                  isBigImage={false}
-                />
-              </Grid>
-              <Grid size={{ md: 4 }}>
-                <CardInsidetext
-                  cover="/public/images/Articles/PlaceToVisitImg/img5.jpg"
-                  link="/"
-                  text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
-                  isBigImage={false}
-                />
-                <CardInsidetext
-                  cover="/public/images/Articles/PlaceToVisitImg/img5.jpg"
-                  link="/"
-                  text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
-                  isBigImage={false}
-                />
-              </Grid>
-              <Grid size={{ md: 4 }}>
-               <Box  >
-               <CardInsidetext
-                  cover="/public/images/Articles/PlaceToVisitImg/img6.jpg"
-                  link="/"
-                  text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
-                  isBigImage={false}
-                />
-               </Box>
-              </Grid>
-            </Grid>
+          <Grid size={{ md: 2 }}  display={"flex"}  height={"100%"}  >
+            <CardInsidetext
+              cover="/public/images/Articles/PlaceToVisitImg/img4.jpg"
+              link="/"
+              text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
+              isBigImage={false}
+            />
           </Grid>
-        </Grid> */}
+          <Grid size={{ md: 2 }}>
+            <CardInsidetext
+              cover="/public/images/Articles/PlaceToVisitImg/img5.jpg"
+              link="/"
+              text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
+              isBigImage={false}
+            />
+            <CardInsidetext
+              cover="/public/images/Articles/PlaceToVisitImg/img5.jpg"
+              link="/"
+              text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
+              isBigImage={false}
+            />
+          </Grid>
+          <Grid size={{ md: 2 }}>
+            <Box>
+              <CardInsidetext
+                cover="/public/images/Articles/PlaceToVisitImg/img6.jpg"
+                link="/"
+                text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
+                isBigImage={false}
+              />
+            </Box>
+          </Grid>
+        </Grid>
         <TitleSection
           isSubTitle={true}
           mainTitle={`برترین برنامه های سفر "هیجانات در فضای باز".`}
@@ -300,7 +296,7 @@ function Article() {
               alignItems={"center"}
               justifyContent={"center"}
               marginTop={"2rem"}
-              sx={{direction :"ltr"}}
+              sx={{ direction: "ltr" }}
             >
               <Pagination count={10} color="primary" />
             </Box>
