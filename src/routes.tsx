@@ -15,6 +15,7 @@ import Trips from "./Pages/Trips/Trips";
 import TravelersChoice from "./Pages/TravelersChoice/TravelersChoice";
 import TravelersChoiceHotels from "./Pages/TravelersChoiceHotels/TravelersChoiceHotels";
 import Article from "./Pages/Article/Article";
+import ArticleDetails from "./Pages/ArticleDetails/ArticleDetails";
 
 let routes = [
   {
@@ -84,6 +85,10 @@ let routes = [
   {
     element: <NotFound />,
     path: "/*",
+  },
+  {
+    element: <ArticleDetails />,
+    path: "/Articles/ArticleDetails",
   },
 ];
 

@@ -64,7 +64,7 @@ function Article() {
           <Grid size={{ md: 9 }}>
             <CardInsidetext
               cover="/public/images/Articles/imgSectionOne/BigImg.jpg"
-              link="/"
+              link="/Articles/ArticleDetails"
               text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
               isBigImage={true}
             />
@@ -73,21 +73,21 @@ function Article() {
         <Grid container sx={{ marginTop: "2rem" }} spacing={2}>
           <Grid size={{ md: 4 }}>
             <CardHorizontal
-              link="/"
+              link="/Articles/ArticleDetails"
               coverCard="/public/images/Articles/CardHorizontal/img1.jpg"
               text="چرا باید برای برداشت روغن زیتون در پاییز امسال سفر کنید؟"
             />
           </Grid>
           <Grid size={{ md: 4 }}>
             <CardHorizontal
-              link="/"
+              link="/Articles/ArticleDetails"
               coverCard="/public/images/Articles/CardHorizontal/img2.jpg"
               text="بهترین مکان برای اقامت در دوبلین"
             />
           </Grid>
           <Grid size={{ md: 4 }}>
             <CardHorizontal
-              link="/"
+              link="/Articles/ArticleDetails"
               coverCard="/public/images/Articles/CardHorizontal/img3.jpg"
               text="چرا باید برای برداشت روغن زیتون در پاییز امسال سفر کنید؟"
             />
@@ -119,13 +119,18 @@ function Article() {
           subTitle="هیجان‌انگیزترین مقاصد، تجربیات، جواهرات پنهان و علاقه‌مندی‌های مسافران برای بررسی هم‌اکنون."
           title="مکان هایی برای بازدید"
         />
-        <Grid container spacing={1}   justifyContent={"center"}  alignItems={"center"}>
+        <Grid
+          container
+          spacing={1}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
           <Grid size={{ md: 4 }}>
-            <Grid container  spacing={1} >
-              <Grid size={{ md: 6 }}  >
+            <Grid container spacing={1}>
+              <Grid size={{ md: 6 }}>
                 <CardInsidetext
                   cover="/public/images/Articles/PlaceToVisitImg/img1.jpg"
-                  link="/"
+                  link="/Articles/ArticleDetails"
                   text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
                   isBigImage={false}
                 />
@@ -133,7 +138,7 @@ function Article() {
               <Grid size={{ md: 6 }}>
                 <CardInsidetext
                   cover="/public/images/Articles/PlaceToVisitImg/img2.jpg"
-                  link="/"
+                  link="/Articles/ArticleDetails"
                   text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
                   isBigImage={false}
                 />
@@ -141,17 +146,17 @@ function Article() {
               <Grid size={{ md: 12 }}>
                 <CardInsidetext
                   cover="/public/images/Articles/PlaceToVisitImg/img7.jpg"
-                  link="/"
+                  link="/Articles/ArticleDetails"
                   text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
                   isBigImage={true}
                 />
               </Grid>
             </Grid>
           </Grid>
-          <Grid size={{ md: 2 }}  display={"flex"}  height={"100%"}  >
+          <Grid size={{ md: 2 }} display={"flex"} height={"100%"}>
             <CardInsidetext
               cover="/public/images/Articles/PlaceToVisitImg/img4.jpg"
-              link="/"
+              link="/Articles/ArticleDetails"
               text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
               isBigImage={false}
             />
@@ -159,13 +164,13 @@ function Article() {
           <Grid size={{ md: 2 }}>
             <CardInsidetext
               cover="/public/images/Articles/PlaceToVisitImg/img5.jpg"
-              link="/"
+              link="/Articles/ArticleDetails"
               text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
               isBigImage={false}
             />
             <CardInsidetext
               cover="/public/images/Articles/PlaceToVisitImg/img5.jpg"
-              link="/"
+              link="/Articles/ArticleDetails"
               text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
               isBigImage={false}
             />
@@ -174,7 +179,7 @@ function Article() {
             <Box>
               <CardInsidetext
                 cover="/public/images/Articles/PlaceToVisitImg/img6.jpg"
-                link="/"
+                link="/Articles/ArticleDetails"
                 text="چگونه در فلورانس واقعاً خوب غذا بخوریم - فراتر از نقاط توریستی."
                 isBigImage={false}
               />
@@ -190,19 +195,19 @@ function Article() {
 
         <SliderWrapper numberOfShowSlider={3}>
           <CardTextFooter
-            link="/"
+            link="/Articles/ArticleDetails"
             img="/public/images/Articles/interpidCard/img1.jpg"
             subTitle="از پرو تا ژاپن، محبوب‌ترین برنامه‌های سفر مشترک Intrepid را برای مسافران انفرادی کشف کنید."
             title="برترین ماجراهای «انفرادی بروید، با هم سفر کنید»."
           />
           <CardTextFooter
-            link="/"
+            link="/Articles/ArticleDetails"
             img="/public/images/Articles/interpidCard/img2.jpg"
             subTitle="از پرو تا ژاپن، محبوب‌ترین برنامه‌های سفر مشترک Intrepid را برای مسافران انفرادی کشف کنید."
             title="برترین ماجراهای «انفرادی بروید، با هم سفر کنید»."
           />
           <CardTextFooter
-            link="/"
+            link="/Articles/ArticleDetails"
             img="/public/images/Articles/interpidCard/img3.jpg"
             subTitle="از پرو تا ژاپن، محبوب‌ترین برنامه‌های سفر مشترک Intrepid را برای مسافران انفرادی کشف کنید."
             title="برترین ماجراهای «انفرادی بروید، با هم سفر کنید»."

@@ -86,7 +86,9 @@ const CardRightSideImg: FC<ICardRightSideImgProps> = ({
             ‌
             <Box display={"flex"} gap={1}>
               {badgeDetails.map(({ icon, title }) => {
-                return <BadgeBoxes icon={icon} text={title} bgColor= "#F2F1EC" />;
+                return (
+                  <BadgeBoxes icon={icon} text={title} bgColor="#F2F1EC" />
+                );
               })}
             </Box>
           </Box>

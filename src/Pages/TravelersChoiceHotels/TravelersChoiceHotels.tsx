@@ -16,7 +16,6 @@ import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 import ReadMore from "../../components/ReadMore/ReadMore";
 import CardComment from "../../components/CompTravelerChoiceHotel/CardComment";
 import CardRightSideImg from "../../components/CompTravelerChoiceHotel/CardRightSideImg";
-import CardInsidetext from "../../components/CompArticles/CardInsidetext";
 import NextTripSection from "../../components/ComHomePage/NextTripSection";
 const TravelersChoiceHotels = () => {
   const CusTPTitle = styled(Typography)({

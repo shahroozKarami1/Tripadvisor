@@ -1,4 +1,4 @@
-import { Box, Divider, List, ListItem, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import DarkBtn from "../DarkBtn/DarkBtn";
 import LanguageIcon from "@mui/icons-material/Language";

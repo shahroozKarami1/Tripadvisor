@@ -31,12 +31,9 @@ const Home = () => {
     };
   }, []);
 
-
-  
-
   return (
     <Box>
-      <Container>
+      <Container >
         {isShowStickyMenu && <MainHeader />}
         {!isShowStickyMenu && <TopBarHome />}
         <NavBarHome />

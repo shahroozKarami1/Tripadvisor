@@ -1,8 +1,9 @@
 :root {
-  --primary-color: #00AA6C;
+  --primary-color: #00aa6c;
   --dark-color: #000000;
-  --gray-color: #ADAAAD;
-  --gray-back :  #F2F2F2  ; 
+  --gray-color: #adaaad;
+  --gray-back: #f2f2f2;
+  --yellow-color: #fdc735;
   --main-font: AzarMehr;
-  --main-shadow  : 1px 3px 12px -4px rgba(0,0,0,0.75)
+  --main-shadow: 1px 3px 12px -4px rgba(0, 0, 0, 0.75);
 }

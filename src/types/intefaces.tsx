@@ -227,5 +227,15 @@ export interface ICardRightSideImgProps {
   badgeDetails: {
     icon: React.ReactNode;
     title: string;
-  }[]
+  }[];
+}
+
+export interface IBoxOfArticleProps {
+  title: string;
+  topic: string;
+  AverageTemp: { min: number; max: number };
+  coverArticle: string;
+  TextArticle: {
+    text: string;
+  }[];
 }
