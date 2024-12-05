@@ -15,6 +15,9 @@ import RangeScore from "../../components/CompTravelerChoiceHotel/RangeScore";
 import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 import ReadMore from "../../components/ReadMore/ReadMore";
 import CardComment from "../../components/CompTravelerChoiceHotel/CardComment";
+import CardRightSideImg from "../../components/CompTravelerChoiceHotel/CardRightSideImg";
+import CardInsidetext from "../../components/CompArticles/CardInsidetext";
+import NextTripSection from "../../components/ComHomePage/NextTripSection";
 const TravelersChoiceHotels = () => {
   const CusTPTitle = styled(Typography)({
     color: "#fff",
@@ -205,6 +208,142 @@ const TravelersChoiceHotels = () => {
             profile="/public/images/NextTrip/img1.jpg"
           />
         </SliderWrapper>
+
+        <Grid container>
+          <Grid size={{ md: 12 }}>
+            <CardRightSideImg
+              badgeDetails={[
+                { icon: <DinnerDiningIcon />, title: "رستوران" },
+                { icon: <SpaOutlinedIcon />, title: "آبگرم" },
+                { icon: <PoolIcon />, title: "استخرگرم" },
+              ]}
+              cover="/public/images/BestChoiceDetails/cardRideSideImg/img1.jpg"
+              disc=" را ببینید، جایی که مناظر استوایی ایده‌آل با طرح‌های الهام‌گرفته از طبیعت ملاقات می‌کند. محیطی منزوی و فقط برای بزرگسالان را با اقامتگاه‌های مدرن، استخرهای خصوصی و مناظر شگفت‌انگیز تصور کنید. گشت‌های هیجان‌انگیز مانند غواصی، غواصی و ماهیگیری فقط چند قدم با دسترسی به ساحل فاصله دارند. از غذاهای شگفت انگیز در رستوران هتل لذت ببرید و در آبگرم آرامش بخش با درمان های جوان کننده استراحت کنید. در استخر بی نهایت شیرجه بزنید یا به مرکز تناسب اندام بروید. با خدمات عالی، آب و هوای استثنایی، و احساس مخفی گاه، این یک مکان ایده آل است."
+              link=""
+              location="ایران-تهران"
+              number={1}
+              review="3,500"
+              title="هتل اسپیناس  پالاس"
+            />
+          </Grid>
+          <Grid size={{ md: 12 }}>
+            <CardRightSideImg
+              badgeDetails={[
+                { icon: <DinnerDiningIcon />, title: "رستوران" },
+                { icon: <SpaOutlinedIcon />, title: "آبگرم" },
+                { icon: <PoolIcon />, title: "استخرگرم" },
+              ]}
+              cover="/public/images/BestChoiceDetails/cardRideSideImg/img2.jpg"
+              disc=" را ببینید، جایی که مناظر استوایی ایده‌آل با طرح‌های الهام‌گرفته از طبیعت ملاقات می‌کند. محیطی منزوی و فقط برای بزرگسالان را با اقامتگاه‌های مدرن، استخرهای خصوصی و مناظر شگفت‌انگیز تصور کنید. گشت‌های هیجان‌انگیز مانند غواصی، غواصی و ماهیگیری فقط چند قدم با دسترسی به ساحل فاصله دارند. از غذاهای شگفت انگیز در رستوران هتل لذت ببرید و در آبگرم آرامش بخش با درمان های جوان کننده استراحت کنید. در استخر بی نهایت شیرجه بزنید یا به مرکز تناسب اندام بروید. با خدمات عالی، آب و هوای استثنایی، و احساس مخفی گاه، این یک مکان ایده آل است."
+              link=""
+              location="ایران-تهران"
+              number={2}
+              review="5,500"
+              title="هتل اسپیناس  پالاس"
+            />
+          </Grid>
+          <Grid size={{ md: 12 }}>
+            <CardRightSideImg
+              badgeDetails={[
+                { icon: <DinnerDiningIcon />, title: "رستوران" },
+                { icon: <SpaOutlinedIcon />, title: "آبگرم" },
+                { icon: <PoolIcon />, title: "استخرگرم" },
+              ]}
+              cover="/public/images/BestChoiceDetails/cardRideSideImg/img1.jpg"
+              disc=" را ببینید، جایی که مناظر استوایی ایده‌آل با طرح‌های الهام‌گرفته از طبیعت ملاقات می‌کند. محیطی منزوی و فقط برای بزرگسالان را با اقامتگاه‌های مدرن، استخرهای خصوصی و مناظر شگفت‌انگیز تصور کنید. گشت‌های هیجان‌انگیز مانند غواصی، غواصی و ماهیگیری فقط چند قدم با دسترسی به ساحل فاصله دارند. از غذاهای شگفت انگیز در رستوران هتل لذت ببرید و در آبگرم آرامش بخش با درمان های جوان کننده استراحت کنید. در استخر بی نهایت شیرجه بزنید یا به مرکز تناسب اندام بروید. با خدمات عالی، آب و هوای استثنایی، و احساس مخفی گاه، این یک مکان ایده آل است."
+              link=""
+              location="ایران-تهران"
+              number={3}
+              review="7,500"
+              title="هتل اسپیناس  پالاس"
+            />
+          </Grid>
+          <Grid size={{ md: 12 }}>
+            <CardRightSideImg
+              badgeDetails={[
+                { icon: <DinnerDiningIcon />, title: "رستوران" },
+                { icon: <SpaOutlinedIcon />, title: "آبگرم" },
+                { icon: <PoolIcon />, title: "استخرگرم" },
+              ]}
+              cover="/public/images/BestChoiceDetails/cardRideSideImg/img2.jpg"
+              disc=" را ببینید، جایی که مناظر استوایی ایده‌آل با طرح‌های الهام‌گرفته از طبیعت ملاقات می‌کند. محیطی منزوی و فقط برای بزرگسالان را با اقامتگاه‌های مدرن، استخرهای خصوصی و مناظر شگفت‌انگیز تصور کنید. گشت‌های هیجان‌انگیز مانند غواصی، غواصی و ماهیگیری فقط چند قدم با دسترسی به ساحل فاصله دارند. از غذاهای شگفت انگیز در رستوران هتل لذت ببرید و در آبگرم آرامش بخش با درمان های جوان کننده استراحت کنید. در استخر بی نهایت شیرجه بزنید یا به مرکز تناسب اندام بروید. با خدمات عالی، آب و هوای استثنایی، و احساس مخفی گاه، این یک مکان ایده آل است."
+              link=""
+              location="ایران-تهران"
+              number={4}
+              review="1,500"
+              title="هتل اسپیناس  پالاس"
+            />
+          </Grid>
+          <Grid size={{ md: 12 }}>
+            <CardRightSideImg
+              badgeDetails={[
+                { icon: <DinnerDiningIcon />, title: "رستوران" },
+                { icon: <SpaOutlinedIcon />, title: "آبگرم" },
+                { icon: <PoolIcon />, title: "استخرگرم" },
+              ]}
+              cover="/public/images/BestChoiceDetails/cardRideSideImg/img2.jpg"
+              disc=" را ببینید، جایی که مناظر استوایی ایده‌آل با طرح‌های الهام‌گرفته از طبیعت ملاقات می‌کند. محیطی منزوی و فقط برای بزرگسالان را با اقامتگاه‌های مدرن، استخرهای خصوصی و مناظر شگفت‌انگیز تصور کنید. گشت‌های هیجان‌انگیز مانند غواصی، غواصی و ماهیگیری فقط چند قدم با دسترسی به ساحل فاصله دارند. از غذاهای شگفت انگیز در رستوران هتل لذت ببرید و در آبگرم آرامش بخش با درمان های جوان کننده استراحت کنید. در استخر بی نهایت شیرجه بزنید یا به مرکز تناسب اندام بروید. با خدمات عالی، آب و هوای استثنایی، و احساس مخفی گاه، این یک مکان ایده آل است."
+              link=""
+              location="ایران-تهران"
+              number={2}
+              review="5,500"
+              title="هتل اسپیناس  پالاس"
+            />
+          </Grid>
+          <Grid size={{ md: 12 }}>
+            <CardRightSideImg
+              badgeDetails={[
+                { icon: <DinnerDiningIcon />, title: "رستوران" },
+                { icon: <SpaOutlinedIcon />, title: "آبگرم" },
+                { icon: <PoolIcon />, title: "استخرگرم" },
+              ]}
+              cover="/public/images/BestChoiceDetails/cardRideSideImg/img1.jpg"
+              disc=" را ببینید، جایی که مناظر استوایی ایده‌آل با طرح‌های الهام‌گرفته از طبیعت ملاقات می‌کند. محیطی منزوی و فقط برای بزرگسالان را با اقامتگاه‌های مدرن، استخرهای خصوصی و مناظر شگفت‌انگیز تصور کنید. گشت‌های هیجان‌انگیز مانند غواصی، غواصی و ماهیگیری فقط چند قدم با دسترسی به ساحل فاصله دارند. از غذاهای شگفت انگیز در رستوران هتل لذت ببرید و در آبگرم آرامش بخش با درمان های جوان کننده استراحت کنید. در استخر بی نهایت شیرجه بزنید یا به مرکز تناسب اندام بروید. با خدمات عالی، آب و هوای استثنایی، و احساس مخفی گاه، این یک مکان ایده آل است."
+              link=""
+              location="ایران-تهران"
+              number={3}
+              review="7,500"
+              title="هتل اسپیناس  پالاس"
+            />
+          </Grid>
+          <Grid size={{ md: 12 }}>
+            <CardRightSideImg
+              badgeDetails={[
+                { icon: <DinnerDiningIcon />, title: "رستوران" },
+                { icon: <SpaOutlinedIcon />, title: "آبگرم" },
+                { icon: <PoolIcon />, title: "استخرگرم" },
+              ]}
+              cover="/public/images/BestChoiceDetails/cardRideSideImg/img2.jpg"
+              disc=" را ببینید، جایی که مناظر استوایی ایده‌آل با طرح‌های الهام‌گرفته از طبیعت ملاقات می‌کند. محیطی منزوی و فقط برای بزرگسالان را با اقامتگاه‌های مدرن، استخرهای خصوصی و مناظر شگفت‌انگیز تصور کنید. گشت‌های هیجان‌انگیز مانند غواصی، غواصی و ماهیگیری فقط چند قدم با دسترسی به ساحل فاصله دارند. از غذاهای شگفت انگیز در رستوران هتل لذت ببرید و در آبگرم آرامش بخش با درمان های جوان کننده استراحت کنید. در استخر بی نهایت شیرجه بزنید یا به مرکز تناسب اندام بروید. با خدمات عالی، آب و هوای استثنایی، و احساس مخفی گاه، این یک مکان ایده آل است."
+              link=""
+              location="ایران-تهران"
+              number={4}
+              review="1,500"
+              title="هتل اسپیناس  پالاس"
+            />
+          </Grid>
+        </Grid>
+        <NextTripSection
+          dataNextTripArr={[
+            {
+              img: "/public/images/NextTrip/img4.jpg",
+              title: "آمستردام /  آلمان",
+            },
+            {
+              img: "/public/images/NextTrip/img1.jpg",
+              title: "آمستردام /  آلمان",
+            },
+            {
+              img: "/public/images/NextTrip/img2.jpg",
+              title: "آمستردام /  آلمان",
+            },
+            {
+              img: "/public/images/NextTrip/img3.jpg",
+              title: "آمستردام /  آلمان",
+            },
+          ]}
+          mainTitle="دسته‌های انتخاب مسافران بیشتری را کاوش کنید"
+        />
       </Container>
     </Box>
   );

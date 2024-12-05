@@ -204,15 +204,28 @@ export interface ITitleCenterProps {
 }
 
 export interface IBadgeBoxesProps {
-  bgColor ?: string;
+  bgColor?: string;
   text: string;
   icon: React.ReactNode;
 }
 
-
- export interface ICardCommentProps {
+export interface ICardCommentProps {
   CommentBody: string;
   email: string;
   profile: string;
   date: string;
+}
+
+export interface ICardRightSideImgProps {
+  cover: string;
+  title: string;
+  number: number;
+  location: string;
+  review: string;
+  disc: string;
+  link: string;
+  badgeDetails: {
+    icon: React.ReactNode;
+    title: string;
+  }[]
 }
