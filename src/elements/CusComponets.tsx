@@ -158,7 +158,8 @@ export const CusCircleOutLine = styled(PanoramaFishEyeIcon)({
     //   backgroundColor: `var(--primary-color)`,
     //   border: 0,
     // },
-    fontSize: "2rem",
+    fontSize: "1.2rem",
+    
     fill: `var(--primary-color)`,
   },
 });
@@ -187,3 +188,20 @@ export const DarkOverlay = () => {
     />
   );
 };
+ export  const CusCardDetails = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  padding: "1rem",
+  border: "1px  solid  #ccc",
+  borderRadius: "1rem",
+  height : "100%" , 
+  backgroundColor : "#fff"
+});
+
+export const CusOutLineLinkBtn = styled(Button)({
+  padding: "0",
+  color: "var(--dark-color)",
+  fontWeight :'bold' ,  
+  fontSize :"0.80rem" ,  
+  borderBottom :"1px  solid  var(--dark-color)"
+});

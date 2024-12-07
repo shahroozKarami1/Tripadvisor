@@ -1,4 +1,4 @@
-import { Box, Button, Container, List, Typography } from "@mui/material";
+import { Box, Container, List, Typography } from "@mui/material";
 import { CusCircleIcon, DarkOverlay } from "../../elements/CusComponets";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import styled from "@emotion/styled";
@@ -10,13 +10,13 @@ import BadgeBoxes from "../../components/CompTravelerChoiceHotel/BadgeBoxes";
 import DinnerDiningIcon from "@mui/icons-material/DinnerDining";
 import SpaOutlinedIcon from "@mui/icons-material/SpaOutlined";
 import PoolIcon from "@mui/icons-material/Pool";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import RangeScore from "../../components/CompTravelerChoiceHotel/RangeScore";
 import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 import ReadMore from "../../components/ReadMore/ReadMore";
 import CardComment from "../../components/CompTravelerChoiceHotel/CardComment";
 import CardRightSideImg from "../../components/CompTravelerChoiceHotel/CardRightSideImg";
 import NextTripSection from "../../components/ComHomePage/NextTripSection";
+import SaveBtn from "../../components/SaveBtn/SaveBtn";
 const TravelersChoiceHotels = () => {
   const CusTPTitle = styled(Typography)({
     color: "#fff",
@@ -136,21 +136,7 @@ const TravelersChoiceHotels = () => {
                 </Grid>
                 <Grid size={{ md: 5 }}>
                   <Box display={"flex"} justifyContent={"flex-end"}>
-                    <Button
-                      sx={{
-                        bgcolor: "#fff",
-                        border: "1px  solid #000",
-                        padding: "0.5rem  1rem",
-                        borderRadius: "2rem",
-                      }}
-                    >
-                      <FavoriteBorderOutlinedIcon />
-                      <Typography
-                        sx={{ fontWeight: "bold", fontSize: "0.90rem" }}
-                      >
-                        ذخیره
-                      </Typography>
-                    </Button>
+                    <SaveBtn />
                   </Box>
                   <Box display={"flex"} gap={1} alignItems={"center"}>
                     <Typography sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>

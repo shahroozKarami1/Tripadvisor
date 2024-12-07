@@ -239,3 +239,21 @@ export interface IBoxOfArticleProps {
     text: string;
   }[];
 }
+
+export interface ICardSliderProps {
+  title?: string;
+  count?: number;
+  coverImg: string;
+  isMainImg: boolean;
+}
+
+export interface ReviewBoxProps {
+  profile: string;
+  name: string;
+  countContributions: number;
+  likeCount: number;
+  title: string;
+  date: string;
+  typeOfFamilly: string;
+  reviewBody: string;
+}
