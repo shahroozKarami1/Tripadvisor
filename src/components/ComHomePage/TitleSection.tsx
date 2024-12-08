@@ -9,6 +9,7 @@ const TitleSection: FC<ITitleSectionProps> = ({
   mainTitle,
   subTitle,
   isSeeAll,
+  
 }) => {
   return (
     <CusSectionTitle>

@@ -48,6 +48,7 @@ export interface ITourWaysCardProps {
   price?: number;
   img: string;
   isDetails?: boolean;
+  link  ?: string
 }
 
 export interface IMoreExploreCardProps {
@@ -256,4 +257,13 @@ export interface ReviewBoxProps {
   date: string;
   typeOfFamilly: string;
   reviewBody: string;
+}
+
+
+export interface ICardNearByProps {
+  titleCard: string;
+  countOfLike: number;
+  coverCard: string;
+  linkCard: string;
+  mileAway: number;
 }

@@ -1,7 +1,11 @@
 import {
   Box,
+  Button,
   Container,
   IconButton,
+  Tooltip,
+  tooltipClasses,
+  TooltipProps,
   Typography,
   useMediaQuery,
 } from "@mui/material";
@@ -15,15 +19,19 @@ import CardDetailsRating from "../../components/CompHotelDetails/CardDetailsRati
 import CardDetailsBox from "../../components/CompHotelDetails/CardDetailsBox";
 import CardMapDetails from "../../components/CompHotelDetails/CardMapDetails";
 import BigBoxDetails from "../../components/CompHotelDetails/BigBoxDetails";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
+import InpSearch from "../../components/InpSearch/InpSearch";
+import ReviewBox from "../../components/CompHotelDetails/ReviewBox";
+import RateProgress from "../../components/CompHotelDetails/RateProgress";
+import PopularMentionsCard from "../../components/CompHotelDetails/PopularMentionsCard";
 import {
   CusCardDetails,
   CusCircleIcon,
   CusCircleOutLine,
 } from "../../elements/CusComponets";
-import InpSearch from "../../components/InpSearch/InpSearch";
-import ReviewBox from "../../components/CompHotelDetails/ReviewBox";
-import RateProgress from "../../components/CompHotelDetails/RateProgress";
-import PopularMentionsCard from "../../components/CompHotelDetails/PopularMentionsCard";
+import styled from "@emotion/styled";
+import TitleSection from "../../components/ComHomePage/TitleSection";
+import CardNearBy from "../../components/CompHotelDetails/CardNearBy";
 const HotelDetails = () => {
   var settings = {
     dots: true,
@@ -34,6 +42,17 @@ const HotelDetails = () => {
   };
 
   let isXs = useMediaQuery("(max-width: 1000px)");
+  const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))(() => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: "#fff",
+      color: "rgba(0, 0, 0, 0.87)",
+      boxShadow: `var(--primary-shadow)`,
+      fontSize: "0.80rem",
+      lineHeight: 2,
+    },
+  }));
   return (
     <Box>
       <Container>
@@ -261,6 +280,78 @@ const HotelDetails = () => {
                 </Grid>
               </Grid>
             </CusCardDetails>
+          </Box>
+          <Box sx={{ marginTop: "1rem" }}>
+            <Grid container justifyContent={"flex-start"}>
+              <Grid size={{ md: 9 }}>
+                <CusCardDetails>
+                  <Box display={"flex"} alignItems={"center"}>
+                    <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
+                      بهترین نزدیک ها
+                    </Typography>
+                    <LightTooltip
+                      title="ما این هتل‌ها، رستوران‌ها و جاذبه‌ها را با متعادل کردن نظرات اعضای خود و میزان نزدیکی آنها به این مکان رتبه‌بندی می‌کنیم."
+                      arrow
+                    >
+                      <IconButton>
+                        <ErrorOutlineIcon />
+                      </IconButton>
+                    </LightTooltip>
+                  </Box>
+                  <Box
+                    display={"flex"}
+                    justifyContent={"center"}
+                    marginTop={"2rem"}
+                  >
+                    <img
+                      src="/public/images/HotelDetail/bigMap.png"
+                      alt=""
+                      className="rounded-lg  w-full"
+                    />
+                  </Box>
+
+                  <Grid container>
+                    <TitleSection
+                      isSubTitle={false}
+                      isSeeAll={true}
+                      mainTitle="بهترین هتل ها در نزدیکی"
+                    />
+                    <Grid size={{ md: 6 }}>
+                      <CardNearBy
+                        countOfLike={124}
+                        coverCard="/public/images/Hotelmg/TopDistination/img2.jpg"
+                        linkCard="/"
+                        mileAway={4.6}
+                        titleCard="هتل قو تهران"
+                      />
+                      <CardNearBy
+                        countOfLike={124}
+                        coverCard="/public/images/Hotelmg/TopDistination/img3.jpg"
+                        linkCard="/"
+                        mileAway={4.6}
+                        titleCard="هتل قو تهران"
+                      />
+                    </Grid>
+                    <Grid size={{ md: 6 }}>
+                      <CardNearBy
+                        countOfLike={124}
+                        coverCard="/public/images/Hotelmg/TopDistination/img4.jpg"
+                        linkCard="/"
+                        mileAway={4.6}
+                        titleCard="هتل قو تهران"
+                      />
+                      <CardNearBy
+                        countOfLike={124}
+                        coverCard="/public/images/Hotelmg/TopDistination/img1.jpg"
+                        linkCard="/"
+                        mileAway={4.6}
+                        titleCard="هتل قو تهران"
+                      />
+                    </Grid>
+                  </Grid>
+                </CusCardDetails>
+              </Grid>
+            </Grid>
           </Box>
         </Container>
       </Box>

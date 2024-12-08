@@ -159,7 +159,7 @@ export const CusCircleOutLine = styled(PanoramaFishEyeIcon)({
     //   border: 0,
     // },
     fontSize: "1.2rem",
-    
+
     fill: `var(--primary-color)`,
   },
 });
@@ -183,25 +183,25 @@ export const DarkOverlay = () => {
           "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%)",
         zIndex: 0,
         borderRadius: "0.5rem",
- 
+        width: "100%",
       }}
     />
   );
 };
- export  const CusCardDetails = styled(Box)({
+export const CusCardDetails = styled(Box)({
   display: "flex",
   flexDirection: "column",
   padding: "1rem",
   border: "1px  solid  #ccc",
   borderRadius: "1rem",
-  height : "100%" , 
-  backgroundColor : "#fff"
+  height: "100%",
+  backgroundColor: "#fff",
 });
 
 export const CusOutLineLinkBtn = styled(Button)({
   padding: "0",
   color: "var(--dark-color)",
-  fontWeight :'bold' ,  
-  fontSize :"0.80rem" ,  
-  borderBottom :"1px  solid  var(--dark-color)"
+  fontWeight: "bold",
+  fontSize: "0.80rem",
+  borderBottom: "1px  solid  var(--dark-color)",
 });

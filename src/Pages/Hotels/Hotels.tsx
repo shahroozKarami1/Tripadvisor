@@ -45,6 +45,7 @@ const Hotels = () => {
           />
           <Grid size={{ md: 3 }}>
             <TourWaysCard
+              link="/Hotels/HotelDetails"
               isDetails={false}
               price={134}
               score={935}
@@ -54,6 +55,7 @@ const Hotels = () => {
           </Grid>
           <Grid size={{ md: 3 }}>
             <TourWaysCard
+              link="/Hotels/HotelDetails"
               isDetails={false}
               score={935}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
@@ -63,6 +65,7 @@ const Hotels = () => {
           <Grid size={{ md: 3 }}>
             <TourWaysCard
               isDetails={false}
+              link="/Hotels/HotelDetails"
               score={935}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/ResortsImgs/img3.jpg"
@@ -71,6 +74,7 @@ const Hotels = () => {
           <Grid size={{ md: 3 }}>
             <TourWaysCard
               isDetails={false}
+              link="/Hotels/HotelDetails"
               score={4350}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/ResortsImgs/img4.jpg"

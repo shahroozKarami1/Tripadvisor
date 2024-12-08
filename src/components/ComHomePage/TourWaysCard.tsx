@@ -10,11 +10,12 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
   price,
   score,
   isDetails,
+  link
 }) => {
 
   return (
     <Box  sx={{direction :"rtl"}}>
- <Link  to={"/"}>
+ <Link  to={link  ? link  :  "/"}>
  <Box sx={{ position: "relative" ,  margin : "0 0.70rem" }}>
         <img
           src={img}
