@@ -267,3 +267,12 @@ export interface ICardNearByProps {
   linkCard: string;
   mileAway: number;
 }
+
+export interface IOperatorCardProps {
+  name: string;
+  profile: string;
+  countContributions: number;
+  title: string;
+  mainText: string;
+  date : string
+}

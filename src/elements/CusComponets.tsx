@@ -4,7 +4,8 @@ import FirstBannerImg from "../../public/images/HomePage/FirstBanner.jpg";
 import MainBanner from "/public/images/ThingsToDoPage/Banner.jpg";
 import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
-
+import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
+import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
@@ -192,7 +193,7 @@ export const CusCardDetails = styled(Box)({
   display: "flex",
   flexDirection: "column",
   padding: "1rem",
-  border: "1px  solid  #ccc",
+  // border: "1px  solid  #ccc",
   borderRadius: "1rem",
   height: "100%",
   backgroundColor: "#fff",
@@ -204,4 +205,16 @@ export const CusOutLineLinkBtn = styled(Button)({
   fontWeight: "bold",
   fontSize: "0.80rem",
   borderBottom: "1px  solid  var(--dark-color)",
+});
+
+   export  const CusAddBtn = styled(AddCircleOutlinedIcon)({
+  fontSize: "2.2rem",
+  cursor: "pointer",
+});
+   export  const CusRemoveBtn = styled(RemoveCircleOutlinedIcon)({
+  fontSize: "2.2rem",
+  "&.MuiSvgIcon-root  path": {
+    color: `var(--gray-color)`,
+    cursor: "pointer",
+  },
 });

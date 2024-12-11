@@ -1,9 +1,8 @@
-import { FC, useReducer } from "react";
+import { FC } from "react";
 import { ITravelerBoxProps } from "../../../types/intefaces";
-import { Box, List, ListItem, Typography } from "@mui/material";
-import { CusTravelerBox } from "../../../elements/CusComponets";
-import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
-import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
+import {  List, ListItem, Typography } from "@mui/material";
+import { CusAddBtn, CusRemoveBtn, CusTravelerBox } from "../../../elements/CusComponets";
+
 import Grid from "@mui/material/Grid2";
 import RangeOfPeople from "./RangeOfPeople";
 import styled from "@emotion/styled";
@@ -15,17 +14,6 @@ const TravelerBox: FC<ITravelerBoxProps> = ({}) => {
     justifyContent: "center",
   });
 
-  const CusAddBtn = styled(AddCircleOutlinedIcon)({
-    fontSize: "2.2rem",
-    cursor: "pointer",
-  });
-  const CusRemoveBtn = styled(RemoveCircleOutlinedIcon)({
-    fontSize: "2.2rem",
-    "&.MuiSvgIcon-root  path": {
-      color: `var(--gray-color)`,
-      cursor: "pointer",
-    },
-  });
 
 
   return (

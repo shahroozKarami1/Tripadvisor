@@ -33,7 +33,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
 }) => {
   var settings = {
     dots: true,
-    infinite: true,
+    infinite: true , 
     speed: 1000,
     slidesToShow: numberOfShowSlider,
     // autoplaySpeed: 7000,
