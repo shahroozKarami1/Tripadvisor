@@ -48,7 +48,7 @@ export interface ITourWaysCardProps {
   price?: number;
   img: string;
   isDetails?: boolean;
-  link  ?: string
+  link?: string;
 }
 
 export interface IMoreExploreCardProps {
@@ -106,6 +106,7 @@ export interface ICardRentalProps {
 export interface ICardSingleTextProps {
   TopCover: string;
   textBody: string;
+  heightCard?: string;
 }
 
 export interface ITravelerBoxProps {}
@@ -259,7 +260,6 @@ export interface ReviewBoxProps {
   reviewBody: string;
 }
 
-
 export interface ICardNearByProps {
   titleCard: string;
   countOfLike: number;
@@ -274,7 +274,7 @@ export interface IOperatorCardProps {
   countContributions: number;
   title: string;
   mainText: string;
-  date : string
+  date: string;
 }
 
 export interface ICardHeaderSliderProps {
@@ -282,11 +282,11 @@ export interface ICardHeaderSliderProps {
   title: string;
   conutOfLike: number;
   footerCard: string;
-  cover  :  {
-    id :  number  ,  imgSrc : string
-  }[]
+  cover: {
+    id: number;
+    imgSrc: string;
+  }[];
 }
-
 
 export interface IwhenToVisitCardProps {
   temperature: number;
@@ -294,9 +294,25 @@ export interface IwhenToVisitCardProps {
   typeOfBusy: "خیلی" | "به طور متوسط" | "کمتر";
   countOfRainDay: number;
   isDetails?: boolean;
-  details ?: {
-    tempDetail : string  | ""
-    rainDayDetail : string  | ""
-    busyDetail : string  | ""
-  }
+  details?: {
+    tempDetail: string | "";
+    rainDayDetail: string | "";
+    busyDetail: string | "";
+  };
+}
+
+export interface ICardItemProfileFooterProps {
+  countOfIem: number;
+  title: string;
+  writer: string;
+  profile: string;
+  link: string;
+  imgCover: string;
+}
+export interface ICardFooterDicsProps {
+  title: string;
+  countLike: number;
+  discFooter: string;
+  coverCard: string;
+  link: string;
 }

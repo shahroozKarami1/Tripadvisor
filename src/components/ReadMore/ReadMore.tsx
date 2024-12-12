@@ -18,7 +18,7 @@ const ReadMore: FC<{
           WebkitBoxOrient: "vertical",
           overflow: "hidden",
           textOverflow: "ellipsis",
-          fontsize: "0.90rem",
+          fontsize: "0.80rem" , 
           textAlign: "right",
         }}
       >

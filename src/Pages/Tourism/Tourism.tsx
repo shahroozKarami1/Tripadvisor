@@ -10,6 +10,13 @@ import PopularMentionsCard from "../../components/CompHotelDetails/PopularMentio
 import CardHeaderSlider from "../../components/CompTourism/CardHeaderSlider";
 import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 import WhenToVisitCard from "../../components/CompTourism/WhenToVisitCard";
+import BoxTextAndSlider from "../../components/CompTourism/BoxTextAndSlider";
+import CardCenterTextFooter from "../../components/CompTourism/CardCenterTextFooter";
+import CardItemProfileFooter from "../../components/CompTourism/CardItemProfileFooter";
+import SimpleSlider from "../../components/SliderWithOutContainer/SimpleSlider";
+import CardFooterDics from "../../components/CompTourism/CardFooterDics";
+import CollectionCard from "../../components/CompTravelerChoiceHotel/CollectionCard";
+
 const Tourism = () => {
   return (
     <Box>
@@ -710,6 +717,171 @@ const Tourism = () => {
             />
           </SliderWrapper>
         </Box>
+        <Box>
+          <TitleSection
+            isSubTitle={true}
+            mainTitle="برنامه های سفر برای کمک به برنامه ریزی"
+            isSeeAll={false}
+            subTitle="از دیدگاه‌های واقعی مسافران گرفته تا بینش‌های هوش مصنوعی که توسط جامعه ما هدایت می‌شوند. بیشتر بدانید"
+          />
+          <BoxTextAndSlider />
+        </Box>
+
+        <Box marginTop={"5rem"}>
+          <SliderWrapper numberOfShowSlider={3}>
+            <CardCenterTextFooter
+              img="/public/images/Tourism/Slider/img7.jpg"
+              link="/"
+              textFooter="کریسمس در لندن: بازارهای کریسمس، چراغ‌های جشن و غیره"
+            />
+            <CardCenterTextFooter
+              img="/public/images/Tourism/Slider/img8.jpg"
+              link="/"
+              textFooter="کریسمس در لندن: بازارهای کریسمس، چراغ‌های جشن و غیره"
+            />
+            <CardCenterTextFooter
+              img="/public/images/Tourism/Slider/img9.jpg"
+              link="/"
+              textFooter="کریسمس در لندن: بازارهای کریسمس، چراغ‌های جشن و غیره"
+            />
+          </SliderWrapper>
+        </Box>
+
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="راهنمای مسافران"
+            isSeeAll={false}
+          />
+          <SliderWrapper numberOfShowSlider={3}>
+            <CardItemProfileFooter
+              link="/"
+              countOfIem={10}
+              imgCover="/public/images/Tourism/Slider/img10.jpg"
+              profile="/public/images/NextTrip/img1.jpg"
+              title="لندن: جالب ترین مکان های کوکتل"
+              writer="شهروز کرمی"
+            />
+            <CardItemProfileFooter
+              link="/"
+              countOfIem={10}
+              imgCover="/public/images/Tourism/Slider/img11.jpg"
+              profile="/public/images/NextTrip/img2.jpg"
+              title="لندن: جالب ترین مکان های کوکتل"
+              writer="شهروز کرمی"
+            />
+            <CardItemProfileFooter
+              link="/"
+              countOfIem={10}
+              imgCover="/public/images/Tourism/Slider/img12.jpg"
+              profile="/public/images/NextTrip/img3.jpg"
+              title="لندن: جالب ترین مکان های کوکتل"
+              writer="شهروز کرمی"
+            />
+          </SliderWrapper>
+        </Box>
+      </Container>
+      <Box
+        sx={{ bgcolor: "#F2F1EC", padding: "2rem 1rem  ", margin: "2rem  0" }}
+      >
+        <Container>
+          <Grid container spacing={3}>
+            <Grid size={{ md: 3 }}>
+              <Box>
+                <img
+                  src="/public/images/Tourism/Slider/mainImg.jpg"
+                  alt=""
+                  style={{
+                    borderRadius: "50%",
+                    width: "140px",
+                  }}
+                />
+                <Typography
+                  sx={{
+                    fontWeight: "bold",
+                    padding: "1rem 0",
+                    fontSize: "1.1rem",
+                  }}
+                >
+                  خزیدن در رستوران های لندن
+                </Typography>
+                <Typography sx={{ fontSize: "1rem" }}>
+                  بعد از سال‌ها نوشتن درباره‌ی آن‌ها بیشتر از آنچه من دوست دارم
+                  اعتراف کنم، می‌توانم یک میخانه خوب لندن را سریع‌تر از آن‌چه
+                  بتوانید بگویید «پینت، لطفاً» ببینم. راز چیست؟ بزرگ یا کوچک،
+                  مرکزی یا حومه شهر، به شخصی که پشت میله است می رسد. و البته،
+                  خود مکان نیز باید شخصیتی داشته باشد. اینجا میخانه های مورد
+                  علاقه من هستند.
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid size={{ md: 9 }}>
+              <SimpleSlider countOfSlider={3}>
+                <CardFooterDics
+                  link="/"
+                  countLike={54}
+                  coverCard="/public/images/Tourism/Slider/img4.jpg"
+                  discFooter="صاحبخانه ایرلندی، کان، استانداردهای بالایی را در این میخانه محله ای بی تکلف در جنوب شرقی لندن تعیین می کند: کارکنان کراوات می بندند و آبجو همیشه عالی ریخته می شود. پنج‌شنبه‌ها برای اجراهای نوازندگان محلی مورد علاقه من هستند، اما به لطف جو دوستانه و خوش‌آمد، در هیچ روز هفته نمی‌توانید اشتباه کنید."
+                  title="سفره خانه بلیت هیل"
+                />
+                <CardFooterDics
+                  link="/"
+                  countLike={54}
+                  coverCard="/public/images/Tourism/Slider/img5.jpg"
+                  discFooter="صاحبخانه ایرلندی، کان، استانداردهای بالایی را در این میخانه محله ای بی تکلف در جنوب شرقی لندن تعیین می کند: کارکنان کراوات می بندند و آبجو همیشه عالی ریخته می شود. پنج‌شنبه‌ها برای اجراهای نوازندگان محلی مورد علاقه من هستند، اما به لطف جو دوستانه و خوش‌آمد، در هیچ روز هفته نمی‌توانید اشتباه کنید."
+                  title="سفره خانه بلیت هیل"
+                />
+                <CardFooterDics
+                  link="/"
+                  countLike={54}
+                  coverCard="/public/images/Tourism/Slider/img8.jpg"
+                  discFooter="صاحبخانه ایرلندی، کان، استانداردهای بالایی را در این میخانه محله ای بی تکلف در جنوب شرقی لندن تعیین می کند: کارکنان کراوات می بندند و آبجو همیشه عالی ریخته می شود. پنج‌شنبه‌ها برای اجراهای نوازندگان محلی مورد علاقه من هستند، اما به لطف جو دوستانه و خوش‌آمد، در هیچ روز هفته نمی‌توانید اشتباه کنید."
+                  title="سفره خانه بلیت هیل"
+                />
+              </SimpleSlider>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      <Container>
+        <Box>
+          <TitleSection
+            isSubTitle={true}
+            mainTitle="مجموعه ها را مرور کنید"
+            isSeeAll={false}
+            subTitle="درباره کارهایی که باید انجام دهید، ببینید و بخورید ایده بگیرید"
+          />
+        </Box>
+        <SliderWrapper numberOfShowSlider={4}>
+          <CollectionCard
+            TopCover="/public/images/Tourism/CollectionCard/img1.jpg"
+            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+            link="/"
+            textBody="زمستان در لندن"
+          />
+        
+          <CollectionCard
+            TopCover="/public/images/Tourism/CollectionCard/img2.jpg"
+            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+            link="/"
+            textBody="زمستان در لندن"
+          />
+        
+          <CollectionCard
+            TopCover="/public/images/Tourism/CollectionCard/img3.jpg"
+            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+            link="/"
+            textBody="زمستان در لندن"
+          />
+        
+          <CollectionCard
+            TopCover="/public/images/Tourism/CollectionCard/img4.jpg"
+            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+            link="/"
+            textBody="زمستان در لندن"
+          />
+        
+        </SliderWrapper>
       </Container>
     </Box>
   );

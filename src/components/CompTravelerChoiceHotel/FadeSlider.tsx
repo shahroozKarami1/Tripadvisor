@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import Slider from "react-slick";
+import styled from "@emotion/styled";
 import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
-import styled from "@emotion/styled";
-const FadeSlider: FC<{ children: React.ReactNode }> = ({ children }) => {
+const FadeSlider: FC<{ children: React.ReactNode  }> = ({ children }) => {
   const CusPreArrow = styled(ArrowCircleLeftOutlinedIcon)({
     position: "absolute",
     zIndex: 100,

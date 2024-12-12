@@ -3,7 +3,6 @@ import { Box, Typography } from "@mui/material";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import PhotoSizeSelectActualOutlinedIcon from "@mui/icons-material/PhotoSizeSelectActualOutlined";
-import { DarkOverlay } from "../../elements/CusComponets";
 interface CardSliderProps {
   link: string;
   cover: string;
