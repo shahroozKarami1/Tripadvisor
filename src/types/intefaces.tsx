@@ -276,3 +276,27 @@ export interface IOperatorCardProps {
   mainText: string;
   date : string
 }
+
+export interface ICardHeaderSliderProps {
+  link: string;
+  title: string;
+  conutOfLike: number;
+  footerCard: string;
+  cover  :  {
+    id :  number  ,  imgSrc : string
+  }[]
+}
+
+
+export interface IwhenToVisitCardProps {
+  temperature: number;
+  monthName: string;
+  typeOfBusy: "خیلی" | "به طور متوسط" | "کمتر";
+  countOfRainDay: number;
+  isDetails?: boolean;
+  details ?: {
+    tempDetail : string  | ""
+    rainDayDetail : string  | ""
+    busyDetail : string  | ""
+  }
+}

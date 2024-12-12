@@ -18,6 +18,7 @@ import Article from "./Pages/Article/Article";
 import ArticleDetails from "./Pages/ArticleDetails/ArticleDetails";
 import HotelDetails from "./Pages/HotelDetails/HotelDetails";
 import ThingsToDoDetails from "./Pages/ThingsToDoDetails/ThingsToDoDetails";
+import Tourism from "./Pages/Tourism/Tourism";
 
 let routes = [
   {
@@ -99,6 +100,10 @@ let routes = [
   {
     element: <ThingsToDoDetails />,
     path: "/Attractions/AttractionsDetails",
+  },
+  {
+    element: <Tourism />,
+    path: "/Tourism",
   },
 ];
 
