@@ -69,12 +69,12 @@ const AccordionMenu: React.FC<{ dataCoordion: TAccordionMenuProps }> = ({
               id={`panel${id}d-header`}
               sx={{ display: "flex" }}
             >
-              <Typography sx={{ fontWeight: "bold", fontSize: "0.80rem" }}>
+              <Typography sx={{ fontWeight: "bold", fontSize: "0.90rem" }}>
                 {title}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{textBody}</Typography>
+              <Typography  sx={{fontSize  : "0.90rem"}}>{textBody}</Typography>
             </AccordionDetails>
           </Accordion>
         );

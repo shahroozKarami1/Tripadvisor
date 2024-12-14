@@ -19,7 +19,7 @@ const CardSingleText: FC<ICardSingleTextProps> = ({
     fontWeight: "bold",
   });
   return (
-    <Box>
+    <Box margin={"0  0.25rem"}  >
       <Box
         sx={{ position: "relative", height: heightCard ? heightCard : "100%" }}
       >

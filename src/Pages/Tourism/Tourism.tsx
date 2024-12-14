@@ -16,6 +16,11 @@ import CardItemProfileFooter from "../../components/CompTourism/CardItemProfileF
 import SimpleSlider from "../../components/SliderWithOutContainer/SimpleSlider";
 import CardFooterDics from "../../components/CompTourism/CardFooterDics";
 import CollectionCard from "../../components/CompTravelerChoiceHotel/CollectionCard";
+import CardSingleText from "../../components/CardSingleText/CardSingleText";
+import ReadMoreCard from "../../components/CompTourism/ReadMoreCard";
+import TipCard from "../../components/CompTourism/TipCard";
+import SimpleTextTitle from "../../components/CompTourism/SimpleTextTitle";
+import AccordionMenu from "../../components/AccordionMenu/AccordionMenu";
 
 const Tourism = () => {
   return (
@@ -851,37 +856,254 @@ const Tourism = () => {
             isSeeAll={false}
             subTitle="درباره کارهایی که باید انجام دهید، ببینید و بخورید ایده بگیرید"
           />
+          <SliderWrapper numberOfShowSlider={4}>
+            <CollectionCard
+              TopCover="/public/images/Tourism/CollectionCard/img1.jpg"
+              footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+              link="/"
+              textBody="زمستان در لندن"
+            />
+
+            <CollectionCard
+              TopCover="/public/images/Tourism/CollectionCard/img2.jpg"
+              footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+              link="/"
+              textBody="زمستان در لندن"
+            />
+
+            <CollectionCard
+              TopCover="/public/images/Tourism/CollectionCard/img3.jpg"
+              footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+              link="/"
+              textBody="زمستان در لندن"
+            />
+
+            <CollectionCard
+              TopCover="/public/images/Tourism/CollectionCard/img4.jpg"
+              footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
+              link="/"
+              textBody="زمستان در لندن"
+            />
+          </SliderWrapper>
         </Box>
-        <SliderWrapper numberOfShowSlider={4}>
-          <CollectionCard
-            TopCover="/public/images/Tourism/CollectionCard/img1.jpg"
-            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
-            link="/"
-            textBody="زمستان در لندن"
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="پایتخت های فرهنگی بیشتر بریتانیا"
+            isSeeAll={false}
           />
-        
-          <CollectionCard
-            TopCover="/public/images/Tourism/CollectionCard/img2.jpg"
-            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
-            link="/"
-            textBody="زمستان در لندن"
+          <SliderWrapper numberOfShowSlider={4}>
+            <CardSingleText
+              heightCard="300px"
+              TopCover="/public/images/Tourism/Slider/img12.jpg"
+              textBody="منچستر"
+            />
+            <CardSingleText
+              heightCard="300px"
+              TopCover="/public/images/Tourism/Slider/img8.jpg"
+              textBody="منچستر"
+            />
+            <CardSingleText
+              heightCard="300px"
+              TopCover="/public/images/Tourism/Slider/img6.jpg"
+              textBody="منچستر"
+            />
+            <CardSingleText
+              heightCard="300px"
+              TopCover="/public/images/Tourism/Slider/img5.jpg"
+              textBody="منچستر"
+            />
+          </SliderWrapper>
+        </Box>
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="از حامیان ما بیشتر کاوش کنید"
+            isSeeAll={false}
           />
-        
-          <CollectionCard
-            TopCover="/public/images/Tourism/CollectionCard/img3.jpg"
-            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
-            link="/"
-            textBody="زمستان در لندن"
+        </Box>
+        <Grid container spacing={2} marginTop={"2rem"}>
+          <Grid size={{ md: 3 }}>
+            <ReadMoreCard
+              coverImg="/public/images/Tourism/Slider/img5.jpg"
+              disc="از قله های برفی گرفته تا آسمان خراش های سر به فلک کشیده، در اینجا برخی از بهترین مناظر کوه و شهر در جهان را مشاهده می کنید."
+              link="/"
+              titleCard="10 تا از حماسی ترین دیدگاه های جهان"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <ReadMoreCard
+              coverImg="/public/images/Tourism/Slider/img8.jpg"
+              disc="از قله های برفی گرفته تا آسمان خراش های سر به فلک کشیده، در اینجا برخی از بهترین مناظر کوه و شهر در جهان را مشاهده می کنید."
+              link="/"
+              titleCard="10 تا از حماسی ترین دیدگاه های جهان"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <ReadMoreCard
+              coverImg="/public/images/Tourism/Slider/img10.jpg"
+              disc="از قله های برفی گرفته تا آسمان خراش های سر به فلک کشیده، در اینجا برخی از بهترین مناظر کوه و شهر در جهان را مشاهده می کنید."
+              link="/"
+              titleCard="10 تا از حماسی ترین دیدگاه های جهان"
+            />
+          </Grid>
+          <Grid size={{ md: 3 }}>
+            <ReadMoreCard
+              coverImg="/public/images/Tourism/Slider/img12.jpg"
+              disc="از قله های برفی گرفته تا آسمان خراش های سر به فلک کشیده، در اینجا برخی از بهترین مناظر کوه و شهر در جهان را مشاهده می کنید."
+              link="/"
+              titleCard="10 تا از حماسی ترین دیدگاه های جهان"
+            />
+          </Grid>
+        </Grid>
+        <TitleSection
+          isSubTitle={false}
+          mainTitle="راهنمای سفر لندن"
+          isSeeAll={false}
+        />
+        <TitleSection
+          isSubTitle={false}
+          mainTitle="نکات حرفه ای مسافران برای تجربه لندن"
+          isSeeAll={false}
+        />
+        <Grid container>
+          <Grid size={{ md: 9 }}>
+            <TipCard
+              name="شهروز  کرمی"
+              profile="/public/images/NextTrip/img3.jpg"
+              tipBody="آماده باشید: صرف نظر از گزارش آب و هوا، همیشه یک چتر و/یا کت بارانی در دست داشته باشید!"
+            />
+            <TipCard
+              name="شهروز  کرمی"
+              profile="/public/images/NextTrip/img6.jpg"
+              tipBody="آماده باشید: صرف نظر از گزارش آب و هوا، همیشه یک چتر و/یا کت بارانی در دست داشته باشید!"
+            />
+            <TipCard
+              name="شهروز  کرمی"
+              profile="/public/images/NextTrip/img8.jpg"
+              tipBody="آماده باشید: صرف نظر از گزارش آب و هوا، همیشه یک چتر و/یا کت بارانی در دست داشته باشید!"
+            />
+            <TipCard
+              name="شهروز  کرمی"
+              profile="/public/images/NextTrip/img1.jpg"
+              tipBody="آماده باشید: صرف نظر از گزارش آب و هوا، همیشه یک چتر و/یا کت بارانی در دست داشته باشید!"
+            />
+            <TipCard
+              name="شهروز  کرمی"
+              profile="/public/images/NextTrip/img2.jpg"
+              tipBody="آماده باشید: صرف نظر از گزارش آب و هوا، همیشه یک چتر و/یا کت بارانی در دست داشته باشید!"
+            />
+            <TipCard
+              name="شهروز  کرمی"
+              profile="/public/images/NextTrip/img5.jpg"
+              tipBody="آماده باشید: صرف نظر از گزارش آب و هوا، همیشه یک چتر و/یا کت بارانی در دست داشته باشید!"
+            />
+          </Grid>
+        </Grid>
+        <TitleSection
+          isSubTitle={false}
+          mainTitle="بهترین راه برای رسیدن به آنجا چیست؟"
+          isSeeAll={false}
+        />
+        <SimpleTextTitle
+          textBody="لندن توسط شش فرودگاه بین المللی خدمات رسانی می شود: فرودگاه هیترو، فرودگاه گاتویک، فرودگاه شهر لندن، فرودگاه لوتون، فرودگاه استانستد و فرودگاه ساوتند. آنها با هم شلوغ ترین فضای هوایی جهان را بر اساس تعداد مسافران تشکیل می دهند."
+          title="پرواز کردن"
+        />
+        <SimpleTextTitle
+          textBody="لندن توسط شش فرودگاه بین المللی خدمات رسانی می شود: فرودگاه هیترو، فرودگاه گاتویک، فرودگاه شهر لندن، فرودگاه لوتون، فرودگاه استانستد و فرودگاه ساوتند. آنها با هم شلوغ ترین فضای هوایی جهان را بر اساس تعداد مسافران تشکیل می دهند."
+          title="قطار"
+        />
+        <SimpleTextTitle
+          textBody="لندن توسط شش فرودگاه بین المللی خدمات رسانی می شود: فرودگاه هیترو، فرودگاه گاتویک، فرودگاه شهر لندن، فرودگاه لوتون، فرودگاه استانستد و فرودگاه ساوتند. آنها با هم شلوغ ترین فضای هوایی جهان را بر اساس تعداد مسافران تشکیل می دهند."
+          title="تاکسی"
+        />
+        <Box>
+          <TitleSection
+            isSubTitle={true}
+            subTitle="این پرسش‌ها و پاسخ‌ها توسط هوش مصنوعی و با استفاده از رایج‌ترین سؤالاتی که مسافران در انجمن‌ها می‌پرسند، ایجاد شده‌اند."
+            mainTitle="مشاوره سفر لندن"
+            isSeeAll={false}
           />
-        
-          <CollectionCard
-            TopCover="/public/images/Tourism/CollectionCard/img4.jpg"
-            footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
-            link="/"
-            textBody="زمستان در لندن"
+          ‌
+          <Box marginTop={"1rem"}>
+            <AccordionMenu
+              dataCoordion={[
+                {
+                  id: 10,
+                  textBody: `
+          مکان و محدوده قیمت
+برخی از مسافران زنجیره‌های Premier Inn و Travelodge را برای گزینه‌های مقرون به صرفه در مرکز لندن، با قیمت‌های بالقوه در محدوده 150-250 دلار توصیه کردند. سالن پریمیر این کانتی و تراولودج کاونت گاردن به‌خاطر قیمت‌های خوب و مکان‌های مرکزی‌شان به‌طور خاص ذکر شده‌اند.`,
+                  title: "چند هتل پیشنهادی در لندن کدامند؟",
+                },
+              ]}
+            />
+            <AccordionMenu
+              dataCoordion={[
+                {
+                  id: 11,
+                  textBody: `
+          مکان و محدوده قیمت
+برخی از مسافران زنجیره‌های Premier Inn و Travelodge را برای گزینه‌های مقرون به صرفه در مرکز لندن، با قیمت‌های بالقوه در محدوده 150-250 دلار توصیه کردند. سالن پریمیر این کانتی و تراولودج کاونت گاردن به‌خاطر قیمت‌های خوب و مکان‌های مرکزی‌شان به‌طور خاص ذکر شده‌اند.`,
+                  title: "گزینه های حمل و نقل از هیترو به مرکز لندن چیست؟",
+                },
+              ]}
+            />
+            <AccordionMenu
+              dataCoordion={[
+                {
+                  id: 20,
+                  textBody: `
+          مکان و محدوده قیمت
+برخی از مسافران زنجیره‌های Premier Inn و Travelodge را برای گزینه‌های مقرون به صرفه در مرکز لندن، با قیمت‌های بالقوه در محدوده 150-250 دلار توصیه کردند. سالن پریمیر این کانتی و تراولودج کاونت گاردن به‌خاطر قیمت‌های خوب و مکان‌های مرکزی‌شان به‌طور خاص ذکر شده‌اند.`,
+                  title: "چند فرودگاه پیشنهادی در لندن کدامند؟",
+                },
+              ]}
+            />
+          </Box>
+        </Box>
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="سوالات متداول در مورد لندن"
+            isSeeAll={false}
           />
-        
-        </SliderWrapper>
+          ‌
+          <Box marginTop={"1rem"}>
+            <AccordionMenu
+              dataCoordion={[
+                {
+                  id: 10,
+                  textBody: `
+          مکان و محدوده قیمت
+برخی از مسافران زنجیره‌های Premier Inn و Travelodge را برای گزینه‌های مقرون به صرفه در مرکز لندن، با قیمت‌های بالقوه در محدوده 150-250 دلار توصیه کردند. سالن پریمیر این کانتی و تراولودج کاونت گاردن به‌خاطر قیمت‌های خوب و مکان‌های مرکزی‌شان به‌طور خاص ذکر شده‌اند.`,
+                  title: "چند هتل پیشنهادی در لندن کدامند؟",
+                },
+              ]}
+            />
+            <AccordionMenu
+              dataCoordion={[
+                {
+                  id: 11,
+                  textBody: `
+          مکان و محدوده قیمت
+برخی از مسافران زنجیره‌های Premier Inn و Travelodge را برای گزینه‌های مقرون به صرفه در مرکز لندن، با قیمت‌های بالقوه در محدوده 150-250 دلار توصیه کردند. سالن پریمیر این کانتی و تراولودج کاونت گاردن به‌خاطر قیمت‌های خوب و مکان‌های مرکزی‌شان به‌طور خاص ذکر شده‌اند.`,
+                  title: "گزینه های حمل و نقل از هیترو به مرکز لندن چیست؟",
+                },
+              ]}
+            />
+            <AccordionMenu
+              dataCoordion={[
+                {
+                  id: 20,
+                  textBody: `
+          مکان و محدوده قیمت
+برخی از مسافران زنجیره‌های Premier Inn و Travelodge را برای گزینه‌های مقرون به صرفه در مرکز لندن، با قیمت‌های بالقوه در محدوده 150-250 دلار توصیه کردند. سالن پریمیر این کانتی و تراولودج کاونت گاردن به‌خاطر قیمت‌های خوب و مکان‌های مرکزی‌شان به‌طور خاص ذکر شده‌اند.`,
+                  title: "چند فرودگاه پیشنهادی در لندن کدامند؟",
+                },
+              ]}
+            />
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

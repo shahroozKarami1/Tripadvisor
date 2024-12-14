@@ -316,3 +316,27 @@ export interface ICardFooterDicsProps {
   coverCard: string;
   link: string;
 }
+
+export interface IReadMoreCardProps {
+  link: string;
+  coverImg: string;
+  titleCard: string;
+  disc: string;
+}
+
+export interface ITipCardProps {
+  name: string;
+  tipBody: string;
+  profile: string;
+}
+export interface ITourCardSliderProps {
+  imgCover: string[];
+  titeCard: string;
+  countOfLike: number;
+  TourPrice: number;
+  typeOfTraveler: "بزرگسالان" | "گروهی";
+  hours: string;
+  disc: string;
+  TypeOfTour: string;
+  recommendedPercent: number;
+}
