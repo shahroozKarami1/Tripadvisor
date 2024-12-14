@@ -52,6 +52,7 @@ export const CusFirstBanner = styled(Box)({
 export const CusSectionTitle = styled(Box)({
   marginTop: "3rem ",
   display: "flex",
+  alignItems: "center",
   justifyContent: "space-between",
   width: "100%",
   gap: 4,
@@ -70,7 +71,7 @@ export const CusTPSimpleCard = styled(Typography)({
 export const CusBoxIconHeart = styled(Box)({
   position: "absolute",
   top: "10px",
-  left: "10px",
+  right: "10px",
   backgroundColor: "#fff",
   borderRadius: "50%",
   padding: "0.5rem",
@@ -207,14 +208,49 @@ export const CusOutLineLinkBtn = styled(Button)({
   borderBottom: "1px  solid  var(--dark-color)",
 });
 
-   export  const CusAddBtn = styled(AddCircleOutlinedIcon)({
+export const CusAddBtn = styled(AddCircleOutlinedIcon)({
   fontSize: "2.2rem",
   cursor: "pointer",
 });
-   export  const CusRemoveBtn = styled(RemoveCircleOutlinedIcon)({
+export const CusRemoveBtn = styled(RemoveCircleOutlinedIcon)({
   fontSize: "2.2rem",
   "&.MuiSvgIcon-root  path": {
     color: `var(--gray-color)`,
     cursor: "pointer",
   },
+});
+
+export const CusBackOfSlider = styled(Box)({
+  width: "100%",
+  height: "100%",
+  backgroundColor: "#CEBEE5",
+  position: "relative",
+  //  transform : "translateY(50px)"
+});
+
+export const AiBtn = styled(Button)({
+  backgroundColor: "#CEBEE5",
+  color: "#000",
+  fontWeight: "bold",
+  borderRadius: "2rem",
+  padding: "0.5rem  1em",
+  fontSize: "0.80rem",
+  marginLeft: "0.5rem",
+});
+
+export const BetaText = styled(Typography)({
+  fontSize: "0.7rem",
+  fontWeight: "bold",
+  backgroundColor: "#CEBEE5",
+  padding: "0.35rem",
+  borderRadius: "0.25rem",
+});
+
+export const CusYellowCard = styled(Box)({
+  position: "relative",
+  margin : "0   0.2rem",  
+  direction :"rtl" , 
+  backgroundColor : "#FFF7E1",
+  padding : "0.80rem"  , 
+  borderRadius : "1rem"
 });

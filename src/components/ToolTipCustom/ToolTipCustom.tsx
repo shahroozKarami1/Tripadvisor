@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@mui/material";
+import { Button, Tooltip, Typography } from "@mui/material";
 import React, { FC } from "react";
 
 const ToolTipCustom: FC<{
@@ -6,8 +6,16 @@ const ToolTipCustom: FC<{
   icon: React.ReactNode;
 }> = ({ icon, text }) => {
   return (
-    <Tooltip   title={text} arrow>
-      <Button  sx={{justifyContent : 'flex-start'}}>{icon}</Button>
+    <Tooltip
+      sx={{ lineHeight: 5 }}
+      title={
+        <Typography sx={{ lineHeight: 2, fontSize: "0.875rem", color : "#fff" }}>
+          {text}
+        </Typography>
+      }
+      arrow
+    >
+      <Button sx={{ justifyContent: "flex-start", padding: 0 }}>{icon}</Button>
     </Tooltip>
   );
 };

@@ -33,7 +33,6 @@ import TitleSection from "../../components/ComHomePage/TitleSection";
 import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 import TourWaysCard from "../../components/ComHomePage/TourWaysCard";
 import OperatorCard from "../../components/ThingsToDoDetails/OperatorCard";
-import CardSingleText from "../../components/CardSingleText/CardSingleText";
 import TinyCardSingleText from "../../components/TinyCardSingleText/TinyCardSingleText";
 import RateProgress from "../../components/CompHotelDetails/RateProgress";
 import ReviewBox from "../../components/CompHotelDetails/ReviewBox";

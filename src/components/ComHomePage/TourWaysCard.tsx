@@ -10,52 +10,50 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
   price,
   score,
   isDetails,
-  link
+  link,
 }) => {
-
   return (
-    <Box  sx={{direction :"rtl"}}>
- <Link  to={link  ? link  :  "/"}>
- <Box sx={{ position: "relative" ,  margin : "0 0.70rem" }}>
-        <img
-          src={img}
-          alt=""
-          className="rounded-lg  "
-          style={{
-            height: "255px",
-            width: "100%",
-          }}
-        />
-        <CusBoxIconHeart>
-          <FavoriteBorderIcon />
-        </CusBoxIconHeart>
-      </Box>
-      <Box  sx={{marginRight :"0.70rem"}}>
-        <Typography
-          sx={{
-            fontSize: "0.90rem",
-            fontWeight: "bold",
-            margin: "0.25rem  0",
-            lineHeight: 2,
-          }}
-        >
-          {disc}
-        </Typography>
-        <Box display={"flex"} sx={{ margin: "0.5rem  0" }}>
-          <CusCircleIcon />
-          <CusCircleIcon />
-          <CusCircleIcon />
-          <CusCircleIcon />
-          <Typography sx={{ marginRight: "0.25rem" }}>{score}</Typography>
+    <Box sx={{ direction: "rtl" }}>
+      <Link to={link ? link : "/"}>
+        <Box sx={{ position: "relative", margin: "0 0.5rem" }}>
+          <img
+            src={img}
+            alt=""
+            className="rounded-lg  "
+            style={{
+              height: "255px",
+              width: "100%",
+            }}
+          />
+          <CusBoxIconHeart>
+            <FavoriteBorderIcon />
+          </CusBoxIconHeart>
         </Box>
-        {isDetails && (
-          <Typography sx={{ fontWeight: "bold", fontSize: "0.80rem" }}>
-            از {price} دلار برای هر بزرگسال
+        <Box sx={{ marginRight: "0.70rem" }}>
+          <Typography
+            sx={{
+              fontSize: "0.90rem",
+              fontWeight: "bold",
+              margin: "0.25rem  0",
+              lineHeight: 2,
+            }}
+          >
+            {disc}
           </Typography>
-        )}
-      </Box>
- 
- </Link>
+          <Box  alignItems={"center"}  display={"flex"} sx={{ margin: "0.5rem  0" }}>
+            <CusCircleIcon />
+            <CusCircleIcon />
+            <CusCircleIcon />
+            <CusCircleIcon />
+            <Typography sx={{ marginRight: "0.25rem"  ,  color : "#444"}}>{score}</Typography>
+          </Box>
+          {isDetails && (
+            <Typography sx={{ fontWeight: "bold", fontSize: "0.80rem" }}>
+              از {price} دلار برای هر بزرگسال
+            </Typography>
+          )}
+        </Box>
+      </Link>
     </Box>
   );
 };

@@ -1,4 +1,3 @@
-import { Interests } from "@mui/icons-material";
 import React from "react";
 
 export interface IDarkBtnProps {
@@ -282,6 +281,10 @@ export interface ICardHeaderSliderProps {
   title: string;
   conutOfLike: number;
   footerCard: string;
+  isYellowSeeWay?: boolean;
+  CountOfExperience?: number;
+  isExtraDisc?: boolean;
+  TextExtraDisc?: string;
   cover: {
     id: number;
     imgSrc: string;
@@ -339,4 +342,11 @@ export interface ITourCardSliderProps {
   disc: string;
   TypeOfTour: string;
   recommendedPercent: number;
+}
+export interface ICardYellowBackProps {
+  coverCard: string;
+  title: string;
+  coutOfLike: string;
+  TypeOfCard: string;
+  CardPrice: number;
 }

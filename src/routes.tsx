@@ -20,6 +20,7 @@ import HotelDetails from "./Pages/HotelDetails/HotelDetails";
 import ThingsToDoDetails from "./Pages/ThingsToDoDetails/ThingsToDoDetails";
 import Tourism from "./Pages/Tourism/Tourism";
 import TourAttractions from "./Pages/TourAttractions/TourAttractions";
+import OtherPage from "./Pages/OtherPage/OtherPage";
 
 let routes = [
   {
@@ -109,6 +110,10 @@ let routes = [
   {
     element: <TourAttractions />,
     path: "/TourAttractions",
+  },
+  {
+    element: <OtherPage />,
+    path: "/OtherPage",
   },
 ];
 

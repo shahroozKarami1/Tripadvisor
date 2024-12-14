@@ -39,7 +39,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
     // autoplaySpeed: 7000,
     // pauseOnHover: true,
     cssEase: "linear",
-    autoplay: true  ,  
+    autoplay: false  ,  
     rtl: true,
     slidesToScroll: 1,
     nextArrow: <CusRightArrow />,
@@ -60,9 +60,9 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
         breakpoint: 600,
         settings: {
   
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
