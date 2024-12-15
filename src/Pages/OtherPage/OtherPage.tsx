@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Avatar, Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import FadeSlider from "../../components/CompTravelerChoiceHotel/FadeSlider";
@@ -11,6 +11,11 @@ import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 import CardYellowBack from "../../components/OtherPageComp/CardYellowBack";
 import TourWaysCard from "../../components/ComHomePage/TourWaysCard";
 import CardHeaderSlider from "../../components/CompTourism/CardHeaderSlider";
+import CardThreeImgs from "../../components/OtherPageComp/CardThreeImgs";
+import SimpleSlider from "../../components/SliderWithOutContainer/SimpleSlider";
+import GrayCardQues from "../../components/OtherPageComp/GrayCardQues";
+import WhenToVisitCard from "../../components/CompTourism/WhenToVisitCard";
+import ReviewBox from "../../components/CompHotelDetails/ReviewBox";
 function OtherPage() {
   return (
     <Box>
@@ -667,9 +672,207 @@ function OtherPage() {
         </Box>
       </Container>
 
-      <Box sx={{backgroundColor : "#EAFAF4"  ,  marginTop : "5rem "}} >
-           This  is  fake  .... 
+      <Box sx={{ backgroundColor: "#EAFAF4", marginTop: "5rem " }}>
+        <Container>
+          <Box sx={{ padding: "1rem  0  4rem  0" }}>
+            <TitleSection
+              isSubTitle={false}
+              mainTitle="مکان های دیگر اطراف را کاوش کنید"
+              isSeeAll={false}
+            />
+            <SliderWrapper numberOfShowSlider={2}>
+              <CardThreeImgs
+                imgUrls={{
+                  mainImg: "/public/images/OtherPages/ThreeSlider/mainImg.jpg",
+                  otherImgs: [
+                    "/public/images/OtherPages/ThreeSlider/img1.jpg",
+                    "/public/images/OtherPages/ThreeSlider/img2.jpg",
+                  ],
+                }}
+                link="/"
+                mileNumber={52}
+                titleOfMainCard="آکسفورد"
+              />
+              <CardThreeImgs
+                imgUrls={{
+                  mainImg: "/public/images/OtherPages/ThreeSlider/mainImg.jpg",
+                  otherImgs: [
+                    "/public/images/OtherPages/ThreeSlider/img1.jpg",
+                    "/public/images/OtherPages/ThreeSlider/img2.jpg",
+                  ],
+                }}
+                link="/"
+                mileNumber={52}
+                titleOfMainCard="آکسفورد"
+              />
+              <CardThreeImgs
+                imgUrls={{
+                  mainImg: "/public/images/OtherPages/ThreeSlider/mainImg.jpg",
+                  otherImgs: [
+                    "/public/images/OtherPages/ThreeSlider/img1.jpg",
+                    "/public/images/OtherPages/ThreeSlider/img2.jpg",
+                  ],
+                }}
+                link="/"
+                mileNumber={52}
+                titleOfMainCard="آکسفورد"
+              />
+            </SliderWrapper>
+          </Box>
+        </Container>
       </Box>
+
+      <Container>
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="راهنمای کوچک لندن"
+            isSeeAll={false}
+          />
+          <Grid container marginTop={"2rem"}>
+            <Grid size={{ md: 2 }}>
+              <Box display={"flex"} flexDirection={"column"} gap={1}>
+                <Avatar
+                  src="/public/images/NextTrip/img1.jpg"
+                  sx={{ width: 80, height: 80 }}
+                />
+                <Typography sx={{ fontWeight: "bold" }}>شهروز کرمی</Typography>
+                <Typography sx={{ fontSize: "0.80rem", color: "#444" }}>
+                  {" "}
+                  کارشناس سفر
+                </Typography>
+                <Typography sx={{ fontSize: "0.80rem", color: "#444" }}>
+                  {" "}
+                  متولد لندن، هنوز آن را خانه می داند
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid size={{ md: 10 }}>
+              <SimpleSlider countOfSlider={3}>
+                <GrayCardQues
+                  cardBody="یک مجموعه کنسرت ۲ تا ۳ هفته‌ای در تابستان به نام BST Hyde Park برگزار می‌شود که میزبان نمایش‌های فوق‌العاده در هوای آزاد، هم در روز و هم در شب است. ترکیب هر سال فراتر از چشمگیر است (من چند سال پیش بازی Rolling Stones و Duran Duran را دیدم). به علاوه فقط یک فضای خاص در آنجا وجود دارد. همچنین برای بازدیدکنندگان تابستانی، بلیط های ویمبلدون ارزش بررسی را دارد."
+                  title="چه چیزی را بازدیدکنندگان نباید از دست بدهند؟"
+                />
+                <GrayCardQues
+                  cardBody="یک مجموعه کنسرت ۲ تا ۳ هفته‌ای در تابستان به نام BST Hyde Park برگزار می‌شود که میزبان نمایش‌های فوق‌العاده در هوای آزاد، هم در روز و هم در شب است. ترکیب هر سال فراتر از چشمگیر است (من چند سال پیش بازی Rolling Stones و Duran Duran را دیدم). به علاوه فقط یک فضای خاص در آنجا وجود دارد. همچنین برای بازدیدکنندگان تابستانی، بلیط های ویمبلدون ارزش بررسی را دارد."
+                  title="چه چیزی را بازدیدکنندگان نباید از دست بدهند؟"
+                />
+                <GrayCardQues
+                  cardBody="یک مجموعه کنسرت ۲ تا ۳ هفته‌ای در تابستان به نام BST Hyde Park برگزار می‌شود که میزبان نمایش‌های فوق‌العاده در هوای آزاد، هم در روز و هم در شب است. ترکیب هر سال فراتر از چشمگیر است (من چند سال پیش بازی Rolling Stones و Duran Duran را دیدم). به علاوه فقط یک فضای خاص در آنجا وجود دارد. همچنین برای بازدیدکنندگان تابستانی، بلیط های ویمبلدون ارزش بررسی را دارد."
+                  title="چه چیزی را بازدیدکنندگان نباید از دست بدهند؟"
+                />
+              </SimpleSlider>
+            </Grid>
+          </Grid>
+        </Box>
+
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="چه زمانی  باید بازدید کرد "
+            isSeeAll={false}
+          />
+          <SliderWrapper numberOfShowSlider={4}>
+            <WhenToVisitCard
+              countOfRainDay={11}
+              temperature={45}
+              typeOfBusy="خیلی"
+              monthName="فروردین"
+            />
+            <WhenToVisitCard
+              countOfRainDay={11}
+              temperature={45}
+              typeOfBusy="به طور متوسط"
+              monthName="اردیبهشت"
+            />
+            <WhenToVisitCard
+              countOfRainDay={11}
+              temperature={45}
+              typeOfBusy="خیلی"
+              monthName="خرداد"
+            />
+            <WhenToVisitCard
+              countOfRainDay={11}
+              temperature={45}
+              typeOfBusy="کمتر"
+              monthName="تیر"
+            />
+            <WhenToVisitCard
+              countOfRainDay={11}
+              temperature={45}
+              typeOfBusy="کمتر"
+              monthName="دی"
+              isDetails={true}
+              details={{
+                busyDetail: "حداقل شلوغی ماه",
+                rainDayDetail: "مرطوب ترین",
+                tempDetail: "سردترین ماه",
+              }}
+            />
+            <WhenToVisitCard
+              countOfRainDay={11}
+              temperature={45}
+              typeOfBusy="کمتر"
+              monthName="بهمن"
+            />
+            <WhenToVisitCard
+              countOfRainDay={11}
+              temperature={45}
+              typeOfBusy="کمتر"
+              monthName="آذر"
+            />
+          </SliderWrapper>
+        </Box>
+
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="آنچه مسافران می گویند"
+            isSeeAll={false}
+          />
+          <SliderWrapper numberOfShowSlider={3}>
+            <ReviewBox
+              countContributions={22}
+              date="18 خرداد"
+              likeCount={5}
+              name="محمد سعید احمدی  کوپایی"
+              profile="/public/images//NextTrip/img1.jpg"
+              reviewBody="من و خانمم اصلا راضی نبودیم با این   که غذاخوری‌هایی با تجربه‌های شگفت‌انگیز غذایی داشتیم، از رفتن به کباب سرای مسلم برای جشن سالگرد ازدواجمان هیجان‌زده بودیم.
+متأسفانه ما بسیار ناامید شدیم. 22 دوره که عموماً فاقد طعم بودند، به حداقل مهارت پخت و پز نیاز داشتند و عمدتاً فاقد مواد اولیه با کیفیت بودند.
+مهمتر از آن ما احساس می کردیم که بسیار عجله داریم. سرویس نه تنها در نقاطی آشفته بود، بلکه شخصی دائماً پشت میز بود، اما به ندرت همان فرد بود. من بسیاری از ناهار سه ساعته تنبل را با تنها 4 دوره تجربه کرده ام. این 22 دوره انجام شد و در 2.5 ساعت گردگیری شد.
+ما با پخت شراب رفتیم و این تا حدی بر غذا برتری داشت. وقتی نزدیک به 1000 یورو برای تجربه در موگاریتز (از جمله پرواز شراب) پرداخت می‌کنید - فکر نمی‌کنم غیرمنطقی باشد که انتظار داشته باشیم این تجربه باشکوه باشد. نزدیک نبود."
+              title="ناامید"
+              typeOfFamilly="زوج"
+            />
+            <ReviewBox
+              countContributions={22}
+              date="18 خرداد"
+              likeCount={5}
+              name="محمد سعید احمدی  کوپایی"
+              profile="/public/images//NextTrip/img1.jpg"
+              reviewBody="من و خانمم اصلا راضی نبودیم با این   که غذاخوری‌هایی با تجربه‌های شگفت‌انگیز غذایی داشتیم، از رفتن به کباب سرای مسلم برای جشن سالگرد ازدواجمان هیجان‌زده بودیم.
+متأسفانه ما بسیار ناامید شدیم. 22 دوره که عموماً فاقد طعم بودند، به حداقل مهارت پخت و پز نیاز داشتند و عمدتاً فاقد مواد اولیه با کیفیت بودند.
+مهمتر از آن ما احساس می کردیم که بسیار عجله داریم. سرویس نه تنها در نقاطی آشفته بود، بلکه شخصی دائماً پشت میز بود، اما به ندرت همان فرد بود. من بسیاری از ناهار سه ساعته تنبل را با تنها 4 دوره تجربه کرده ام. این 22 دوره انجام شد و در 2.5 ساعت گردگیری شد.
+ما با پخت شراب رفتیم و این تا حدی بر غذا برتری داشت. وقتی نزدیک به 1000 یورو برای تجربه در موگاریتز (از جمله پرواز شراب) پرداخت می‌کنید - فکر نمی‌کنم غیرمنطقی باشد که انتظار داشته باشیم این تجربه باشکوه باشد. نزدیک نبود."
+              title="ناامید"
+              typeOfFamilly="زوج"
+            />
+            <ReviewBox
+              countContributions={22}
+              date="18 خرداد"
+              likeCount={5}
+              name="محمد سعید احمدی  کوپایی"
+              profile="/public/images//NextTrip/img1.jpg"
+              reviewBody="من و خانمم اصلا راضی نبودیم با این   که غذاخوری‌هایی با تجربه‌های شگفت‌انگیز غذایی داشتیم، از رفتن به کباب سرای مسلم برای جشن سالگرد ازدواجمان هیجان‌زده بودیم.
+متأسفانه ما بسیار ناامید شدیم. 22 دوره که عموماً فاقد طعم بودند، به حداقل مهارت پخت و پز نیاز داشتند و عمدتاً فاقد مواد اولیه با کیفیت بودند.
+مهمتر از آن ما احساس می کردیم که بسیار عجله داریم. سرویس نه تنها در نقاطی آشفته بود، بلکه شخصی دائماً پشت میز بود، اما به ندرت همان فرد بود. من بسیاری از ناهار سه ساعته تنبل را با تنها 4 دوره تجربه کرده ام. این 22 دوره انجام شد و در 2.5 ساعت گردگیری شد.
+ما با پخت شراب رفتیم و این تا حدی بر غذا برتری داشت. وقتی نزدیک به 1000 یورو برای تجربه در موگاریتز (از جمله پرواز شراب) پرداخت می‌کنید - فکر نمی‌کنم غیرمنطقی باشد که انتظار داشته باشیم این تجربه باشکوه باشد. نزدیک نبود."
+              title="ناامید"
+              typeOfFamilly="زوج"
+            />
+          </SliderWrapper>
+        </Box>
+      </Container>
     </Box>
   );
 }

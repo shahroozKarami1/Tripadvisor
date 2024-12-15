@@ -13,13 +13,14 @@ const ReadMore: FC<{
     <Box>
       <Typography
         sx={{
+          fontSize  : "0.90rem"  , 
           display: "-webkit-box",
           WebkitLineClamp: isExpended ? "none" : lineShow,
           WebkitBoxOrient: "vertical",
           overflow: "hidden",
           textOverflow: "ellipsis",
-          fontsize: "0.80rem" , 
           textAlign: "right",
+          color  : "#444"
         }}
       >
         {textBody}

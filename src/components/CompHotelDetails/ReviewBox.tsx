@@ -10,7 +10,7 @@ const RatingReview: FC<{ reviewTopic: string; likeScore?: number }> = ({
   reviewTopic,
 }) => {
   return (
-    <Box display={"flex"} gap={1} alignItems={"center"} marginBottom={"1rem"}>
+    <Box     display={"flex"} gap={1} alignItems={"center"} marginBottom={"1rem"}>
       <Typography sx={{ fontSize: "0.80rem" }}>{reviewTopic}</Typography>
 
       <Box display={"flex"} alignItems={"center"}>
@@ -40,7 +40,7 @@ const ReviewBox: FC<ReviewBoxProps> = ({
   };
   return (
     <Box
-      sx={{ padding: "1rem", borderTop: "2px  solid  #ccc", marginTop: "1rem" }}
+      sx={{ padding: "1rem", marginTop: "1rem"  ,  direction  : "rtl"}}
     >
       <Box
         display={"flex"}

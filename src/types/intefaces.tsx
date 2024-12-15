@@ -350,3 +350,10 @@ export interface ICardYellowBackProps {
   TypeOfCard: string;
   CardPrice: number;
 }
+
+export interface ICardThreeImgsProps {
+  titleOfMainCard: string;
+  mileNumber: number;
+  imgUrls: { mainImg: string; otherImgs: string[] };
+  link: string;
+}
