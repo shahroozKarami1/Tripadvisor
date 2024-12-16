@@ -16,6 +16,7 @@ import SimpleSlider from "../../components/SliderWithOutContainer/SimpleSlider";
 import GrayCardQues from "../../components/OtherPageComp/GrayCardQues";
 import WhenToVisitCard from "../../components/CompTourism/WhenToVisitCard";
 import ReviewBox from "../../components/CompHotelDetails/ReviewBox";
+import PersianDataPicker from "../../components/PersianDatePicker/PersianDataPicker";
 function OtherPage() {
   return (
     <Box>
@@ -28,12 +29,13 @@ function OtherPage() {
           spacing={8}
         >
           <Grid size={{ md: 6 }}>
-            <CusBackOfSlider>
+            <Box position={"relative"}>
+              <CusBackOfSlider />
               <FadeSlider>
                 <CardSliderImg img="/public/images/OtherPages/slider/img1.jpg" />
                 <CardSliderImg img="/public/images/OtherPages/slider/img2.jpg" />
               </FadeSlider>
-            </CusBackOfSlider>
+            </Box>
           </Grid>
           <Grid size={{ md: 6 }}>
             <Box display={"flex"} flexDirection={"column"} gap={1}>
@@ -738,11 +740,9 @@ function OtherPage() {
                 />
                 <Typography sx={{ fontWeight: "bold" }}>شهروز کرمی</Typography>
                 <Typography sx={{ fontSize: "0.80rem", color: "#444" }}>
-                  {" "}
                   کارشناس سفر
                 </Typography>
                 <Typography sx={{ fontSize: "0.80rem", color: "#444" }}>
-                  {" "}
                   متولد لندن، هنوز آن را خانه می داند
                 </Typography>
               </Box>
@@ -872,6 +872,8 @@ function OtherPage() {
             />
           </SliderWrapper>
         </Box>
+
+        {/* <PersianDataPicker/> */}
       </Container>
     </Box>
   );

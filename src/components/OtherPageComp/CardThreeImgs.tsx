@@ -71,9 +71,9 @@ const CardThreeImgs: FC<ICardThreeImgsProps> = ({
             </Box>
           </Grid>
           <Grid size={{ md: 4 }}>
-            {imgUrls.otherImgs.map((imgSrc) => {
+            {imgUrls.otherImgs.map((imgSrc , index) => {
               return (
-                <Box>
+                <Box  key  ={index}>
                   <img
                     src={imgSrc}
                     alt=""

@@ -357,3 +357,20 @@ export interface ICardThreeImgsProps {
   imgUrls: { mainImg: string; otherImgs: string[] };
   link: string;
 }
+
+export interface ICardSliderReadMore {
+  countOfLike: number;
+  imgCover: string[];
+  textBodyCard: string;
+  isComment: boolean;
+  category: {
+    icon: React.ReactNode;
+    text: string;
+  }[]
+  comment?: {
+    profile: string;
+    name: string;
+    textComment: string;
+  };
+  titeCard: string;
+}

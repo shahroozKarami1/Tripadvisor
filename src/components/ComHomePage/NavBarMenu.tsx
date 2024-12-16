@@ -13,9 +13,9 @@ const NavbarMenu: FC<INavbarMenuProps> = ({
 
   return (
     <>
-      {NavBarMenuArr.map(({ icon, title, link, placeholder, textTitle }) => {
+      {NavBarMenuArr.map(({ icon, title, link, placeholder, textTitle } ,  index) => {
         return (
-          <ListItem>
+          <ListItem  key  ={index}>
             <Link to={link ? link : "/"}>
               <Button
                 onClick={() => {

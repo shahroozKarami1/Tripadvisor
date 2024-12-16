@@ -13,14 +13,14 @@ const NextTripSection: FC<IPorpsNextTrip> = ({
         {mainTitle}
       </Typography>
       <SliderWrapper  numberOfShowSlider={4}>
-      {dataNextTripArr.map(({ img, title }) => {
+      {dataNextTripArr.map(({ img, title } ,  index) => {
           return (
-            <>
-                <CusCard>
+            <Box  key = {index}>
+                <CusCard  >
                   <img src={img} alt="" className="rounded-lg" />
                   <CusTPSimpleCard>{title}</CusTPSimpleCard>
                 </CusCard>
-            </>
+            </Box>
           );
         })}
       </SliderWrapper>

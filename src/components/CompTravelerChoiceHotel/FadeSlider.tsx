@@ -34,8 +34,8 @@ const FadeSlider: FC<{ children: React.ReactNode  }> = ({ children }) => {
     waitForAnimate: false,
   };
   return (
-    <div className="slider-container">
-      <Slider {...settings}>{children}</Slider>
+    <div className="slider-container" >
+      <Slider {...settings}>{children}</Slider>  
     </div>
   );
 };

@@ -6,6 +6,7 @@ import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
+import zIndex from "@mui/material/styles/zIndex";
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
@@ -221,11 +222,14 @@ export const CusRemoveBtn = styled(RemoveCircleOutlinedIcon)({
 });
 
 export const CusBackOfSlider = styled(Box)({
+  position: "absolute",
   width: "100%",
+  top : -30 ,
+  left : 30  ,   
   height: "100%",
-  backgroundColor: "#CEBEE5",
-  position: "relative",
-  //  transform : "translateY(50px)"
+  background: " #D9D3FB",
+  boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
+  zIndex: 0,
 });
 
 export const AiBtn = styled(Button)({
@@ -248,9 +252,9 @@ export const BetaText = styled(Typography)({
 
 export const CusYellowCard = styled(Box)({
   position: "relative",
-  margin : "0   0.2rem",  
-  direction :"rtl" , 
-  backgroundColor : "#FFF7E1",
-  padding : "0.80rem"  , 
-  borderRadius : "1rem"
+  margin: "0   0.2rem",
+  direction: "rtl",
+  backgroundColor: "#FFF7E1",
+  padding: "0.80rem",
+  borderRadius: "1rem",
 });

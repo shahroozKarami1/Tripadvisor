@@ -4,7 +4,8 @@ import { FC, useState } from "react";
 const ReadMore: FC<{
   textBody: string;
   lineShow: number;
-}> = ({ lineShow, textBody }) => {
+  fontSizeCus ?: string
+}> = ({ lineShow, textBody , fontSizeCus }) => {
   let [isExpended, setIsExpended] = useState<boolean>(false);
   const toggleReadMore = () => {
     setIsExpended(!isExpended);
@@ -13,8 +14,9 @@ const ReadMore: FC<{
     <Box>
       <Typography
         sx={{
-          fontSize  : "0.90rem"  , 
+          fontSize :   `${fontSizeCus ? fontSizeCus :  "0.90rem"  } `  , 
           display: "-webkit-box",
+          lineHeight  : 2  ,  
           WebkitLineClamp: isExpended ? "none" : lineShow,
           WebkitBoxOrient: "vertical",
           overflow: "hidden",
