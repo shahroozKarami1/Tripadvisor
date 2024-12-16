@@ -1,4 +1,4 @@
-import { Box, Container, List, ListItem, useMediaQuery } from "@mui/material";
+import { Box, Container, List } from "@mui/material";
 import { CusTitleHomePage } from "../../elements/CusComponets";
 import NavbarMenu from "./NavBarMenu";
 import CottageOutlinedIcon from "@mui/icons-material/CottageOutlined";
@@ -33,7 +33,6 @@ const NavBarHome = () => {
     }
   }
 
-  let isXs = useMediaQuery("(max-width: 800px)");
 
   return (
     <Box sx={{ marginTop: "4rem" }}>

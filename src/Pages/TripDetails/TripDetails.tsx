@@ -2,15 +2,30 @@ import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import MainBanner from "../../components/CopmTripDetails/MainBanner";
 import ForestOutlinedIcon from "@mui/icons-material/ForestOutlined";
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
+import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import AccordionChildren from "../../components/AccordionChildren/AccordionChildren";
 import CardSliderReadMore from "../../components/CopmTripDetails/CardSliderReadMore";
+import MapComponent from "../../components/MapComponent/MapComponent";
 const TripDetails = () => {
   return (
     <Box>
       <Container>
-        <Grid container spacing={2}  marginTop={"3rem"}>
-          <Grid size={{ md: 4 }}>This is LeafLat map</Grid>
+        <Grid container   spacing={2} marginTop={"3rem"}>
+          <Grid size={{ md: 4 }}>
+         <Box  height={"900vh"}>
+         <Box
+              sx={{
+                position: "sticky",
+                top: "180px", 
+                height: "500px", 
+                width: "100%",
+                zIndex: 1, 
+              }}
+            >
+              <MapComponent />
+            </Box>
+         </Box>
+          </Grid>
           <Grid size={{ md: 8 }}>
             <MainBanner />
             <Box sx={{ margin: "1rem  0" }}>
@@ -165,10 +180,7 @@ const TripDetails = () => {
                   textBodyCard="موزه به چهار بخش تقسیم می‌شود، تاریخچه قلعه سنت آنجلو با چاپ‌های قدیمی، مناظر منظره و ایده‌آل‌های بازسازی جالب این بنا، همانطور که توسط تخیل هنرمندان و معماران رنسانس، از زمان ساخت تا نوزدهم پیشنهاد شده است، به تصویر کشیده شده است. قرن، در مسیری که شدید و مداوم را برجسته می کند."
                 />
               </AccordionChildren>
-              <AccordionChildren
-                id={150}
-                titleAccordion="غدا و نوشیدنی (50)"
-              >
+              <AccordionChildren id={150} titleAccordion="غدا و نوشیدنی (50)">
                 <CardSliderReadMore
                   category={[
                     {

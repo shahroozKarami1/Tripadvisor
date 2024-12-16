@@ -39,7 +39,7 @@ function Footer() {
   return (
 
       <Grid container spacing={2}>
-        <Grid size={{ md: 8 }}>
+        <Grid size={{ md: 8  ,  xs : 12 }}>
           <Box display={"flex"} alignItems={"center"} justifyContent={"end"}  >
             <img src="/public/images/singleLogo.svg" alt="" width={"50px"} />
             <Box
@@ -94,7 +94,7 @@ function Footer() {
             </Box>
           </Box>
         </Grid>
-        <Grid size={{ md: 4 }} alignContent={"center"}  >
+        <Grid size={{ md: 4   ,xs :  12}} alignContent={"center"}  >
           <Box display={"flex"} flexDirection={"column"}>
             {/* <Box display={"flex"} alignItems={"center"} gap={2} width={"100%"}>
               <CusAutoComplete
