@@ -10,6 +10,7 @@ import Grid from "@mui/material/Grid2";
 import InpSearch from "../InpSearch/InpSearch";
 import { useState } from "react";
 import FlightInp from "./FlightInp/FlightInp";
+import { useMedia } from "../../context/MediaQueryContext";
 const NavBarHome = () => {
   let [textPlaceholder, setPlaceHolder] = useState<string>(
     "جاهایی برای رفتن و کارهایی برای انجام دادن و هتل ها و..."
@@ -33,7 +34,7 @@ const NavBarHome = () => {
     }
   }
 
-
+  let isXs = useMedia();
   return (
     <Box sx={{ marginTop: "4rem" }}>
       <Container>
@@ -45,9 +46,16 @@ const NavBarHome = () => {
               flexDirection={"column"}
               justifyContent={"center"}
             >
-              <CusTitleHomePage>{textHomeTitle}</CusTitleHomePage>
+              {!isXs && <CusTitleHomePage>{textHomeTitle}</CusTitleHomePage>}
               <Box>
-                <List sx={{ display: "flex" }}>
+                <List
+                  sx={{
+                    display: isXs ? "grid" :  "flex",
+                    gridTemplateColumns:  isXs  ?  " 1fr 1fr"   :  ""  ,  
+                    
+                    gap: 2, 
+                  }}
+                >
                   <NavbarMenu
                     HandlerBtn={handleBtnClick}
                     fontSize={"1rem"}

@@ -10,7 +10,7 @@ const App = () => {
   let router = useRoutes(routes);
   let location = useLocation();
   return (
-    <Box>
+        <Box>
       {location.pathname !== "/" && <MainHeader />}
       {router}
       <Stack>

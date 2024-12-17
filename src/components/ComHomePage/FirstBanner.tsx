@@ -7,7 +7,8 @@ const FirstBanner = () => {
     left: "10px",
     // position :"relative" ,
     top: "200px",
-    display: "flex",
+    display: "flex", 
+    
     alignItems: "center",
     height: "100%",
     justifyContent: "end",

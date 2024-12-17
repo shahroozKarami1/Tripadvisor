@@ -3,8 +3,7 @@ import {
   Button,
   Container,
   InputAdornment,
-  Menu,
-  MenuItem,
+
   TextField,
   Typography,
 } from "@mui/material";
@@ -19,6 +18,7 @@ import dayjs from "dayjs";
 import styled from "@emotion/styled";
 import PeopleOutlineOutlinedIcon from "@mui/icons-material/PeopleOutlineOutlined";
 import TravelerBox from "../TravelerBox/TravelerBox";
+// import { useMedia } from "../../../context/MediaQueryContext";
 function FlightInp() {
   const [startDate, setStartDate] = useState<dayjs.Dayjs | null>(null);
   const [endDate, setEndDate] = useState<dayjs.Dayjs | null>(null);
@@ -38,7 +38,7 @@ function FlightInp() {
   const CusBtnSearch = styled(Button)({
     backgroundColor: `var(--primary-color)`,
     color: "#000",
-
+width : "100%"  ,  
     fontWeight: "bold",
     borderRadius: "2rem",
     padding: "1rem",
@@ -48,37 +48,41 @@ function FlightInp() {
   function HandlerTravelerBox() {
     setIsShowTravelerBox(!isShowTravelerBox);
   }
-
+  // let  isXs   = useMedia()
   return (
     <Container sx={{ width: "100%" }}>
-      <Grid container width={"100%"} spacing={1}>
-        <Grid size={{ md: 6 }}>
-          <Grid container spacing={1}>
-            <Grid size={{ md: 6 }}>
-              <Box
-                gap={1}
-                display={"flex"}
-                justifyContent={"flex-start"}
-                alignItems={"flex-start"}
-              >
-                <CusBtnSearch>جست و جو </CusBtnSearch>
-                <Box position={"relative"}>
-                  <CusBtnTraverler
-                    onClick={() => HandlerTravelerBox()}
-                  >
-                    <PeopleOutlineOutlinedIcon />
-                    <Typography
-                      sx={{ fontWeight: "bold", fontSize: "0.85rem" }}
-                    >
-                      1 مسافر
-                    </Typography>
-                  </CusBtnTraverler>
-                  {isShowTravelerBox && <TravelerBox />}
-                </Box>
-              </Box>
-            </Grid>
+      <Grid container width={"100%"} spacing={1}  >
 
-            <Grid size={{ md: 6 }}>
+        <Grid size={{ md: 6   , xs :  12}}>
+          <Box display={"flex"} gap={2}>
+            <CusInput
+              placeholder="مبدا"
+              startAdornment={
+                <InputAdornment position="start">
+                  <Box display={"flex"} gap={1}>
+                    <FlightTakeoffOutlinedIcon />
+                    <Typography sx={{ fontWeight: "bold" }}>از:</Typography>
+                  </Box>
+                </InputAdornment>
+              }
+            />
+            <CusInput
+              placeholder="مقصد"
+              startAdornment={
+                <InputAdornment position="start">
+                  <Box display={"flex"} gap={1}>
+                    <FlightLandOutlinedIcon />
+                    <Typography sx={{ fontWeight: "bold" }}>به:</Typography>
+                  </Box>
+                </InputAdornment>
+              }
+            />
+          </Box>
+        </Grid>
+        <Grid size={{ md: 6 ,  xs  :  12 }}>
+          <Grid container spacing={1}   >
+
+            <Grid size={{ md: 6  ,  xs :  12 }}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Box display="flex" flexDirection="column" gap={2}>
                   <TextField
@@ -142,33 +146,32 @@ function FlightInp() {
                 </Box>
               </LocalizationProvider>
             </Grid>
+            <Grid size={{ md: 6  ,  xs :  12}}>
+              <Box
+                gap={1}
+                display={"flex"}
+                justifyContent={"flex-start"}
+                alignItems={"flex-start"}   
+              >
+                <Box position={"relative"}>
+                  <CusBtnTraverler
+                    onClick={() => HandlerTravelerBox()}
+                  >
+                    <PeopleOutlineOutlinedIcon />
+                    <Typography
+                      sx={{ fontWeight: "bold", fontSize: "0.85rem" }}
+                    >
+                      1 مسافر
+                    </Typography>
+                  </CusBtnTraverler>
+                  {isShowTravelerBox && <TravelerBox />}
+                </Box>
+                <CusBtnSearch>جست و جو </CusBtnSearch>
+
+              </Box>
+            </Grid>
+
           </Grid>
-        </Grid>
-        <Grid size={{ md: 6 }}>
-          <Box display={"flex"} gap={2}>
-            <CusInput
-              placeholder="مبدا"
-              startAdornment={
-                <InputAdornment position="start">
-                  <Box display={"flex"} gap={1}>
-                    <FlightTakeoffOutlinedIcon />
-                    <Typography sx={{ fontWeight: "bold" }}>از:</Typography>
-                  </Box>
-                </InputAdornment>
-              }
-            />
-            <CusInput
-              placeholder="مقصد"
-              startAdornment={
-                <InputAdornment position="start">
-                  <Box display={"flex"} gap={1}>
-                    <FlightLandOutlinedIcon />
-                    <Typography sx={{ fontWeight: "bold" }}>به:</Typography>
-                  </Box>
-                </InputAdornment>
-              }
-            />
-          </Box>
         </Grid>
       </Grid>
     </Container>

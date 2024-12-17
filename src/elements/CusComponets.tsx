@@ -6,7 +6,6 @@ import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
-import zIndex from "@mui/material/styles/zIndex";
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
@@ -19,7 +18,7 @@ export const CusTitleHomePage = styled(Typography)({
 });
 export const CusSearchInp = styled(Input)({
   border: 0,
-  padding: "0.5rem",
+  padding: "  0.75rem   1rem ",
   backgroundColor: "#fff",
   boxShadow: `var(--main-shadow)`,
   borderRadius: "2rem",
@@ -28,6 +27,11 @@ export const CusSearchInp = styled(Input)({
     ":before": {
       display: "none",
     },
+    "&.MuiInputBase-root" : {
+      "::after" :  {
+        display : "none"
+      }
+    }
   },
 });
 export const CusSearchBtn = styled(Button)({
@@ -90,6 +94,7 @@ export const CusStickyMenu = styled(Box)({
   display: "block",
   top: 0,
   zIndex: 999,
+  width  : "100vw" ,  
   padding: "0.5rem  0",
 });
 export const CusThingsToDoPage = styled(Box)({

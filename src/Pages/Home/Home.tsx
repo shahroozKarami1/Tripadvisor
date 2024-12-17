@@ -33,9 +33,9 @@ const Home = () => {
 
   return (
     <Box>
-      <Container >
         {isShowStickyMenu && <MainHeader />}
         {!isShowStickyMenu && <TopBarHome />}
+      <Container >
         <NavBarHome />
         <FirstBanner />
         <TitleSection

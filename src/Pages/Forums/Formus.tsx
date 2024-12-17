@@ -8,19 +8,21 @@ import ListOfForum from "../../components/CompForum/ListOfForum";
 import PopularFourmsCard from "../../components/CompForum/PopularFourmsCard";
 import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 import TitleSection from "../../components/ComHomePage/TitleSection";
+import { useMedia } from "../../context/MediaQueryContext";
 const Formus = () => {
+  let  isXs  =  useMedia ()
+
   const CusMainBox = styled(Box)({
     margin: "3rem  0",
     padding: "2rem",
     borderRadius: "1rem",
   });
   const CusTgSubText = styled(Typography)({
-    fontSize: "1.2rem",
+    fontSize:  isXs ?  "0.90rem" :   "1.2rem",
     margin: "0.5rem",
     width: "250px",
     fontWeight: 500,
   });
-
   let browseDistinationArr = [
     { text: "آمریکا", link: "/" },
     { text: "اروپا", link: "/" },
@@ -49,22 +51,22 @@ const Formus = () => {
     <Box>
       <Box sx={{ bgcolor: "#F2F2F2", margin: "3rem  0 ", padding: "3rem" }}>
         <Container>
-          <Grid container alignItems={"flex-end"}>
-            <Grid size={{ md: 6 }}>
-              <Box display={"flex"} flexDirection={"column"} gap={2}>
+          <Grid container  justifyContent={"center"} alignItems={"flex-end"}>
+            <Grid size={{ md: 6 }}  >
+              <Box display={"flex"}   flexDirection={ isXs ?"column" : "row"} gap={2}>
                 <img
                   src="/public/images/Formus/bgImg.svg"
                   alt=""
                   width={"250px"}
                 />
-                <Typography sx={{ fontWeight: "bold", fontSize: "2.5rem" }}>
+                <Typography sx={{ fontWeight: "bold", fontSize:  isXs? "1.5rem" :    "2.5rem" }}>
                   انجمن های Tripadvisor
                 </Typography>
               </Box>
             </Grid>
 
-            <Grid size={{ md: 6 }}>
-              <Box display={"flex"} gap={1}>
+            <Grid size={{ md: 6   }}>
+              <Box    flexDirection={isXs ? "column"  : "row"} display={"flex"} gap={1}  >
                 <Box width={"100%"}>
                   <InpSearch
                     isBtnSearch={false}

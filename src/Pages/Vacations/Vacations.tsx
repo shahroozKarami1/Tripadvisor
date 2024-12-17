@@ -29,7 +29,7 @@ const Vacations = () => {
               >
                 آخرین بررسی ها پایین ترین قیمت ها.{" "}
               </Typography>
-              <InpSearch isBtnSearch={false} />
+              <InpSearch textPlaceHolder="جست و جو کنید ... " isBtnSearch={false} />
             </Grid>
           </Grid>
         </Container>
@@ -51,25 +51,25 @@ const Vacations = () => {
         </Grid>
 
         <Grid container spacing={2}  sx={{marginTop : "3rem"}}>
-          <Grid size={{ md: 3 }}>
+          <Grid size={{ md: 3  ,  xs :  6}}>
             <CardSingleText
               TopCover="/public/images/RentalFile/img1.jpg"
               textBody="اجاره تعطیلات منطقه خرس بزرگ"
             />
           </Grid>
-          <Grid size={{ md: 3 }}>
+          <Grid size={{ md: 3  , xs :  6 }}>
             <CardSingleText
               TopCover="/public/images/RentalFile/img2.jpg"
               textBody="اجاره تعطیلات منطقه خرس بزرگ"
             />
           </Grid>
-          <Grid size={{ md: 3 }}>
+          <Grid size={{ md: 3  ,  xs :  6 }}>
             <CardSingleText
               TopCover="/public/images/RentalFile/img3.jpg"
               textBody="اجاره تعطیلات منطقه خرس بزرگ"
             />
           </Grid>
-          <Grid size={{ md: 3 }}>
+          <Grid size={{ md: 3  ,  xs :  6}}>
             <CardSingleText
               TopCover="/public/images/RentalFile/img4.jpg"
               textBody="اجاره تعطیلات منطقه خرس بزرگ"

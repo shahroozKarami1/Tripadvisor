@@ -1,11 +1,13 @@
 import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import DarkBtn from "../DarkBtn/DarkBtn";
+import { useMedia } from "../../context/MediaQueryContext";
 const ThirdBanner = () => {
+  let  isXs =  useMedia()
   return (
     <Box>
       <Container>
-        <Grid container sx={{ overflow: "hidden" }} spacing={4}>
+        <Grid container sx={{ overflow: "hidden" }} spacing={4}   flexDirection={isXs ?  "column-reverse" :  "row"}>
           <Grid size={{ md: 7 }}>
             <img src="/public/images/ThirdBanner/ThirdBanner.png" alt="" />
           </Grid>

@@ -3,20 +3,22 @@ import { ICardSingleTextProps } from "../../types/intefaces";
 import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import { DarkOverlay } from "../../elements/CusComponets";
+import { useMedia } from "../../context/MediaQueryContext";
 
 const CardSingleText: FC<ICardSingleTextProps> = ({
   TopCover,
   textBody,
   heightCard,
 }) => {
+  const  isXs  =  useMedia()
   const CusTPForCard = styled(Typography)({
     bottom: 0,
     position: "absolute",
     right: 0,
     color: "#fff",
     padding: "1rem",
-    fontSize: "1.3rem",
-    fontWeight: "bold",
+    fontSize: isXs ?  "0.90rem " :   "1.3rem",
+    fontWeight: isXs ?  "light" :   "bold",
   });
   return (
     <Box margin={"0  0.25rem"}  >
@@ -31,7 +33,7 @@ const CardSingleText: FC<ICardSingleTextProps> = ({
             objectFit: "cover",
             objectPosition: "center",
             width: "100%",
-            height: "100%",
+            height:  "250px"  ,  
             borderRadius: "0.5rem",
           }}
         />

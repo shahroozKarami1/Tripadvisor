@@ -39,11 +39,11 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
     // autoplaySpeed: 7000,
     // pauseOnHover: true,
     cssEase: "linear",
-    autoplay: false  ,  
+    autoplay: true  ,  
     rtl: true,
     slidesToScroll: 1,
-    nextArrow: <CusRightArrow />,
-    prevArrow: <CusLeftArrow />,
+    // nextArrow: <CusRightArrow />,
+    // prevArrow: <CusLeftArrow />,
     initialSlide: 0,
     responsive: [
       {

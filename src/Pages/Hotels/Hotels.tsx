@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid2";
 import TitleSection from "../../components/ComHomePage/TitleSection";
 import TourWaysCard from "../../components/ComHomePage/TourWaysCard";
 import CardTopDistination from "../../components/CompHotelPage/CardTopDistination";
+import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
 const Hotels = () => {
   return (
     <Box>
@@ -18,7 +19,7 @@ const Hotels = () => {
             alignContent={"center"}
             gap={2}
           >
-            <Grid size={{ md: 7 }}>
+            <Grid size={{ md: 7  , xs : 12}}>
               <Typography
                 sx={{
                   fontWeight: "bold",
@@ -37,14 +38,15 @@ const Hotels = () => {
       </MainBanner>
 
       <Container>
-        <Grid container spacing={3}>
+        <Box>
+
           <TitleSection
             isSubTitle={false}
             mainTitle="انتخاب مسافران: استراحتگاه های فراگیر"
             isSeeAll={true}
           />
-          <Grid size={{ md: 3 }}>
-            <TourWaysCard
+  <SliderWrapper numberOfShowSlider={4}>
+  <TourWaysCard
               link="/Hotels/HotelDetails"
               isDetails={false}
               price={134}
@@ -52,8 +54,6 @@ const Hotels = () => {
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/ResortsImgs/img1.jpg"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <TourWaysCard
               link="/Hotels/HotelDetails"
               isDetails={false}
@@ -61,8 +61,6 @@ const Hotels = () => {
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/ResortsImgs/img2.jpg"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <TourWaysCard
               isDetails={false}
               link="/Hotels/HotelDetails"
@@ -70,8 +68,6 @@ const Hotels = () => {
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/ResortsImgs/img3.jpg"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <TourWaysCard
               isDetails={false}
               link="/Hotels/HotelDetails"
@@ -79,85 +75,74 @@ const Hotels = () => {
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/ResortsImgs/img4.jpg"
             />
-          </Grid>
-        </Grid>
+  </SliderWrapper>
+        </Box>
 
-        <Grid container spacing={3}>
+<Box>
+
           <TitleSection
             isSubTitle={false}
             mainTitle="انتخاب مسافران: هتل های برتر"
             isSeeAll={true}
           />
-          <Grid size={{ md: 3 }}>
-            <TourWaysCard
+  <SliderWrapper numberOfShowSlider={4}>
+  <TourWaysCard
               isDetails={false}
               price={134}
               score={935}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/BestChoice/img1.jpg"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <TourWaysCard
               isDetails={false}
               score={935}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/BestChoice/img2.jpg"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <TourWaysCard
               isDetails={false}
               score={935}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/BestChoice/img3.jpg"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <TourWaysCard
               isDetails={false}
               score={4350}
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/BestChoice/img4.jpg"
             />
-          </Grid>
-        </Grid>
-
-        <Grid container spacing={2}>
-          <TitleSection
+  </SliderWrapper>
+          </Box>
+<Box>
+<TitleSection
             isSubTitle={false}
             mainTitle="هتل ها در مقاصد برتر"
             isSeeAll={true}
           />
-          <Grid size={{ md: 3 }}>
-            <CardTopDistination
+ <SliderWrapper  numberOfShowSlider={4}>
+ <CardTopDistination
               diec="Scottsdale سرانه اسپاهای بیشتری نسبت به هر شهر دیگری در ایالات متحده دارد—بنابراین چه به دنبال جدیدترین فن‌آوری آبگرم رسانه‌ای باشید و چه به دنبال فضایی جدید و غیرعادی باشید، مطمئناً چیزی برای شما وجود دارد. این نیز چیز خوبی است - پس از گذراندن تمام روز برای گشت و گذار در صحرای زیبا، برای کمی نوازش سپاسگزار خواهید بود."
               img="/public/images/Hotelmg/TopDistination/img1.jpg"
               title="اسکاتسدیل"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <CardTopDistination
               diec="Scottsdale سرانه اسپاهای بیشتری نسبت به هر شهر دیگری در ایالات متحده دارد—بنابراین چه به دنبال جدیدترین فن‌آوری آبگرم رسانه‌ای باشید و چه به دنبال فضایی جدید و غیرعادی باشید، مطمئناً چیزی برای شما وجود دارد. این نیز چیز خوبی است - پس از گذراندن تمام روز برای گشت و گذار در صحرای زیبا، برای کمی نوازش سپاسگزار خواهید بود."
               img="/public/images/Hotelmg/TopDistination/img2.jpg"
               title="اسکاتسدیل"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <CardTopDistination
               diec="Scottsdale سرانه اسپاهای بیشتری نسبت به هر شهر دیگری در ایالات متحده دارد—بنابراین چه به دنبال جدیدترین فن‌آوری آبگرم رسانه‌ای باشید و چه به دنبال فضایی جدید و غیرعادی باشید، مطمئناً چیزی برای شما وجود دارد. این نیز چیز خوبی است - پس از گذراندن تمام روز برای گشت و گذار در صحرای زیبا، برای کمی نوازش سپاسگزار خواهید بود."
               img="/public/images/Hotelmg/TopDistination/img3.jpg"
               title="اسکاتسدیل"
             />
-          </Grid>
-          <Grid size={{ md: 3 }}>
             <CardTopDistination
               diec="Scottsdale سرانه اسپاهای بیشتری نسبت به هر شهر دیگری در ایالات متحده دارد—بنابراین چه به دنبال جدیدترین فن‌آوری آبگرم رسانه‌ای باشید و چه به دنبال فضایی جدید و غیرعادی باشید، مطمئناً چیزی برای شما وجود دارد. این نیز چیز خوبی است - پس از گذراندن تمام روز برای گشت و گذار در صحرای زیبا، برای کمی نوازش سپاسگزار خواهید بود."
               img="/public/images/Hotelmg/TopDistination/img4.jpg"
               title="اسکاتسدیل"
             />
-          </Grid>
-        </Grid>
+ </SliderWrapper>
+</Box>
+
       </Container>
     </Box>
   );

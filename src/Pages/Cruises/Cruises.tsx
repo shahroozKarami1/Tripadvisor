@@ -67,7 +67,7 @@ const Cruises = () => {
                   textOnBtn="به کجا ؟"
                   icon={<LocationOnOutlinedIcon />}
                 >
-                  fuck man !
+                  This is Test ..
                 </BtnMenus>
                 <CusDarkBtnSearch>جست و جو </CusDarkBtnSearch>
               </Box>
@@ -159,28 +159,28 @@ const Cruises = () => {
               isSubTitle={false}
               mainTitle="سفرهای دریایی به مقصدهای محبوب جزیره"
             />
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3, xs: 6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img1.jpg"
                 name="برمودا"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3, xs: 6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img2.jpg"
                 name="هاوایی"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3, xs: 6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img3.jpg"
                 name="کیش"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3  , xs  :  6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img4.jpg"
@@ -193,28 +193,28 @@ const Cruises = () => {
               isSubTitle={false}
               mainTitle="سفرهای دریایی به مقصدهای محبوب"
             />
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3  ,  xs :  6}}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img3.jpg"
                 name="آسیا"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3  ,  xs :  6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img4.jpg"
                 name="آسیا"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3  ,  xs :  6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img1.jpg"
                 name="آسیا"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3  , xs :  6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img2.jpg"
@@ -227,28 +227,28 @@ const Cruises = () => {
               isSubTitle={false}
               mainTitle="سفرهای دریایی بر اساس طول"
             />
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3  , xs :  6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img2.jpg"
                 name="+15 روز"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3    , xs :  6}}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img3.jpg"
                 name="8روز"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3   , xs :  6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img4.jpg"
                 name="2روز"
               />
             </Grid>
-            <Grid size={{ md: 3 }}>
+            <Grid size={{ md: 3  , xs :  6 }}>
               <CardWhiteBottom
                 link="/"
                 coverImg="/public/images/Cruises/popularDistination/img1.jpg"

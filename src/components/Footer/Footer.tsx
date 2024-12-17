@@ -1,10 +1,7 @@
-import styled from "@emotion/styled";
 import {
-  Autocomplete,
   Box,
   List,
   ListItem,
-  TextField,
   Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
@@ -13,33 +10,14 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
 import { Link } from "react-router-dom";
+import { useMedia } from "../../context/MediaQueryContext";
 function Footer() {
-  const top100Films = [
-    { label: "The Shawshank Redemption", year: 1994 },
-    { label: "The Godfather", year: 1972 },
-    { label: "The Godfather: Part II", year: 1974 },
-  ];
-
-  const CusAutoComplete = styled(Autocomplete)({
-    backgroundColor: "#fff",
-    borderRadius: "1rem",
-    "& .MuiInputBase-root"  : {
-      padding :  0 , 
-   width : "100%" ,  
-      border : 0
-    } ,  
-    "& .MuiOutlinedInput-notchedOutline": {
-    border: "none",
-  },
-  "& .MuiPaper-root": {
-    border: "none",
-    boxShadow: "none", // در صورت نیاز به حذف سایه
-  },
-  });
+let isXs = useMedia()
+console.log(isXs)
   return (
 
       <Grid container spacing={2}>
-        <Grid size={{ md: 8  ,  xs : 12 }}>
+        <Grid size={{ md: 8 ,  xs : 12 }}>
           <Box display={"flex"} alignItems={"center"} justifyContent={"end"}  >
             <img src="/public/images/singleLogo.svg" alt="" width={"50px"} />
             <Box
@@ -58,6 +36,8 @@ function Footer() {
                   whiteSpace: "nowrap",
                   fontSize: "0.80rem",
                   fontWeight: "bold",
+                  flexDirection :  isXs ?  "column" :  "row" , 
+                  
                 }}
               >
                 <ListItem>
@@ -94,7 +74,7 @@ function Footer() {
             </Box>
           </Box>
         </Grid>
-        <Grid size={{ md: 4   ,xs :  12}} alignContent={"center"}  >
+        <Grid size={{ md: 4  ,  xs :  12}} alignContent={"center"}  >
           <Box display={"flex"} flexDirection={"column"}>
             {/* <Box display={"flex"} alignItems={"center"} gap={2} width={"100%"}>
               <CusAutoComplete
