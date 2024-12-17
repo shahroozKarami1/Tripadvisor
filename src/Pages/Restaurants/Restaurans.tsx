@@ -3,11 +3,10 @@ import InpSearch from "../../components/InpSearch/InpSearch";
 import Grid from "@mui/material/Grid2";
 import MainCardsRestaurant from "../../components/CompRestaurantsPage/MainCardsRestaurant";
 import TitleSection from "../../components/ComHomePage/TitleSection";
-import TourWaysCard from "../../components/ComHomePage/TourWaysCard";
-import NextTripSection from "../../components/ComHomePage/NextTripSection";
 import MainBanner from "../../components/MainBanner/MainBanner";
 import { useMedia } from "../../context/MediaQueryContext";
 import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
+import CardWithReviewAndPlace from "../../components/CompRestaurantsPage/CardWithReviewAndPlace";
 
 const Restaurans = () => {
   const isXs = useMedia();
@@ -25,7 +24,12 @@ const Restaurans = () => {
           >
             <InpSearch textPlaceHolder="جست و جو" isBtnSearch={false} />
             <Typography
-              sx={{ fontWeight: "bold", color: "#fff", fontSize: isXs ? "1.5rem" :   "2.5rem"   ,  textAlign : "center"}}
+              sx={{
+                fontWeight: "bold",
+                color: "#fff",
+                fontSize: isXs ? "1.5rem" : "2.5rem",
+                textAlign: "center",
+              }}
             >
               بهترین رستوران خود را پیدا کنید
             </Typography>
@@ -55,70 +59,188 @@ const Restaurans = () => {
         <Box>
           <TitleSection
             isSubTitle={false}
-            mainTitle="انتخاب مسافران: غذاخوری عالی"
+            mainTitle="رستوران های جدید و پرطرفدار در دبی"
             isSeeAll={true}
           />
           <SliderWrapper numberOfShowSlider={4}>
-            <TourWaysCard
-              isDetails={true}
-              price={134}
-              score={935}
-              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
-              img="/public/images/ResturantImgs/BestChoice/photo1.jpg"
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
             />
-            <TourWaysCard
-              isDetails={true}
-              price={134}
-              score={935}
-              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
-              img="/public/images/ResturantImgs/BestChoice/photo1.jpg"
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img2.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
             />
-            <TourWaysCard
-              isDetails={true}
-              price={134}
-              score={935}
-              disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
-              img="/public/images/ResturantImgs/BestChoice/photo2.jpg"
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img3.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
             />
-
-          <TourWaysCard
-            isDetails={true}
-            price={134}
-            score={935}
-            disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
-            img="/public/images/ResturantImgs/BestChoice/photo4.jpg"
-          />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img4.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
           </SliderWrapper>
         </Box>
-
-
-  <Box>
-  <TitleSection
+        <Box>
+          <TitleSection
             isSubTitle={false}
-            mainTitle="رستوران ها در مقاصد برتر"
+            mainTitle="ناهار در دبی "
             isSeeAll={true}
           />
-          <NextTripSection
-            dataNextTripArr={[
-              {
-                img: "/public/images/NextTrip/img4.jpg",
-                title: "آمستردام /  آلمان",
-              },
-              {
-                img: "/public/images/NextTrip/img1.jpg",
-                title: "آمستردام /  آلمان",
-              },
-              {
-                img: "/public/images/NextTrip/img2.jpg",
-                title: "آمستردام /  آلمان",
-              },
-              {
-                img: "/public/images/NextTrip/img3.jpg",
-                title: "آمستردام /  آلمان",
-              },
-            ]}
+          <SliderWrapper numberOfShowSlider={4}>
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img2.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img3.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img4.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+          </SliderWrapper>
+        </Box>
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="شام در دبی"
+            isSeeAll={true}
           />
-  </Box>
+          <SliderWrapper numberOfShowSlider={4}>
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img2.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img3.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img4.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+          </SliderWrapper>
+        </Box>
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="صبحانه در دبی"
+            isSeeAll={true}
+          />
+          <SliderWrapper numberOfShowSlider={4}>
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img2.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img3.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img4.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+          </SliderWrapper>
+        </Box>
+        <Box>
+          <TitleSection
+            isSubTitle={false}
+            mainTitle="خوردنی های ارزان در دبی"
+            isSeeAll={true}
+          />
+          <SliderWrapper numberOfShowSlider={4}>
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img2.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img3.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+            <CardWithReviewAndPlace
+              cardCover="/public/images/ResturantImgs/otherImgs/img4.jpg"
+              countOfReviews={7500}
+              link="/"
+              textPlace="دبی / امارات متحده عربی"
+              titleCard="رستوران بوف سیاه"
+            />
+          </SliderWrapper>
+        </Box>
       </Container>
     </Box>
   );

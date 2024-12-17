@@ -4,7 +4,6 @@ import Restaurans from "./Pages/Restaurants/Restaurans";
 import Flights from "./Pages/Flights/Flights";
 import Vacations from "./Pages/Vacations/Vacations";
 import Cruises from "./Pages/Cruises/Cruises";
-import RentalCars from "./Pages/RentalCars/RentalCars";
 import Home from "./Pages/Home/Home";
 import Formus from "./Pages/Forums/Formus";
 import UserReview from "./Pages/UserReview/UserReview";

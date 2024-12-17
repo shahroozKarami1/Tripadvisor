@@ -51,6 +51,7 @@ export const CusFirstBanner = styled(Box)({
   backgroundRepeat: "no-repeat",
   marginTop: "4rem",
   borderRadius: "0.25rem",
+
   position: "relative",
 });
 

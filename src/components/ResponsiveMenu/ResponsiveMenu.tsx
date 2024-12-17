@@ -6,17 +6,15 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 const ResponsiveMenu = () => {
   let [isOpenDrawer, setIsOpenDrawer] = useState(false);
   return (
-  <Container >
         <Box
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
       sx={{
-        padding: " 2rem   0",
+        padding: " 1rem   0",
         position :"sticky"  , 
-        top :  10  , 
+        top :  0  , 
         bgcolor : '#fff' ,  
-        
         zIndex : 999
       }}
     >
@@ -38,7 +36,6 @@ const ResponsiveMenu = () => {
    <h1>hello </h1>
       </Drawer>
     </Box>
-  </Container>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Box, Container, Pagination, Typography } from "@mui/material";
+import { Box, Container, Pagination } from "@mui/material";
 import MainSlider from "../../components/CompArticles/MainSlider";
 import CardSlider from "../../components/CompArticles/CardSlider";
 import Grid from "@mui/material/Grid2";
@@ -13,7 +13,8 @@ function Article() {
   return (
     <Box>
       <Container maxWidth={"xl"}>
-        <MainSlider>
+  <Box  marginTop={"1rem"}>
+  <MainSlider >
           <CardSlider
             disc="به علاوه، کجا می توانید آن را برای خودتان در سراسر ایالات متحده ببینید."
             poster="/public/images/Articles/MainSlider/img1.jpg"
@@ -30,6 +31,7 @@ function Article() {
             title="چرا باید برای برداشت روغن زیتون در پاییز امسال سفر کنید؟"
           />
         </MainSlider>
+  </Box>
       </Container>
       <Container>
         <Box
@@ -143,7 +145,7 @@ function Article() {
                   isBigImage={false}
                 />
               </Grid>
-              <Grid size={{ md: 12 }}>
+              <Grid   size={{ md: 12 }}>
                 <CardInsidetext
                   cover="/public/images/Articles/PlaceToVisitImg/img7.jpg"
                   link="/Articles/ArticleDetails"

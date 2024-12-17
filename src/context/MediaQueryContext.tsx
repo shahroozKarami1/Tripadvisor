@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext } from "react";
+import React, { createContext, FC, ReactNode, useContext } from "react";
 import { useMediaQuery } from "@mui/material";
 
 type MediaContextType = boolean | null;
@@ -20,3 +20,4 @@ export const useMedia = () => {
 };
 
 export default MediaContext;
+

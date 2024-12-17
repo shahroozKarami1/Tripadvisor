@@ -6,12 +6,18 @@ import Footer from "./components/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MainHeader from "./components/MainHeader/MainHeader";
+import { useMedia } from "./context/MediaQueryContext";
+import ResponsiveMenu from "./components/ResponsiveMenu/ResponsiveMenu";
 const App = () => {
   let router = useRoutes(routes);
   let location = useLocation();
+  let  isXs =  useMedia()
   return (
         <Box>
       {location.pathname !== "/" && <MainHeader />}
+      {
+        isXs &&  <ResponsiveMenu/>
+      }
       {router}
       <Stack>
         <Box

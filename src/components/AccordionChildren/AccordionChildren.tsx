@@ -4,7 +4,7 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const AccordionChildren: FC<{

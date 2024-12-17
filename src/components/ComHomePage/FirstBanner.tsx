@@ -1,18 +1,23 @@
 import { Box, Button, Typography } from "@mui/material";
-import { CusFirstBanner } from "../../elements/CusComponets";
+import { CusFirstBanner, DarkOverlay } from "../../elements/CusComponets";
 import styled from "@emotion/styled";
-
+import Grid  from "@mui/material/Grid2"
+import { useMedia } from "../../context/MediaQueryContext";
 const FirstBanner = () => {
+
+  let isXs  =  useMedia ()
   const CusBoxBanner = styled(Box)({
     left: "10px",
     // position :"relative" ,
     top: "200px",
     display: "flex", 
-    
     alignItems: "center",
     height: "100%",
     justifyContent: "end",
-    marginLeft: "2rem",
+    marginLeft:   !isXs ?  "2rem" : 0,
+
+  width : "100%" ,  
+    backgroundColor : isXs ?  "rgba(0 ,  0 ,  0 ,  0.6)" : ""   ,  padding : isXs ?  "1rem "  :  0 
   });
   const CusBtnBanner = styled(Button)({
     backgroundColor: "#fff",
@@ -21,8 +26,14 @@ const FirstBanner = () => {
   });
   return (
     <CusFirstBanner>
+      {
+        isXs && 
+        <DarkOverlay />
+
+      }
+      <Grid container    height={"100%"}>
       <CusBoxBanner>
-        <Box display={"flex"} flexDirection={"column"} gap={2}>
+        <Box display={"flex"}   flexDirection={"column"} gap={2}>
           <Box display={"flex"} gap={1}>
             <Typography sx={{ color: "#fff", fontSize: "0.75rem" }}>
               ساخته شده با
@@ -46,11 +57,13 @@ const FirstBanner = () => {
           <Typography sx={{ color: "#fff" }}>
             ایده هایی را که برای شما ساخته شده اند، در چند ثانیه آماده کنید.
           </Typography>
-          <Box sx={{marginTop : "1rem"}}>
+          <Box sx={{marginTop : "1rem"  }}>
             <CusBtnBanner>امتحانش کن !</CusBtnBanner>
           </Box>
         </Box>
       </CusBoxBanner>
+
+      </Grid>
     </CusFirstBanner>
   );
 };

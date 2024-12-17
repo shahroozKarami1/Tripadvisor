@@ -366,11 +366,19 @@ export interface ICardSliderReadMore {
   category: {
     icon: React.ReactNode;
     text: string;
-  }[]
+  }[];
   comment?: {
     profile: string;
     name: string;
     textComment: string;
   };
   titeCard: string;
+}
+
+export interface ICardWithReviewAndPlaceProps {
+  titleCard: string;
+  countOfReviews: number;
+  textPlace: string;
+  link: string;
+  cardCover: string;
 }
