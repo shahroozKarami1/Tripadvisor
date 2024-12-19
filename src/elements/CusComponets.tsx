@@ -10,6 +10,7 @@ export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
   fontWeight: "bold",
+  fontSize : "0.90rem"
 });
 export const CusTitleHomePage = styled(Typography)({
   fontSize: "3rem",
@@ -192,6 +193,8 @@ export const DarkOverlay = () => {
           "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%)",
         zIndex: 0,
         borderRadius: "0.5rem",
+
+        height : "100%"  ,  
         width: "100%",
       }}
     />

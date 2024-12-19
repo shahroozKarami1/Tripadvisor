@@ -6,11 +6,16 @@ import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import AccordionChildren from "../../components/AccordionChildren/AccordionChildren";
 import CardSliderReadMore from "../../components/CopmTripDetails/CardSliderReadMore";
 import MapComponent from "../../components/MapComponent/MapComponent";
+import { useMedia } from "../../context/MediaQueryContext";
 const TripDetails = () => {
+  let  isXs  =  useMedia()
   return (
     <Box>
       <Container>
         <Grid container   spacing={2} marginTop={"3rem"}>
+
+          {
+            !isXs &&  (
           <Grid size={{ md: 4 }}>
          <Box  height={"900vh"}>
          <Box
@@ -26,6 +31,9 @@ const TripDetails = () => {
             </Box>
          </Box>
           </Grid>
+
+            )
+          }
           <Grid size={{ md: 8 }}>
             <MainBanner />
             <Box sx={{ margin: "1rem  0" }}>

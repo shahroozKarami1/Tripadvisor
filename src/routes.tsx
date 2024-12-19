@@ -21,6 +21,7 @@ import Tourism from "./Pages/Tourism/Tourism";
 import TourAttractions from "./Pages/TourAttractions/TourAttractions";
 import OtherPage from "./Pages/OtherPage/OtherPage";
 import TripDetails from "./Pages/TripDetails/TripDetails";
+import TripBuilder from "./Pages/TripBuilder/TripBuilder";
 
 let routes = [
   {
@@ -118,6 +119,10 @@ let routes = [
   {
     element: <TripDetails />,
     path: "/TripDetails",
+  },
+  {
+    element: <TripBuilder />,
+    path: "/TripBuilder",
   },
 ];
 

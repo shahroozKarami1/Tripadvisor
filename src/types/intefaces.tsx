@@ -382,3 +382,11 @@ export interface ICardWithReviewAndPlaceProps {
   link: string;
   cardCover: string;
 }
+
+export interface ICardForFirstTripProps {
+  coverImg: string;
+  titleImg: string;
+  countryName: string;
+changePageHandler :  ()  =>  void
+  
+}

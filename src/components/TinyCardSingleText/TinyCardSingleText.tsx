@@ -20,17 +20,18 @@ const TinyCardSingleText: FC<{
 
   const CusCardWrapper = styled(Box)({
     position: "relative",
-    margin: "0.5rem",
+    // width : "100%" , 
+    margin : "0  0.5rem"
   });
 
   return (
-    <Link to={link}>
-      <CusCardWrapper>
+    <CusCardWrapper>
+        <Link to={link}>
         <DarkOverlay />
-        <img src={cover} alt="" style={{borderRadius : "1rem"}} />
+        <img src={cover} alt="" style={{borderRadius : "1rem" ,  objectFit : "cover"  , width : "100%"}}   />
         <CusTpCard>{text}</CusTpCard>
-      </CusCardWrapper>
     </Link>
+      </CusCardWrapper>
   );
 };
 export default TinyCardSingleText;

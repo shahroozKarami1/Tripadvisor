@@ -10,18 +10,18 @@ const CardSingleText: FC<ICardSingleTextProps> = ({
   textBody,
   heightCard,
 }) => {
-  const  isXs  =  useMedia()
+  const isXs = useMedia();
   const CusTPForCard = styled(Typography)({
     bottom: 0,
     position: "absolute",
     right: 0,
     color: "#fff",
     padding: "1rem",
-    fontSize: isXs ?  "0.90rem " :   "1.3rem",
-    fontWeight: isXs ?  "light" :   "bold",
+    fontSize: isXs ? "0.90rem " : "1.3rem",
+    fontWeight: isXs ? "light" : "bold",
   });
   return (
-    <Box margin={"0  0.25rem"}  >
+    <Box margin={"0  0.25rem"}>
       <Box
         sx={{ position: "relative", height: heightCard ? heightCard : "100%" }}
       >
@@ -33,7 +33,7 @@ const CardSingleText: FC<ICardSingleTextProps> = ({
             objectFit: "cover",
             objectPosition: "center",
             width: "100%",
-            height:  "250px"  ,  
+            height: heightCard ? heightCard : "250px",
             borderRadius: "0.5rem",
           }}
         />

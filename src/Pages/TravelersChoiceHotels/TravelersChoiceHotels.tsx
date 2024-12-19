@@ -17,6 +17,7 @@ import CardComment from "../../components/CompTravelerChoiceHotel/CardComment";
 import CardRightSideImg from "../../components/CompTravelerChoiceHotel/CardRightSideImg";
 import NextTripSection from "../../components/ComHomePage/NextTripSection";
 import SaveBtn from "../../components/SaveBtn/SaveBtn";
+import { useMedia } from "../../context/MediaQueryContext";
 const TravelersChoiceHotels = () => {
   const CusTPTitle = styled(Typography)({
     color: "#fff",
@@ -29,32 +30,74 @@ const TravelersChoiceHotels = () => {
     display: "flex",
     alignItems: "center",
   });
-
+  let isXs = useMedia();
   return (
     <Box>
-      <Box position={"relative"}>
-        <DarkOverlay />
-        <img
-          src="/public/images/BestChoiceDetails/Banner/MainBanner.png"
-          alt=""
-        />
-        <CusInnerMainBanner>
+      {isXs ? (
+        <Box position={"relative"} height={400}>
+          <DarkOverlay />
+
           <img
-            src="/public/images/BestChoiceDetails/Banner/logo.png"
-            width={"100px"}
-            className="ml-5"
+            src="/public/images/BestChoiceDetails/Banner/MainBanner.png"
+            style={{
+              objectFit: "cover",
+              height: "100%",
+              width: "100%",
+              objectPosition: "center",
+            }}
             alt=""
           />
-          <Box display={"flex"} flexDirection={"column"}>
-            <CusTPTitle sx={{ fontSize: "2rem" }}>
-              جوایز انتخاب مسافران
-            </CusTPTitle>
-            <CusTPTitle sx={{ fontSize: "3rem" }}>
-              بهترین از بهترین هتل ها
-            </CusTPTitle>
+          <Box
+            sx={{
+              position: "absolute",
+              top: "105px"  ,
+              right: "65px"  ,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection :"column"
+            }}
+          >
+            <img
+              src="/public/images/BestChoiceDetails/Banner/logo.png"
+              width={"100px"}
+              alt=""
+            />
+            <Box display={"flex"} flexDirection={"column"}>
+              <CusTPTitle sx={{ fontSize: "1.5rem"  , textAlign :"center"}}>
+                جوایز انتخاب مسافران
+              </CusTPTitle>
+              <CusTPTitle sx={{ fontSize: "2rem" , textAlign :"center" }}>
+                بهترین از بهترین هتل ها
+              </CusTPTitle>
+            </Box>
           </Box>
-        </CusInnerMainBanner>
-      </Box>
+        </Box>
+      ) : (
+        <Box position={"relative"}>
+          <DarkOverlay />
+          <img
+            src="/public/images/BestChoiceDetails/Banner/MainBanner.png"
+            alt=""
+          />
+          <CusInnerMainBanner>
+            <img
+              src="/public/images/BestChoiceDetails/Banner/logo.png"
+              width={"100px"}
+              className="ml-5"
+              alt=""
+            />
+            <Box display={"flex"} flexDirection={"column"}>
+              <CusTPTitle sx={{ fontSize: "2rem" }}>
+                جوایز انتخاب مسافران
+              </CusTPTitle>
+              <CusTPTitle sx={{ fontSize: "3rem" }}>
+                بهترین از بهترین هتل ها
+              </CusTPTitle>
+            </Box>
+          </CusInnerMainBanner>
+        </Box>
+      )}
       <Container>
         <Grid container sx={{ borderBottom: "3px  solid #F2B203" }}>
           <Grid size={{ md: 8 }}>

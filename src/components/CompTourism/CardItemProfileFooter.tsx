@@ -19,7 +19,7 @@ const CardItemProfileFooter: FC<ICardItemProfileFooterProps> = ({
   return (
     <Link to={link}>
       <CusCardItemProfileFooter>
-        <img src={imgCover} alt="" style={{ borderRadius: "1rem" }} />
+        <img src={imgCover} alt="" style={{ borderRadius: "1rem"   ,  width :"100%"  ,  objectFit  :"cover"}} />
         <Box display={"flex"} flexDirection={"column"} marginTop={"1rem"} gap={1}>
           <Typography sx={{ fontWeight: "bold", fontSize: "0.90rem" }}>
             {title}

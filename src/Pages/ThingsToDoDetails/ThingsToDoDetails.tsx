@@ -38,6 +38,7 @@ import RateProgress from "../../components/CompHotelDetails/RateProgress";
 import ReviewBox from "../../components/CompHotelDetails/ReviewBox";
 import PopularMentionsCard from "../../components/CompHotelDetails/PopularMentionsCard";
 import InpSearch from "../../components/InpSearch/InpSearch";
+import { useMedia } from "../../context/MediaQueryContext";
 const ListItemComp: FC<{
   text: string;
   icon?: React.ReactNode;
@@ -67,6 +68,7 @@ const ListItemComp: FC<{
   );
 };
 const ThingsToDoDetails = () => {
+  let  isXs =  useMedia ()
   const CusVerifiedOutlinedIcon = styled(VerifiedOutlinedIcon)({
     "& path": {
       color: "#FF5D5D",
@@ -79,8 +81,11 @@ const ThingsToDoDetails = () => {
         <Box
           display={"flex"}
           justifyContent={"space-between"}
-          alignItems={"center"}
+          flexDirection= {  isXs ? "column-reverse" :"row"}
+          alignItems={ isXs ?  "flex-start" :  "center"}
           marginTop={"2rem"}
+          gap={ isXs ? 2 : 0}
+
         >
           <Box display={"flex"} flexDirection={"column"} gap={1}>
             <Typography sx={{ fontWeight: "900", fontSize: "1.6rem" }}>
@@ -118,7 +123,7 @@ const ThingsToDoDetails = () => {
           </Box>
         </Box>
         <Grid container spacing={1} marginTop={"3rem"}>
-          <Grid size={{ md: 7 }}>
+          <Grid size={{ md: 7  , xs :  12}}>
             <Box sx={{ position: "relative" }} height={"409px"}>
               <img
                 src="/public/images/ThingsToDoDetails/Banner/mainImg.jpg"
@@ -135,7 +140,7 @@ const ThingsToDoDetails = () => {
               <Box sx={{ position: "absolute", bottom: 10, right: 10 }}>dd</Box>
             </Box>
           </Grid>
-          <Grid size={{ md: 5 }}>
+          <Grid size={{ md: 5  ,  xs :  12}}>
             <Box display={"flex"} flexDirection={"column"} gap={1}>
               <Box height={"200px"}>
                 <img
@@ -168,7 +173,7 @@ const ThingsToDoDetails = () => {
         </Grid>
 
         <Grid container marginTop={"3rem"} spacing={3}>
-          <Grid size={{ md: 7 }}>
+          <Grid size={{ md: 7  , xs :  12 }}>
             <Box display={"flex"} justifyContent={"space-between"}>
               <Typography sx={{ fontWeight: "bold" }}>درباره ما</Typography>
               <Box display={"flex"} alignItems={"center"} gap={1}>
@@ -321,7 +326,7 @@ const ThingsToDoDetails = () => {
               />
             </Box>
           </Grid>
-          <Grid size={{ md: 5 }}>
+          <Grid size={{ md: 5   , xs :  12}}>
             <PayCard />
           </Grid>
         </Grid>

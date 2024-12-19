@@ -18,7 +18,7 @@ const TopBarHome = () => {
           <Grid size={{ md: 2 }}>
             <Box display={"flex"} gap={3} alignItems={"center"}>
               <DarkBtn>ورود </DarkBtn>
-              <Box
+              {/* <Box
                 sx={{ cursor: "pointer" }}
                 display={"flex"}
                 alignItems={"center"}
@@ -28,7 +28,7 @@ const TopBarHome = () => {
                 </Typography>
                 <Divider>|</Divider>
                 <LanguageIcon />
-              </Box>
+              </Box> */}
             </Box>
           </Grid>
           <Grid size={{ md: 8 }}>

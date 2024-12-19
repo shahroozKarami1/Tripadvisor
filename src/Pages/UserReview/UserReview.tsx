@@ -3,7 +3,9 @@ import Grid from "@mui/material/Grid2";
 import InpSearch from "../../components/InpSearch/InpSearch";
 import BeenHereCards from "../../components/CompUserReview/BeenHereCards";
 import { Link } from "react-router-dom";
+import { useMedia } from "../../context/MediaQueryContext";
 function UserReview() {
+  let isXs = useMedia();
   const CusBoxTextCard = styled(Box)({
     display: "flex",
     flexDirection: "column",
@@ -62,17 +64,17 @@ function UserReview() {
                 <Box display={"flex"} gap={3} sx={{ marginTop: "2rem" }}>
                   <img
                     src="/public/images/UserRview/mainImgs/img1.png"
-                    style={{ width: "200px" }}
+                    style={{ width: isXs ? "120px" : "200px" }}
                     alt=""
                   />
                   <img
                     src="/public/images/UserRview/mainImgs/img2.png"
-                    style={{ width: "200px" }}
+                    style={{ width: isXs ? "120px" : "200px" }}
                     alt=""
                   />
                   <img
                     src="/public/images/UserRview/mainImgs/img3.png"
-                    style={{ width: "200px" }}
+                    style={{ width: isXs ? "120px" : "200px" }}
                     alt=""
                   />
                 </Box>

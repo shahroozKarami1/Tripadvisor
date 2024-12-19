@@ -74,11 +74,11 @@ const MainHeader = () => {
         <Box>
           <List sx={{ display: "flex" }}>
             <NavbarMenu
-              fontSize="0.80rem"
+              fontSize="0.9rem"
               NavBarMenuArr={[{ title: "هتل ها  ", link: "/Hotels" }]}
             />
             <NavbarMenu
-              fontSize="0.80rem"
+              fontSize="0.9rem"
               NavBarMenuArr={[
                 {
                   title: "کارهایی برای انجام ",
@@ -87,17 +87,17 @@ const MainHeader = () => {
               ]}
             />
             <NavbarMenu
-              fontSize="0.80rem"
+              fontSize="0.90rem"
               NavBarMenuArr={[{ title: "رستوران ها ", link: "/Restaurants" }]}
             />
             <NavbarMenu
-              fontSize="0.80rem"
+              fontSize="0.90rem"
               NavBarMenuArr={[
                 { title: "پرواز ها ", link: "/CheapFlightsHome" },
               ]}
             />
             <NavbarMenu
-              fontSize="0.80rem"
+              fontSize="0.90rem"
               NavBarMenuArr={[
                 {
                   title: " تعطیلات اجاره ها ",
@@ -106,7 +106,7 @@ const MainHeader = () => {
               ]}
             />
             <NavbarMenu
-              fontSize="0.80rem"
+              fontSize="0.90rem"
               NavBarMenuArr={[
                 {
                   title: "صفحه اصلی انجمن ",
@@ -124,7 +124,7 @@ const MainHeader = () => {
               ]}
             /> */}
             <NavbarMenu
-              fontSize="0.80rem"
+              fontSize="0.90rem"
               NavBarMenuArr={[
                 {
                   title: "سفرهای دریایی ",

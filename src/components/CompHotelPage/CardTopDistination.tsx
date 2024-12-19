@@ -19,7 +19,8 @@ const CardTopDistination: FC<ICardTopDistinationProps> = ({
       alignItems={"center"}
       justifyContent={"center"}
       flexDirection={"column"}
-      margin= {'0  0.5rem'}
+      sx={{ direction: "rtl" }}
+      margin={"0  0.5rem"}
     >
       <img src={img} className="rounded-md" alt="" />
       <Box
