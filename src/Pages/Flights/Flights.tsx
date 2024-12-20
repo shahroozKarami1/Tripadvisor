@@ -1,7 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import MainBanner from "../../components/MainBanner/MainBanner";
 import Grid from "@mui/material/Grid2";
-import InpSearch from "../../components/InpSearch/InpSearch";
 import PlanCard from "../../components/CompThingsToDo/PlanCard";
 import RestoreOutlinedIcon from "@mui/icons-material/RestoreOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
@@ -34,7 +33,7 @@ const Flights = () => {
               >
                 بهترین پرواز را با قیمت مناسب پیدا کنید{" "}
               </Typography>
-              <InpSearch isBtnSearch={false} />
+              {/* <InpSearch isBtnSearch={false} /> */}
             </Grid>
           </Grid>
         </Container>
@@ -98,7 +97,7 @@ const Flights = () => {
                 خطوط هوایی را مرور کنید
               </Typography>
               <Grid size={{ md: 7 }} sx={{ marginTop: "0.5rem" }}>
-                <InpSearch isBtnSearch={false} />
+                {/* <InpSearch isBtnSearch={false} /> */}
               </Grid>
               <Grid container spacing={1} sx={{ marginTop: "1rem" }}>
                 <Grid size={{ md: 3 }}>

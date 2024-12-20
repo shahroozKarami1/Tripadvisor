@@ -22,6 +22,7 @@ import TourAttractions from "./Pages/TourAttractions/TourAttractions";
 import OtherPage from "./Pages/OtherPage/OtherPage";
 import TripDetails from "./Pages/TripDetails/TripDetails";
 import TripBuilder from "./Pages/TripBuilder/TripBuilder";
+import VacationRentalDetails from "./Pages/VacationRentalDetails/VacationRentalDetails";
 
 let routes = [
   {
@@ -123,6 +124,10 @@ let routes = [
   {
     element: <TripBuilder />,
     path: "/TripBuilder",
+  },
+  {
+    element: <VacationRentalDetails />,
+    path: "/VacationRentalsDetails",
   },
 ];
 

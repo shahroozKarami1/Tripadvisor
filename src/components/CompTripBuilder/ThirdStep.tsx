@@ -1,4 +1,4 @@
-import { Box, Button, colors, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import React, { FC, useState } from "react";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";

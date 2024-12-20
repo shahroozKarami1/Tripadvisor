@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface IDarkBtnProps {
-  children: string;
+  children: string  |  React.ReactNode;
 }
 
 type TSubMenu = {
