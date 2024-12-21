@@ -16,7 +16,7 @@ import ThirdStep from "../../components/CompTripBuilder/ThirdStep";
 const steps = ["مرحله اول", "مرحله دوم", "مرحله سوم", "مرحله چهار"];
 
 const TripBuilder = () => {
-  const [activeStep, setActiveStep] = useState(2);
+  const [activeStep, setActiveStep] = useState(1);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);

@@ -6,7 +6,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 const SecoundStep = () => {
   return (
     <Grid container justifyContent={"center"} alignItems={"center"} gap={1}>
-      <Grid size={{ md: 12 }}>
+      <Grid size={{ md:12 }}>
         <Box
           display={"flex"}
           justifyContent={"center"}

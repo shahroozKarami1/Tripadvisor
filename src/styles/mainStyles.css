@@ -21,12 +21,10 @@ body,
 .custom-calendar.rmdp-wrapper,
 .rmdp-container .custom-calendar.ep-arrow::after {
   background-color: #fff !important ;
-  width: 100%;
 }
 
 .rmdp-day-picker {
-  display: initial !important;
-  width: 100%;
+  /* display: initial !important; */
 }
 /* 
 .MuiInputBase-root::after {
