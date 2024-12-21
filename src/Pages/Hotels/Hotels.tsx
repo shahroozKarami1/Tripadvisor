@@ -6,6 +6,7 @@ import TitleSection from "../../components/ComHomePage/TitleSection";
 import TourWaysCard from "../../components/ComHomePage/TourWaysCard";
 import CardTopDistination from "../../components/CompHotelPage/CardTopDistination";
 import SliderWrapper from "../../components/SliderWraper/SliderWrapper";
+import SearchInpHotel from "../../components/CompHotelPage/SearchInpHotel";
 const Hotels = () => {
   return (
     <Box>
@@ -19,7 +20,7 @@ const Hotels = () => {
             alignContent={"center"}
             gap={2}
           >
-            <Grid size={{ md: 7  , xs : 12}}>
+            <Grid size={{ md: 9, xs: 12 }}>
               <Typography
                 sx={{
                   fontWeight: "bold",
@@ -29,9 +30,9 @@ const Hotels = () => {
                   marginBottom: "3rem",
                 }}
               >
-                آخرین بررسی ها پایین ترین قیمت ها.{" "}
+                آخرین بررسی ها پایین ترین قیمت ها
               </Typography>
-              <InpSearch textPlaceHolder="جست و جو" isBtnSearch={false} />
+              <SearchInpHotel/>
             </Grid>
           </Grid>
         </Container>
@@ -39,14 +40,13 @@ const Hotels = () => {
 
       <Container>
         <Box>
-
           <TitleSection
             isSubTitle={false}
             mainTitle="انتخاب مسافران: استراحتگاه های فراگیر"
             isSeeAll={true}
           />
-  <SliderWrapper numberOfShowSlider={4}>
-  <TourWaysCard
+          <SliderWrapper numberOfShowSlider={4}>
+            <TourWaysCard
               link="/Hotels/HotelDetails"
               isDetails={false}
               price={134}
@@ -75,18 +75,16 @@ const Hotels = () => {
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/ResortsImgs/img4.jpg"
             />
-  </SliderWrapper>
+          </SliderWrapper>
         </Box>
-
-<Box>
-
+        <Box>
           <TitleSection
             isSubTitle={false}
             mainTitle="انتخاب مسافران: هتل های برتر"
             isSeeAll={true}
           />
-  <SliderWrapper numberOfShowSlider={4}>
-  <TourWaysCard
+          <SliderWrapper numberOfShowSlider={4}>
+            <TourWaysCard
               isDetails={false}
               price={134}
               score={935}
@@ -111,16 +109,16 @@ const Hotels = () => {
               disc="گشت روز قلعه هایدلبرگ و شهر از فرانکفورت147"
               img="/public/images/Hotelmg/BestChoice/img4.jpg"
             />
-  </SliderWrapper>
-          </Box>
-<Box>
-<TitleSection
+          </SliderWrapper>
+        </Box>
+        <Box>
+          <TitleSection
             isSubTitle={false}
             mainTitle="هتل ها در مقاصد برتر"
             isSeeAll={true}
           />
- <SliderWrapper  numberOfShowSlider={4}>
- <CardTopDistination
+          <SliderWrapper numberOfShowSlider={4}>
+            <CardTopDistination
               diec="Scottsdale سرانه اسپاهای بیشتری نسبت به هر شهر دیگری در ایالات متحده دارد—بنابراین چه به دنبال جدیدترین فن‌آوری آبگرم رسانه‌ای باشید و چه به دنبال فضایی جدید و غیرعادی باشید، مطمئناً چیزی برای شما وجود دارد. این نیز چیز خوبی است - پس از گذراندن تمام روز برای گشت و گذار در صحرای زیبا، برای کمی نوازش سپاسگزار خواهید بود."
               img="/public/images/Hotelmg/TopDistination/img1.jpg"
               title="اسکاتسدیل"
@@ -140,9 +138,8 @@ const Hotels = () => {
               img="/public/images/Hotelmg/TopDistination/img4.jpg"
               title="اسکاتسدیل"
             />
- </SliderWrapper>
-</Box>
-
+          </SliderWrapper>
+        </Box>
       </Container>
     </Box>
   );

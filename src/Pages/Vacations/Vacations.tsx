@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid2";
 import InpSearch from "../../components/InpSearch/InpSearch";
 import CardRental from "../../components/CompVacationRental/CardRental";
 import CardSingleText from "../../components/CardSingleText/CardSingleText";
+import InpRental from "../../components/CompVacationRental/InpRental";
 const Vacations = () => {
   return (
     <Box>
@@ -29,10 +30,7 @@ const Vacations = () => {
               >
                 آخرین بررسی ها پایین ترین قیمت ها.{" "}
               </Typography>
-              <InpSearch
-                textPlaceHolder="جست و جو کنید ... "
-                isBtnSearch={false}
-              />
+              <InpRental />
             </Grid>
           </Grid>
         </Container>

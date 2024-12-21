@@ -9,7 +9,7 @@ const PayCard = () => {
   let [travelers, setTraveler] = useState<number>(1);
   let [isOpenTravelerBox, setIsOpenTravelerBox] = useState<boolean>(false);
   let [isOpenDataPickerBox, setIsOpenDataPickerBox] = useState<boolean>(false);
-  let [dataState, setDateSate] = useState <number>(new Date().getFullYear());
+  let [dataState ] = useState <number>(new Date().getFullYear());
   const CusPayCard = styled(Box)({
     boxShadow: "var(--main-shadow)",
     borderRadius: "1rem ",
@@ -114,7 +114,7 @@ const PayCard = () => {
 
       {isOpenDataPickerBox && (
         <CusBoxDetailsTraveler>
-          <DataPicker />
+          <DataPicker placeholder="تاریخ  خود را وارد کنید" />
         </CusBoxDetailsTraveler>
       )}
     </CusPayCard>

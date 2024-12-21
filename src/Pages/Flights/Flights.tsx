@@ -8,6 +8,7 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import AssistantOutlinedIcon from "@mui/icons-material/AssistantOutlined";
 import ReviewsCard from "../../components/CompFlightPage/ReviewsCard";
 import Paragraph from "../../components/CompFlightPage/Paragraph";
+import InpSearch from "../../components/InpSearch/InpSearch";
 const Flights = () => {
   return (
     <Box>
@@ -33,7 +34,7 @@ const Flights = () => {
               >
                 بهترین پرواز را با قیمت مناسب پیدا کنید{" "}
               </Typography>
-              {/* <InpSearch isBtnSearch={false} /> */}
+              <InpSearch textPlaceHolder="جست و جو  کنید" isBtnSearch={false} />
             </Grid>
           </Grid>
         </Container>
@@ -82,7 +83,7 @@ const Flights = () => {
               >
                 <AssistantOutlinedIcon />
               </Box>
-              <Typography sx={{ fontWeight: "bold" ,  fontSize  : "1.2rem" }}>
+              <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
                 نظرات مسافران را ببینید
               </Typography>
               <Typography
@@ -155,8 +156,8 @@ const Flights = () => {
             textBody="فیلترهای ما به شما کمک می کند تا به راحتی پرواز ارزان قیمت مناسب خود را پیدا کنید. پروازهای مستقیم بدون توقف را پیدا کنید، از زمان‌های حرکت زودهنگام اجتناب کنید—یا فیلتر بهترین ارزش ما را امتحان کنید، که بر اساس قیمت، مدت زمان و عوامل دیگر مرتب می‌شود."
           />
           <Paragraph
-          header="تجربه در پرواز" 
-          textBody="Wi-Fi می خواهید؟ فضای پا بیشتر؟ یا حتی یک صندلی که به شما امکان می دهد کاملا صاف بخوابید؟ Tripadvisor Flights اکنون یافتن امکاناتی را که می‌تواند باعث ایجاد یا شکست پرواز شما شود، آسان‌تر می‌کند. بیابید کدام پروازها شامل Wi-Fi، تلویزیون زنده، پریز برق، چمدان رایگان و غیره هستند."
+            header="تجربه در پرواز"
+            textBody="Wi-Fi می خواهید؟ فضای پا بیشتر؟ یا حتی یک صندلی که به شما امکان می دهد کاملا صاف بخوابید؟ Tripadvisor Flights اکنون یافتن امکاناتی را که می‌تواند باعث ایجاد یا شکست پرواز شما شود، آسان‌تر می‌کند. بیابید کدام پروازها شامل Wi-Fi، تلویزیون زنده، پریز برق، چمدان رایگان و غیره هستند."
           />
         </Grid>
       </Container>

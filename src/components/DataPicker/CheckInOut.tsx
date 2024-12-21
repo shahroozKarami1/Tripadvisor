@@ -6,10 +6,17 @@ import persian_fa from "react-date-object/locales/persian_fa";
 // import DateRangeIcon from '@mui/icons-material/DateRange';
 import InputIcon from "react-multi-date-picker/components/input_icon";
 
-const CheckInOut: FC<{ label: string }> = ({ label }) => {
+const CheckInOut: FC<{ label ?: string; isLabel?: boolean }> = ({
+  label,
+  isLabel,
+}) => {
   return (
     <Box>
-      <Typography sx={{fontSize : "0.80rem"  ,  marginY :  "0.5rem"}}>{label} :</Typography>
+      {isLabel && (
+        <Typography sx={{ fontSize: "0.80rem", marginY: "0.5rem" }}>
+          {label} :
+        </Typography>
+      )}
       <DatePicker
         render={<InputIcon />}
         range
@@ -19,8 +26,8 @@ const CheckInOut: FC<{ label: string }> = ({ label }) => {
         style={{
           borderRadius: "0.25rem",
           border: "1px  solid  #444",
-          padding : "1rem",
-          width : "150px"
+          padding: "1rem",
+          width: "150px",
         }}
         calendar={persian}
         locale={persian_fa}

@@ -74,7 +74,7 @@ function FlightInp() {
           <Grid container alignItems={"center"}>
             <Grid size={{ md: 6, xs: 12 }}>
               <Box>
-                <DataPicker />
+                <DataPicker placeholder="تاریخ سفر" />
               </Box>
             </Grid>
             <Grid size={{ md: 6, xs: 12 }}>
