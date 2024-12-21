@@ -7,15 +7,15 @@ const ListOfForum: FC<IListOfForumProps> = ({ DataArrListFormus, title }) => {
   return (
     <List>
       <Typography  sx={{fontWeight : "bold"  ,  fontSize : "1.1rem" ,  marginBottom  : "1rem"}}>{title}</Typography>
-      {DataArrListFormus.map(({ link, text }) => {
+      {DataArrListFormus.map(({ link, text } ,  index) => {
         return (
-          <>
-            <ListItem>
+          
+            <ListItem key={index}>
               <Link to={link}>
                 <Typography  >{text}</Typography>
               </Link>
             </ListItem>
-          </>
+          
         );
       })}
     </List>

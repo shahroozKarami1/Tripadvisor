@@ -8,10 +8,15 @@ import "slick-carousel/slick/slick-theme.css";
 import MainHeader from "./components/MainHeader/MainHeader";
 import { useMedia } from "./context/MediaQueryContext";
 import ResponsiveMenu from "./components/ResponsiveMenu/ResponsiveMenu";
+import { useEffect } from "react";
 const App = () => {
   let router = useRoutes(routes);
   let location = useLocation();
   let  isXs =  useMedia()
+  let  {pathname} =  useLocation()
+  useEffect (()  =>  {
+      window.scrollTo(0  ,  0)
+  }  ,  [pathname])
   return (
         <Box>
       {location.pathname !== "/" && <MainHeader />}

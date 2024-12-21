@@ -4,11 +4,13 @@ import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import { DarkOverlay } from "../../elements/CusComponets";
 import { useMedia } from "../../context/MediaQueryContext";
+import { Link } from "react-router-dom";
 
 const CardSingleText: FC<ICardSingleTextProps> = ({
   TopCover,
   textBody,
   heightCard,
+  link
 }) => {
   const isXs = useMedia();
   const CusTPForCard = styled(Typography)({
@@ -21,7 +23,8 @@ const CardSingleText: FC<ICardSingleTextProps> = ({
     fontWeight: isXs ? "light" : "bold",
   });
   return (
-    <Box margin={"0  0.25rem"}>
+  <Link to={link  ?  link  :  "/"}>
+        <Box margin={"0  0.25rem"}>
       <Box
         sx={{ position: "relative", height: heightCard ? heightCard : "100%" }}
       >
@@ -40,6 +43,7 @@ const CardSingleText: FC<ICardSingleTextProps> = ({
         <CusTPForCard>{textBody}</CusTPForCard>
       </Box>
     </Box>
+  </Link>
   );
 };
 

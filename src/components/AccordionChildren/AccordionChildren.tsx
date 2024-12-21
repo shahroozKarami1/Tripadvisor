@@ -24,7 +24,7 @@ const AccordionChildren: FC<{
     sx={ {
      boxShadow :  0  ,  
      "& .MuiAccordionDetails-root" : {
-        padding :  0
+        padding :  0  ,  
      }
     }}
     //   expanded={expanded === `panel${id}`}

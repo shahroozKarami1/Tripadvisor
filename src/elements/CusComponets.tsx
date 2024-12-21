@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box, Button, Input, Typography } from "@mui/material";
+import {  Box, Button, Input, Typography } from "@mui/material";
 import FirstBannerImg from "../../public/images/HomePage/FirstBanner.jpg";
 import MainBanner from "/public/images/ThingsToDoPage/Banner.jpg";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -267,3 +267,5 @@ export const CusYellowCard = styled(Box)({
   padding: "0.80rem",
   borderRadius: "1rem",
 });
+
+

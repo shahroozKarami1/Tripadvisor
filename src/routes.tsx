@@ -113,7 +113,7 @@ let routes = [
     element: <TourAttractions />,
     path: "/TourAttractions",
   },
-{
+  {
     element: <OtherPage />,
     path: "/OtherPage",
   },

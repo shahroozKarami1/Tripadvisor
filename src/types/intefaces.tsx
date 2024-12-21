@@ -106,6 +106,7 @@ export interface ICardSingleTextProps {
   TopCover: string;
   textBody: string;
   heightCard?: string;
+  link ?:  string
 }
 
 export interface ITravelerBoxProps {}
@@ -390,3 +391,22 @@ export interface ICardForFirstTripProps {
 changePageHandler :  ()  =>  void
   
 }
+
+export interface IMoreDetailsSectionCardProps {
+  AboutProperty: string;
+  allowed: {
+    pet: boolean;
+    kid: boolean;
+    smoking: boolean;
+  };
+  items  :  string[];
+}
+export interface IMainCardDetailsProps {
+  title  : string  ;  
+  countOfBedroom :  number  ; 
+  countOfBathroom : number ;
+  countOfSleeps :  number ;  
+  cardSliderImgs   : string[]  , 
+  moreInformation  :  IMoreDetailsSectionCardProps
+}
+

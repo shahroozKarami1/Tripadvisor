@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import { useMedia } from "../../context/MediaQueryContext";
 function Footer() {
 let isXs = useMedia()
-console.log(isXs)
   return (
 
       <Grid container spacing={2}>

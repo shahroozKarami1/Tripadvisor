@@ -19,13 +19,13 @@ const FallDistinationCol: FC<{ myData: { link: string; title: string }[] }> = ({
   let result = chunkingArray(myData, 5);
   return (
     <>
-      {result.map((item) => {
+      {result.map((item ,  index) => {
         return (
-          <Grid size={{ md: 3 }}>
+          <Grid size={{ md: 3 }}  key={index}>
             <List>
-              {item.map(({ link, title }) => {
+              {item.map(({ link, title  } ,  index) => {
                 return (
-                  <ListItem>
+                  <ListItem key={index}>
                     <Link to={link}>
                       <Typography  sx={{fontSize  : "0.90rem"}}>{title}</Typography>
                     </Link>

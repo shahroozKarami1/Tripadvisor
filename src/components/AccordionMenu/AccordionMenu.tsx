@@ -57,9 +57,10 @@ const AccordionMenu: React.FC<{ dataCoordion: TAccordionMenuProps }> = ({
 
   return (
     <>
-      {dataCoordion.map(({ textBody, title, id }) => {
+      {dataCoordion.map(({ textBody, title, id }  ) => {
         return (
           <Accordion
+          key={id}
             sx={{ border: 0, boxShadow: 0 }}
             expanded={expanded === `panel${id}`}
             onChange={handleChange(`panel${id}`)}
