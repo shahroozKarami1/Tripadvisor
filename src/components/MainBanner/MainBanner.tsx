@@ -10,7 +10,7 @@ const MainBanner: FC<IMainBannerProps> = ({bannerUrl  , children}) => {
   const   CusMainBanner  =  styled(Box)  ({
     background : `url(${bannerUrl})`  , 
     height: "70vh",
-    width: "100vw",
+    // width: "100vw",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition :"bottom",

@@ -6,6 +6,7 @@ import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
+import { Opacity } from "@mui/icons-material";
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
@@ -269,3 +270,17 @@ export const CusYellowCard = styled(Box)({
 });
 
 
+export  const CusSearchCard = styled (Box) ({
+ backgroundColor  : "#fff"   ,
+ borderRadius  : "0.5rem"    , 
+ overflow : "hidden"  ,  
+ margin : "2rem  0 " , 
+ boxShadow :"var(--main-shadow)" ,  
+   ":hover" : {
+    "& .titleHover" : {
+      transition : "all  0.25s  ease"  ,  
+      opacity : 0.5  , 
+      borderBottom : "1px  solid  #444"
+    }
+   }
+})

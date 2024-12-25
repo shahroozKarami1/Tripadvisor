@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface IDarkBtnProps {
-  children: string  |  React.ReactNode;
+  children: string | React.ReactNode;
 }
 
 type TSubMenu = {
@@ -106,7 +106,7 @@ export interface ICardSingleTextProps {
   TopCover: string;
   textBody: string;
   heightCard?: string;
-  link ?:  string
+  link?: string;
 }
 
 export interface ITravelerBoxProps {}
@@ -388,8 +388,7 @@ export interface ICardForFirstTripProps {
   coverImg: string;
   titleImg: string;
   countryName: string;
-changePageHandler :  ()  =>  void
-  
+  changePageHandler: () => void;
 }
 
 export interface IMoreDetailsSectionCardProps {
@@ -399,14 +398,36 @@ export interface IMoreDetailsSectionCardProps {
     kid: boolean;
     smoking: boolean;
   };
-  items  :  string[];
+  items: string[];
 }
 export interface IMainCardDetailsProps {
-  title  : string  ;  
-  countOfBedroom :  number  ; 
-  countOfBathroom : number ;
-  countOfSleeps :  number ;  
-  cardSliderImgs   : string[]  , 
-  moreInformation  :  IMoreDetailsSectionCardProps
+  title: string;
+  countOfBedroom: number;
+  countOfBathroom: number;
+  countOfSleeps: number;
+  cardSliderImgs: string[];
+  moreInformation: IMoreDetailsSectionCardProps;
 }
 
+export interface ICardSearchPageProps {
+  coverImg: string;
+  title: string;
+  link: string;
+  country: string;
+  disc: string;
+}
+
+export interface ISearchTitleProps {
+  text: string;
+  isAddPlaceBtn: boolean;
+  isSeeAllBtn: boolean;
+}
+
+export interface IForumsSearchCardProps {
+  title: string;
+  profile: string;
+  name: string;
+  date: string;
+  nameOfForum: string;
+  disc: string;
+}

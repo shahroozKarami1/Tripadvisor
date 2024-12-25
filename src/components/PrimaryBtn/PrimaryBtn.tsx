@@ -10,6 +10,7 @@ const PrimaryBtn: FC<{ text: string }> = ({ text }) => {
   color  : "#000" , 
   width  :  isXs ? "90%" : "200px" ,  
   fontWeight : "bold"  ,  
+  height : "100%" ,  
  padding : "0.5rem  1rem" ,
  marginRight : "1rem" ,   
   borderRadius : "2rem"

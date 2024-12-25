@@ -1,6 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
 import MainBanner from "../../components/MainBanner/MainBanner";
-import InpSearch from "../../components/InpSearch/InpSearch";
 import Grid from "@mui/material/Grid2";
 import TitleSection from "../../components/ComHomePage/TitleSection";
 import TourWaysCard from "../../components/ComHomePage/TourWaysCard";

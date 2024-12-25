@@ -23,6 +23,7 @@ import OtherPage from "./Pages/OtherPage/OtherPage";
 import TripDetails from "./Pages/TripDetails/TripDetails";
 import TripBuilder from "./Pages/TripBuilder/TripBuilder";
 import VacationRentalDetails from "./Pages/VacationRentalDetails/VacationRentalDetails";
+import SearchPage from "./Pages/SearchPage/SearchPage";
 
 let routes = [
   {
@@ -129,6 +130,10 @@ let routes = [
     element: <VacationRentalDetails />,
     path: "/VacationRentalsDetails",
   },
+  {
+    element: <SearchPage />,
+    path: "/searchPage",
+  }
 ];
 
 export default routes;
