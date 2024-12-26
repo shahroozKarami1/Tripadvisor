@@ -2,6 +2,7 @@ import React from "react";
 
 export interface IDarkBtnProps {
   children: string | React.ReactNode;
+  setState  ?:  React.Dispatch<React.SetStateAction<boolean>>
 }
 
 type TSubMenu = {
@@ -430,4 +431,8 @@ export interface IForumsSearchCardProps {
   date: string;
   nameOfForum: string;
   disc: string;
+}
+export interface   IProfileBox  {
+    open : boolean  ; 
+    setOpen :  React.Dispatch<React.SetStateAction<boolean>>
 }
