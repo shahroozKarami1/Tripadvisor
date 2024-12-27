@@ -8,7 +8,7 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import AssistantOutlinedIcon from "@mui/icons-material/AssistantOutlined";
 import ReviewsCard from "../../components/CompFlightPage/ReviewsCard";
 import Paragraph from "../../components/CompFlightPage/Paragraph";
-import InpSearch from "../../components/InpSearch/InpSearch";
+import FlightInp from "../../components/ComHomePage/FlightInp/FlightInp";
 const Flights = () => {
   return (
     <Box>
@@ -34,7 +34,7 @@ const Flights = () => {
               >
                 بهترین پرواز را با قیمت مناسب پیدا کنید{" "}
               </Typography>
-              <InpSearch textPlaceHolder="جست و جو  کنید" isBtnSearch={false} />
+              <FlightInp />
             </Grid>
           </Grid>
         </Container>

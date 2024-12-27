@@ -7,7 +7,7 @@ import { useMedia } from "../../context/MediaQueryContext";
 import { useState } from "react";
 import ProfileBox from "../../Pages/ProfileBox/ProfileBox";
 const TopBarHome = () => {
-  let [isOpenProfileBox, setIsOpenProfileBox] = useState<boolean>(true);
+  let [isOpenProfileBox, setIsOpenProfileBox] = useState<boolean>(false);
   let isXs = useMedia();
 
   return (
