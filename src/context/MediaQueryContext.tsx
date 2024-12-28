@@ -1,4 +1,4 @@
-import React, { createContext, FC, ReactNode, useContext } from "react";
+import  { createContext, ReactNode, useContext } from "react";
 import { useMediaQuery } from "@mui/material";
 
 type MediaContextType = boolean | null;
@@ -7,7 +7,7 @@ const MediaContext = createContext<MediaContextType>(null);
 
 export const MediaProvider = ({ children }: { children: ReactNode }) => {
   const isXs = useMediaQuery("(max-width: 768px)");
-
+   
   return <MediaContext.Provider value={isXs}>{children}</MediaContext.Provider>;
 };
 

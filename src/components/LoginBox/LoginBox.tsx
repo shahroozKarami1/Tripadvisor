@@ -46,7 +46,7 @@ const Transition = forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const ProfileBox: FC<IProfileBox> = ({ setOpen, open }) => {
+const LoginBox: FC<IProfileBox> = ({ setOpen, open }) => {
   function handlerClose() {
     setOpen(false);
   }
@@ -112,4 +112,4 @@ const ProfileBox: FC<IProfileBox> = ({ setOpen, open }) => {
   );
 };
 
-export default ProfileBox;
+export default LoginBox;

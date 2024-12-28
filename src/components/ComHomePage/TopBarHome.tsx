@@ -5,7 +5,7 @@ import TopBarMenu from "./TopBarMenu";
 import { CusStickyMenu } from "../../elements/CusComponets";
 import { useMedia } from "../../context/MediaQueryContext";
 import { useState } from "react";
-import ProfileBox from "../../Pages/ProfileBox/ProfileBox";
+import LoginBox from "../LoginBox/LoginBox";
 const TopBarHome = () => {
   let [isOpenProfileBox, setIsOpenProfileBox] = useState<boolean>(false);
   let isXs = useMedia();
@@ -19,7 +19,7 @@ const TopBarHome = () => {
               <Grid size={{ md: 2 }}>
                 <Box display={"flex"} gap={3} alignItems={"center"}>
                   <DarkBtn  setState={ setIsOpenProfileBox }>ورود </DarkBtn>
-                  <ProfileBox setOpen ={ setIsOpenProfileBox} open={isOpenProfileBox} />
+                  <LoginBox setOpen ={ setIsOpenProfileBox} open={isOpenProfileBox} />
                   {/* <Box
                 sx={{ cursor: "pointer" }}
                 display={"flex"}
@@ -53,7 +53,7 @@ const TopBarHome = () => {
                       { link: "/Trips", text: "شروع  یک سفر جدید !" },
                       { link: "/TripBuilder", text: "ساهت سفر باهوش مصنوعی" },
                     ]}
-                  />
+                />
                   <TopBarMenu
                     titleMenu="بررسی کنید "
                     subMenuArray={[

@@ -436,3 +436,9 @@ export interface   IProfileBox  {
     open : boolean  ; 
     setOpen :  React.Dispatch<React.SetStateAction<boolean>>
 }
+
+export interface IAchievementBoxProps {
+href  :  string  ;  
+title  : string  ; 
+subTitle  :  string
+}

@@ -1,81 +1,102 @@
-import { Box, styled, Tab, Tabs } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  InputAdornment,
+  styled,
+  Typography,
+} from "@mui/material";
+import Grid from "@mui/material/Grid2";
+import { CusInput } from "../../../elements/CusComponets";
+import DataPicker from "../../DataPicker/DataPicker";
+import FlightTakeoffOutlinedIcon from "@mui/icons-material/FlightTakeoffOutlined";
+import PeopleOutlineOutlinedIcon from "@mui/icons-material/PeopleOutlineOutlined";
+import FlightLandOutlinedIcon from "@mui/icons-material/FlightLandOutlined";
 import { useState } from "react";
-import RoundTripInp from "../../CompFlightPage/RoundTripInp";
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-}
-
-function CustomTabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-    </div>
-  );
-}
+import TravelerBox from "../TravelerBox/TravelerBox";
 const FlightInp = () => {
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
-
-  function a11yProps(index: number) {
-    return {
-      id: `simple-tab-${index}`,
-      "aria-controls": `simple-tabpanel-${index}`,
-    };
-  }
-
-  const CusTabsInp = styled(Tab)({
-    color: "#fff",
-    fontSize: "1.2rem",
-    // fontWeight: "bold",
+  const [isShowTravelerBox, setIsShowTravelerBox] = useState<Boolean>(false);
+  const CusBtnTraverler = styled(Button)({
+    backgroundColor: "#fff",
+    border: "1px  solid  #000",
+    borderRadius: "2rem",
+    padding: "  1rem   2rem ",
+    gap: 5,
+    whiteSpace: "nowrap",
   });
-
+  function HandlerTravelerBox() {
+    setIsShowTravelerBox(!isShowTravelerBox);
+  }
+  const CusBtnSearch = styled(Button)({
+    backgroundColor: `var(--primary-color)`,
+    color: "#000",
+    width: "100%",
+    fontWeight: "bold",
+    borderRadius: "2rem",
+    padding: "1rem",
+    whiteSpace: "nowrap",
+  });
   return (
-    <Box>
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-            sx={{
-              "& .css-l4oarj-MuiButtonBase-root-MuiTab-root.Mui-selected ": {
-                color: "#fff",
-                fontWeight : "bold"
-              },
-              "& .css-1qltlow-MuiTabs-indicator": {
-                backgroundColor: "#fff",
-              },
-            }}
-          >
-            <CusTabsInp label="رفت و برگشت" {...a11yProps(0)} />
-            <CusTabsInp label="یک طرفه" {...a11yProps(1)} />
-            <CusTabsInp label="چند شهر" {...a11yProps(2)} />
-          </Tabs>
-        </Box>
-        <CustomTabPanel value={value} index={0}>
-         <RoundTripInp/>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          Item Two
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          Item Three
-        </CustomTabPanel>
-      </Box>
-    </Box>
+    <Container sx={{ width: "100%" }}>
+      <Grid container width={"100%"} spacing={1}>
+        <Grid size={{ md: 6, xs: 12 }}>
+          <Box display={"flex"} gap={2}>
+            <CusInput
+              placeholder="مبدا"
+              startAdornment={
+                <InputAdornment position="start">
+                  <Box display={"flex"} gap={1}>
+                    <FlightTakeoffOutlinedIcon />
+                    <Typography sx={{ fontWeight: "bold" }}>از:</Typography>
+                  </Box>
+                </InputAdornment>
+              }
+            />
+            <CusInput
+              placeholder="مقصد"
+              startAdornment={
+                <InputAdornment position="start">
+                  <Box display={"flex"} gap={1}>
+                    <FlightLandOutlinedIcon />
+                    <Typography sx={{ fontWeight: "bold" }}>به:</Typography>
+                  </Box>
+                </InputAdornment>
+              }
+            />
+          </Box>
+        </Grid>
+        <Grid size={{ md: 6, xs: 12 }}>
+          <Grid container alignItems={"center"}>
+            <Grid size={{ md: 6, xs: 12 }}>
+              <Box>
+                <DataPicker placeholder="تاریخ سفر" />
+              </Box>
+            </Grid>
+            <Grid size={{ md: 6, xs: 12 }}>
+              <Box
+                gap={1}
+                display={"flex"}
+                justifyContent={"flex-start"}
+                alignItems={"flex-start"}
+              >
+                <Box position={"relative"}>
+                  <CusBtnTraverler onClick={() => HandlerTravelerBox()}>
+                    <PeopleOutlineOutlinedIcon />
+                    <Typography
+                      sx={{ fontWeight: "bold", fontSize: "0.85rem" }}
+                    >
+                      1 مسافر
+                    </Typography>
+                  </CusBtnTraverler>
+                  {isShowTravelerBox && <TravelerBox />}
+                </Box>
+                <CusBtnSearch>جست و جو </CusBtnSearch>
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 
