@@ -21,6 +21,7 @@ import LocalSeeOutlinedIcon from "@mui/icons-material/LocalSeeOutlined";
 import UpLoadFile from "../../components/UploadFile/UpLoadFile";
 import IntroBtn from "../../components/CompProfile/IntroBtn";
 import CardOfTabs from "../../components/CompProfile/CardOfTabs";
+import EditForm from "../../components/CompProfile/EditForm";
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -51,12 +52,14 @@ function CustomTabPanel(props: TabPanelProps) {
 
 const Profile = () => {
   const [value, setValue] = useState(0);
+  let [openEditForm, setOpenEditForm] = useState<boolean>(true);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
   const isXs = useMedia();
   return (
+    <>
     <Box sx={{ backgroundColor: "#F2F2F2" }}>
       <Box
         display={"flex"}
@@ -249,22 +252,22 @@ const Profile = () => {
               <List>
                 <IntroBtn
                   Type="plus"
-                  setState=""
+                  setState={setOpenEditForm}
                   text="شهر فعلی خود را اضافه کنید"
                 />
                 <IntroBtn
                   Type="date"
-                  setState=""
+                  setState={setOpenEditForm}
                   text="در مهر 1402 پیوسته ایید"
                 />
                 <IntroBtn
                   Type="plus"
-                  setState=""
+                  setState={setOpenEditForm}
                   text="یک وب سایت اضافه کنید"
                 />
                 <IntroBtn
                   Type="plus"
-                  setState=""
+                  setState={setOpenEditForm}
                   text="جزئیاتی در مورد خودتان بنویسید"
                 />
               </List>
@@ -348,7 +351,6 @@ const Profile = () => {
                 <CustomTabPanel index={4} value={value}>
                   <CardOfTabs
                     isLink={false}
-           
                     textBody={`سایر مسافران آماده کمک - و به اشتراک گذاشتن مشاوره و ایده هستند`}
                     title="سوالی دارید؟ از انجمن های ما بپرسید!"
                   />
@@ -360,6 +362,9 @@ const Profile = () => {
         </Grid>
       </Container>
     </Box>
+      <EditForm openState={openEditForm} setState={setOpenEditForm} />
+    </>
+
   );
 };
 

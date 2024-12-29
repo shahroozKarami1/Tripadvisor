@@ -442,3 +442,14 @@ href  :  string  ;
 title  : string  ; 
 subTitle  :  string
 }
+
+export interface TInpsEditProfile {
+  labelFrom  :  string   ; 
+   inpDetails  :  {
+    icon  ?:  React.ReactNode  ; 
+    placeholder  :  string  ;  
+    value :  string  ; 
+   }  
+   isTextArea :  boolean ;  
+   
+}

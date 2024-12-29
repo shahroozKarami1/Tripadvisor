@@ -1,12 +1,14 @@
 import { Button } from "@mui/material";
 import { FC } from "react";
 
-const BtnWhteBlackTex: FC<{ link: string; title: string }> = ({
+const BtnWhteBlackTex: FC<{ link: string; title: string ,  funcHandler ?: ()  => {} }> = ({
   link,
   title,
+  funcHandler
 }) => {
   return (
     <Button
+    onClick={funcHandler}
       sx={{
         fontWeight: "bold",
         backgroundColor: "#fff",

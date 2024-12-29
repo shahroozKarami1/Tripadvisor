@@ -5,7 +5,7 @@ import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 interface IntroBtnProps {
   text: string;
   Type: "plus" | "date";
-  setState: string;
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const IntroBtn: FC<IntroBtnProps> = ({ Type, setState, text }) => {
@@ -20,7 +20,7 @@ const IntroBtn: FC<IntroBtnProps> = ({ Type, setState, text }) => {
             gap: 1,
           }}
         >
-          <Button sx={{ padding: 0 }}>
+          <Button sx={{ padding: 0 }}  onClick={()   =>  setState(true)}>
             <AddIcon
               sx={{
                 fontSize: "1.1rem",

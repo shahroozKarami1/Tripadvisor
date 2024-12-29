@@ -31,3 +31,11 @@ body,
   dis: none !important;
 } */
 
+.MuiInputBase-root::after {
+  display: none;
+}
+
+.MuiInputBase-root::before {
+  display: none;
+}
+
