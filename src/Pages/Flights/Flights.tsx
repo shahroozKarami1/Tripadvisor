@@ -8,7 +8,6 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import AssistantOutlinedIcon from "@mui/icons-material/AssistantOutlined";
 import ReviewsCard from "../../components/CompFlightPage/ReviewsCard";
 import Paragraph from "../../components/CompFlightPage/Paragraph";
-import FlightInp from "../../components/ComHomePage/FlightInp/FlightInp";
 import InpFlightPage from "../../components/CompFlightPage/InpFlightPage";
 const Flights = () => {
   return (

@@ -2,7 +2,9 @@ import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import DarkBtn from "../DarkBtn/DarkBtn";
+import { useMedia } from "../../context/MediaQueryContext";
 const SecoundBanner = () => {
+  let   isXs  =  useMedia()
   const CusSecoundBanner = styled(Box)({
     backgroundColor: `#F2ECF9`,
     marginTop: "4rem",
@@ -24,8 +26,8 @@ const SecoundBanner = () => {
             <Box display={"flex"} alignItems={"center"}  gap={1}>
                 <Typography sx={{ fontSize: "0.90rem", fontWeight: "light" }}>
                     ساخته شده توسط <u>شهروز</u> 
-            </Typography>cd
-                <img src="/public/images/singleLogo.svg" alt=""  width={"30px"} />
+            </Typography>
+                <img src="/public/images/AllNewLogos/singleLogo.svg" alt=""  width={"40px"} />
             </Box>
             <Typography sx={{ fontSize: "1.7rem", fontWeight: "bold" }}>
               با هم رفتن راحت تر از همیشه است !
@@ -41,7 +43,7 @@ const SecoundBanner = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid size={{ md: 6 }}>
+        <Grid size={{ md: 6 }}   sx ={{marginTop : isXs  ? "2rem" :  "0rem"}}>
           <img
             src="/public/images/secoundBannerImg/caption.jpg"
             className="rounded-md"

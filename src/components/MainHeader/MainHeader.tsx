@@ -72,9 +72,19 @@ const MainHeader = () => {
               />
             </Box>
             <InpSearch textPlaceHolder="جست و جو..." isBtnSearch={false} />
-            <Link to={"/"}>
-              <img src="/public/images/logo.svg" alt="" width={"400px"} />
-            </Link>
+            <Box sx={{ width :  "150px"   , height : "100px"}}>
+        <Link to={"/"}>
+        <img
+                    src="/public/images/AllNewLogos/textLogo.svg"
+                    alt=""
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  /></Link>
+                </Box>
           </Box>
           ‌
           <Grid container>

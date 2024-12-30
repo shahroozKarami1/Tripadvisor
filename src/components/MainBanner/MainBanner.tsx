@@ -1,29 +1,19 @@
-import { Box } from '@mui/material'
-import { FC } from 'react'
-import { IMainBannerProps } from '../../types/intefaces'
-import styled from '@emotion/styled'
+import { Box } from "@mui/material";
+import { FC } from "react";
+import { IMainBannerProps } from "../../types/intefaces";
+import styled from "@emotion/styled";
 
-
-
-const MainBanner: FC<IMainBannerProps> = ({bannerUrl  , children}) => {
-
-  const   CusMainBanner  =  styled(Box)  ({
-    background : `url(${bannerUrl})`  , 
+const MainBanner: FC<IMainBannerProps> = ({ bannerUrl, children }) => {
+  const CusMainBanner = styled(Box)({
+    background: `url(${bannerUrl})`,
     height: "70vh",
     // width: "100vw",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundPosition :"bottom",
-  })
+    backgroundPosition: "bottom",
+  });
 
+  return <CusMainBanner>{children}</CusMainBanner>;
+};
 
-  return (<CusMainBanner>
-
-   {
-    children
-   }
-
-  </CusMainBanner>)
-}
-
-export default MainBanner
+export default MainBanner;

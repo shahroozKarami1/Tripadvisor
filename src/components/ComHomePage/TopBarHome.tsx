@@ -15,24 +15,22 @@ const TopBarHome = () => {
       {!isXs && (
         <CusStickyMenu>
           <Container>
-            <Grid container sx={{ marginTop: "1rem" }} alignItems={"center"}>
+            <Grid container alignItems={"center"}>
               <Grid size={{ md: 2 }}>
-                <Box display={"flex"} gap={3} alignItems={"center"}>
-                  <DarkBtn  setState={ setIsOpenProfileBox }>ورود </DarkBtn>
-                  <LoginBox setOpen ={ setIsOpenProfileBox} open={isOpenProfileBox} />
-                  {/* <Box
-                sx={{ cursor: "pointer" }}
-                display={"flex"}
-                alignItems={"center"}
-              >
-                <Typography sx={{ fontWeight: "bold", fontSize: "0.85rem" }}>
-                  USD
-                </Typography>
-                <Divider>|</Divider>
-                <LanguageIcon />
-              </Box> */}
+                <Box sx={{ width :  "150px"   , height : "100px"}}>
+                  <img
+                    src="/public/images/AllNewLogos/persian vertical 2-01.svg"
+                    alt=""
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  />
                 </Box>
               </Grid>
+
               <Grid size={{ md: 8 }}>
                 <Box
                   display={"flex"}
@@ -53,7 +51,7 @@ const TopBarHome = () => {
                       { link: "/Trips", text: "شروع  یک سفر جدید !" },
                       { link: "/TripBuilder", text: "ساهت سفر باهوش مصنوعی" },
                     ]}
-                />
+                  />
                   <TopBarMenu
                     titleMenu="بررسی کنید "
                     subMenuArray={[
@@ -72,7 +70,13 @@ const TopBarHome = () => {
                 </Box>
               </Grid>
               <Grid size={{ md: 2 }}>
-                <img src="/public/images/logo.svg" alt="" width={"200px"} />
+                <Box display={"flex"} gap={3} alignItems={"center"}>
+                  <DarkBtn setState={setIsOpenProfileBox}>ورود </DarkBtn>
+                  <LoginBox
+                    setOpen={setIsOpenProfileBox}
+                    open={isOpenProfileBox}
+                  />
+                </Box>
               </Grid>
             </Grid>
           </Container>

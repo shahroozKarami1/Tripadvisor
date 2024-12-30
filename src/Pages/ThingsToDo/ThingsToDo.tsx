@@ -27,7 +27,7 @@ const ThingsToDo = () => {
               gap={4}
             >
               <Typography
-                sx={{ fontWeight: "bold", color: "#fff", fontSize: "2.5rem" }}
+                sx={{ fontWeight: "bold", color: "#fff", fontSize: "2.5rem" ,  textAlign: "center" }}
               >
                 کارهایی را برای انجام هر کجا پیدا کنید
               </Typography>

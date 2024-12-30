@@ -18,7 +18,20 @@ let isXs = useMedia()
       <Grid container spacing={2}>
         <Grid size={{ md: 8 ,  xs : 12 }}>
           <Box display={"flex"} alignItems={"center"} justifyContent={"end"}  >
-            <img src="/public/images/singleLogo.svg" alt="" width={"50px"} />
+            <Link to={"/"}>
+            <Box sx={{ width :  "100px"   , height : "100px" ,  marginLeft : "1rem"}}>
+                  <img
+                    src="/public/images/AllNewLogos/textLogo.svg"
+                    alt=""
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  />
+                </Box>
+            </Link>
             <Box
               display={"flex"}
               flexDirection={"column"}

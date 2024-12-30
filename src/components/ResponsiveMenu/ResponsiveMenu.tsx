@@ -36,10 +36,11 @@ const ResponsiveMenu = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
         sx={{
-          padding: " 1rem   0",
+          padding: "  1rem   ",
           position: "sticky",
           top: 0,
           bgcolor: "#fff",
+        
           zIndex: 999,
         }}
       >
@@ -47,14 +48,20 @@ const ResponsiveMenu = () => {
           <AccountCircleOutlinedIcon sx={{ fontSize: "2rem" }} />
         </IconButton>
 
-        <Link to={"/"}>
-          <img
-            src="/public/images/responsiveLogo/img.svg"
-            width={"170px"}
-            alt=""
-          />
-        </Link>
-
+        <Box width={"132px"}  height={"80px"}>
+          <Link to={"/"}>
+            <img
+              src="/public/images/responsiveLogo/img.svg"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                width: "100%",
+                height: "100%",
+              }}
+              alt=""
+            />
+          </Link>
+        </Box>
         <IconButton onClick={() => setIsOpenDrawer(true)}>
           <MenuOutlinedIcon sx={{ fontSize: "2rem" }} />
         </IconButton>

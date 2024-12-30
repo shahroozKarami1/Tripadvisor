@@ -36,7 +36,7 @@ const NavBarHome = () => {
 
   let isXs = useMedia();
   return (
-    <Box sx={{ marginTop: "4rem" }}>
+    <Box sx={{ marginTop: "1rem" }}>
       <Container>
         <Grid container alignItems={"center"} justifyContent={"center"}>
           <Grid size={{ md: 12 }}>
