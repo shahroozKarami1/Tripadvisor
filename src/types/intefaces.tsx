@@ -2,7 +2,7 @@ import React from "react";
 
 export interface IDarkBtnProps {
   children: string | React.ReactNode;
-  setState  ?:  React.Dispatch<React.SetStateAction<boolean>>
+  setState?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 type TSubMenu = {
@@ -22,9 +22,12 @@ export interface INavbarMenuProps {
     textTitle?: string;
     placeholder?: string;
   }[];
+  id: number;
   fontSize: string;
-  HandlerBtn?: (a: string, b: string, c?: boolean) => void;
+  HandlerBtn?: (a: string, f: number, b: string, c?: boolean) => void;
+  ActiveLink?: (link: string) => void;
   isFlight?: boolean;
+  StateID?: number;
 }
 export interface ITitleSectionProps {
   mainTitle: string;
@@ -432,24 +435,23 @@ export interface IForumsSearchCardProps {
   nameOfForum: string;
   disc: string;
 }
-export interface   IProfileBox  {
-    open : boolean  ; 
-    setOpen :  React.Dispatch<React.SetStateAction<boolean>>
+export interface IProfileBox {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface IAchievementBoxProps {
-href  :  string  ;  
-title  : string  ; 
-subTitle  :  string
+  href: string;
+  title: string;
+  subTitle: string;
 }
 
 export interface TInpsEditProfile {
-  labelFrom  :  string   ; 
-   inpDetails  :  {
-    icon  ?:  React.ReactNode  ; 
-    placeholder  :  string  ;  
-    value :  string  ; 
-   }  
-   isTextArea :  boolean ;  
-   
+  labelFrom: string;
+  inpDetails: {
+    icon?: React.ReactNode;
+    placeholder: string;
+    value: string;
+  };
+  isTextArea: boolean;
 }

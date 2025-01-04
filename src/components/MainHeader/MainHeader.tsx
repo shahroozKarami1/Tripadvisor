@@ -14,22 +14,27 @@ import LoginBox from "../LoginBox/LoginBox";
 const MainHeader = () => {
   let [isOpenProfileBox, setIsOpenProfileBox] = useState<boolean>(false);
 
+
   const isXs = useMedia();
   return (
     !isXs && (
       <CusStickyMenu>
         <Container>
-          <Box
-            display={"flex"}
-            gap={3}
-            alignItems={"center"}
-            sx={{ margin: "1rem  0" }}
-          >
-            <DarkBtn setState={setIsOpenProfileBox}>ورود </DarkBtn>
-            <LoginBox
-              setOpen={setIsOpenProfileBox}
-              open={isOpenProfileBox}
-            />{" "}
+          <Box display={"flex"} gap={3} alignItems={"center"}>
+            <Box sx={{ width: "150px", height: "80px" }}>
+              <Link to={"/"}>
+                <img
+                  src="/public/images/AllNewLogos/textLogo.svg"
+                  alt=""
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                />
+              </Link>
+            </Box>
             {/* <Box
           sx={{ cursor: "pointer" }}
           display={"flex"}
@@ -72,29 +77,23 @@ const MainHeader = () => {
               />
             </Box>
             <InpSearch textPlaceHolder="جست و جو..." isBtnSearch={false} />
-            <Box sx={{ width :  "150px"   , height : "100px"}}>
-        <Link to={"/"}>
-        <img
-                    src="/public/images/AllNewLogos/textLogo.svg"
-                    alt=""
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center",
-                      height: "100%",
-                      width: "100%",
-                    }}
-                  /></Link>
-                </Box>
+            <DarkBtn setState={setIsOpenProfileBox}>ورود </DarkBtn>
+            <LoginBox
+              setOpen={setIsOpenProfileBox}
+              open={isOpenProfileBox}
+            />{" "}
           </Box>
           ‌
           <Grid container>
             <Box>
               <List sx={{ display: "flex" }}>
                 <NavbarMenu
+                id={0}
                   fontSize="0.9rem"
                   NavBarMenuArr={[{ title: "هتل ها  ", link: "/Hotels" }]}
                 />
                 <NavbarMenu
+                id={1}
                   fontSize="0.9rem"
                   NavBarMenuArr={[
                     {
@@ -104,18 +103,21 @@ const MainHeader = () => {
                   ]}
                 />
                 <NavbarMenu
+                id={2}
                   fontSize="0.90rem"
                   NavBarMenuArr={[
                     { title: "رستوران ها ", link: "/Restaurants" },
                   ]}
                 />
                 <NavbarMenu
+                id={3}
                   fontSize="0.90rem"
                   NavBarMenuArr={[
                     { title: "پرواز ها ", link: "/CheapFlightsHome" },
                   ]}
                 />
                 <NavbarMenu
+                id={4}
                   fontSize="0.90rem"
                   NavBarMenuArr={[
                     {
@@ -125,6 +127,7 @@ const MainHeader = () => {
                   ]}
                 />
                 <NavbarMenu
+                id={5}
                   fontSize="0.90rem"
                   NavBarMenuArr={[
                     {
@@ -143,6 +146,7 @@ const MainHeader = () => {
               ]}
             /> */}
                 <NavbarMenu
+                id={6}
                   fontSize="0.90rem"
                   NavBarMenuArr={[
                     {

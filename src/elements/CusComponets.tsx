@@ -10,7 +10,13 @@ export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
   fontWeight: "bold",
-  fontSize : "0.90rem"
+  fontSize : "0.90rem" , 
+  margin :   "0.5rem" , 
+  borderRadius  : '2rem'  , 
+
+   "&:hover" : {
+    backgroundColor  : '#ccc' ,
+   }
 });
 export const CusTitleHomePage = styled(Typography)({
   fontSize: "3rem",

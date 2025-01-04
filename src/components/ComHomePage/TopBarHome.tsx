@@ -14,8 +14,8 @@ const TopBarHome = () => {
     <>
       {!isXs && (
         <CusStickyMenu>
-          <Container>
-            <Grid container alignItems={"center"}>
+          <Container  maxWidth ="lg">
+            <Grid container alignItems={"center"}  justifyContent={"center"}>
               <Grid size={{ md: 2 }}>
                 <Box sx={{ width :  "150px"   , height : "100px"}}>
                   <img
@@ -70,7 +70,7 @@ const TopBarHome = () => {
                 </Box>
               </Grid>
               <Grid size={{ md: 2 }}>
-                <Box display={"flex"} gap={3} alignItems={"center"}>
+                <Box display={"flex"} gap={3} alignItems={"center"}  justifyContent={"center"}>
                   <DarkBtn setState={setIsOpenProfileBox}>ورود </DarkBtn>
                   <LoginBox
                     setOpen={setIsOpenProfileBox}

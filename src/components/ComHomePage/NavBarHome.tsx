@@ -17,9 +17,10 @@ const NavBarHome = () => {
   );
   let [textHomeTitle, setTextHomeTitle] = useState<string>("کجا میخوای بری");
   let [isFlightSearch, setIsFlightSearch] = useState<boolean>(false);
-
+  let [idMenu, setIdMenu] = useState<number>(0);
   function handleBtnClick(
     mainTitle: string,
+    id: number,
     textPlaceholder: string,
     isFlight?: boolean
   ) {
@@ -32,11 +33,21 @@ const NavBarHome = () => {
     } else {
       setIsFlightSearch(false);
     }
+    setIdMenu(id);
   }
-
   let isXs = useMedia();
   return (
-    <Box sx={{ marginTop: "1rem" }}>
+    <Box
+      sx={{
+        marginTop: "1rem",
+        background: isXs
+          ? "linear-gradient(180deg, rgba(241,90,41,1) 0%, rgba(255,255,255,1) 100%)"
+          : "",
+        borderBottomLeftRadius: isXs ? "50rem" : "",
+        borderBottomRightRadius: isXs ? "50rem" : "",
+        height: isXs ? "550px" : "",
+      }}
+    >
       <Container>
         <Grid container alignItems={"center"} justifyContent={"center"}>
           <Grid size={{ md: 12 }}>
@@ -50,18 +61,23 @@ const NavBarHome = () => {
               <Box>
                 <List
                   sx={{
-                    display: isXs ? "grid" :  "flex",
-                    gridTemplateColumns:  isXs  ?  " 1fr 1fr"   :  ""  ,  
-                    
-                    gap: 2, 
+                    display: isXs ? "grid" : "flex",
+                    gridTemplateColumns: isXs ? " 1fr 1fr" : "",
+                    gap: 2,
                   }}
                 >
                   <NavbarMenu
+                    StateID={idMenu}
+                    id={0}
                     HandlerBtn={handleBtnClick}
                     fontSize={"1rem"}
                     NavBarMenuArr={[
                       {
-                        icon: <CottageOutlinedIcon />,
+                        icon: (
+                          <CottageOutlinedIcon
+                            sx={isXs ? { "& path": { color: "#fff" } } : {}}
+                          />
+                        ),
                         title: "جست و جوی همه ",
                         textTitle: "کجا میخوای بری",
                         placeholder:
@@ -70,11 +86,17 @@ const NavBarHome = () => {
                     ]}
                   />
                   <NavbarMenu
+                    StateID={idMenu}
+                    id={1}
                     HandlerBtn={handleBtnClick}
                     fontSize={"1rem"}
                     NavBarMenuArr={[
                       {
-                        icon: <KingBedOutlinedIcon />,
+                        icon: (
+                          <KingBedOutlinedIcon
+                            sx={isXs ? { "& path": { color: "#fff" } } : {}}
+                          />
+                        ),
                         title: "هتل ها  ",
                         textTitle: "یه جای عالی بمون",
                         placeholder: "اسم هتل یا مقصد",
@@ -82,11 +104,17 @@ const NavBarHome = () => {
                     ]}
                   />
                   <NavbarMenu
+                    StateID={idMenu}
+                    id={2}
                     HandlerBtn={handleBtnClick}
                     fontSize={"1rem"}
                     NavBarMenuArr={[
                       {
-                        icon: <CottageOutlinedIcon />,
+                        icon: (
+                          <CottageOutlinedIcon
+                            sx={isXs ? { "& path": { color: "#fff" } } : {}}
+                          />
+                        ),
                         title: "کارهایی برای انجام ",
                         textTitle: "یه کار سرگرم کننده انجام بده",
                         placeholder: "جاذبه، فعالیت یا مقصد",
@@ -94,11 +122,17 @@ const NavBarHome = () => {
                     ]}
                   />
                   <NavbarMenu
+                    StateID={idMenu}
+                    id={3}
                     HandlerBtn={handleBtnClick}
                     fontSize={"1rem"}
                     NavBarMenuArr={[
                       {
-                        icon: <RestaurantOutlinedIcon />,
+                        icon: (
+                          <RestaurantOutlinedIcon
+                            sx={isXs ? { "& path": { color: "#fff" } } : {}}
+                          />
+                        ),
                         title: "رستوران ها ",
                         textTitle: "مکان هایی برای غذا خوردن پیدا کنید",
                         placeholder: "رستوران یا مقصد",
@@ -106,12 +140,18 @@ const NavBarHome = () => {
                     ]}
                   />
                   <NavbarMenu
+                    StateID={idMenu}
+                    id={4}
                     HandlerBtn={handleBtnClick}
                     isFlight={true}
                     fontSize={"1rem"}
                     NavBarMenuArr={[
                       {
-                        icon: <FlightTakeoffOutlinedIcon />,
+                        icon: (
+                          <FlightTakeoffOutlinedIcon
+                            sx={isXs ? { "& path": { color: "#fff" } } : {}}
+                          />
+                        ),
                         title: "پرواز ها ",
                         textTitle: "بهترین سفر رو پیدا کن",
                         placeholder:
@@ -120,11 +160,17 @@ const NavBarHome = () => {
                     ]}
                   />
                   <NavbarMenu
+                    StateID={idMenu}
+                    id={5}
                     HandlerBtn={handleBtnClick}
                     fontSize={"1rem"}
                     NavBarMenuArr={[
                       {
-                        icon: <HouseboatOutlinedIcon />,
+                        icon: (
+                          <HouseboatOutlinedIcon
+                            sx={isXs ? { "& path": { color: "#fff" } } : {}}
+                          />
+                        ),
                         title: "تعطیلات اجاره ها",
                         textTitle: "مکان های اجاره ای را کاوش کنید",
                         placeholder: "مقصد",
