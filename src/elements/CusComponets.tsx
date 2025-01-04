@@ -6,6 +6,8 @@ import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
+import { useMedia } from "../context/MediaQueryContext";
+
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
@@ -150,7 +152,7 @@ export const CusTravelerBox = styled(Box)({
   width: "400px",
   borderRadius: "0.5rem",
   marginTop: "1rem",
-  padding: "1rem",
+  padding: "1rem", 
   position: "absolute",
   zIndex: 99,
 });

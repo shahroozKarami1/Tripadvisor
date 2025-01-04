@@ -26,6 +26,7 @@ const FlightInp = () => {
   });
   function HandlerTravelerBox() {
     setIsShowTravelerBox(!isShowTravelerBox);
+
   }
   const CusBtnSearch = styled(Button)({
     backgroundColor: `var(--primary-color)`,
@@ -80,7 +81,7 @@ const FlightInp = () => {
                 alignItems={"flex-start"}
               >
                 <Box position={"relative"}>
-                  <CusBtnTraverler onClick={() => HandlerTravelerBox()}>
+                  <CusBtnTraverler onClick={() => HandlerTravelerBox()}  >
                     <PeopleOutlineOutlinedIcon />
                     <Typography
                       sx={{ fontWeight: "bold", fontSize: "0.85rem" }}

@@ -1,12 +1,15 @@
 import { FC } from "react";
 import { ITravelerBoxProps } from "../../../types/intefaces";
-import {  List, ListItem, Typography } from "@mui/material";
-import { CusAddBtn, CusRemoveBtn, CusTravelerBox } from "../../../elements/CusComponets";
+import { List, ListItem, Typography } from "@mui/material";
+import {
+  CusAddBtn,
+  CusRemoveBtn,
+  CusTravelerBox,
+} from "../../../elements/CusComponets";
 
 import Grid from "@mui/material/Grid2";
 import RangeOfPeople from "./RangeOfPeople";
 import styled from "@emotion/styled";
-
 const TravelerBox: FC<ITravelerBoxProps> = ({}) => {
   const CusListItem = styled(ListItem)({
     marginBottom: "1rem  ",
@@ -14,10 +17,11 @@ const TravelerBox: FC<ITravelerBoxProps> = ({}) => {
     justifyContent: "center",
   });
 
-
-
   return (
-    <CusTravelerBox>
+    <CusTravelerBox sx= {{left : {
+      xs : undefined  ,  
+      md  :  "0rem"
+    }}}>
       <Grid container>
         <Grid size={{ md: 6 }}>
           <List sx={{ display: "flex", flexDirection: "column" }}>
