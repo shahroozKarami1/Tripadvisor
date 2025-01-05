@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import {  Box, Button, Input, Typography } from "@mui/material";
+import { Box, Button, Input, Typography } from "@mui/material";
 import FirstBannerImg from "../../public/images/HomePage/FirstBanner.jpg";
 import MainBanner from "/public/images/ThingsToDoPage/Banner.jpg";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -12,13 +12,13 @@ export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
   color: `var(--dark-color)`,
   fontWeight: "bold",
-  fontSize : "0.90rem" , 
-  margin :   "0.5rem" , 
-  borderRadius  : '2rem'  , 
+  fontSize: "0.90rem",
+  margin: "0.5rem",
+  borderRadius: "2rem",
 
-   "&:hover" : {
-    backgroundColor  : '#ccc' ,
-   }
+  "&:hover": {
+    backgroundColor: "#ccc",
+  },
 });
 export const CusTitleHomePage = styled(Typography)({
   fontSize: "3rem",
@@ -27,20 +27,20 @@ export const CusTitleHomePage = styled(Typography)({
 });
 export const CusSearchInp = styled(Input)({
   border: 0,
+  position: "relative",
+
   padding: "  0.75rem   1rem ",
   backgroundColor: "#fff",
-  boxShadow: `var(--main-shadow)`,
-  borderRadius: "2rem",
   width: "100%",
   "&.MuiInput-underline": {
     ":before": {
       display: "none",
     },
-    "&.MuiInputBase-root" : {
-      "::after" :  {
-        display : "none"
-      }
-    }
+    "&.MuiInputBase-root": {
+      "::after": {
+        display: "none",
+      },
+    },
   },
 });
 export const CusSearchBtn = styled(Button)({
@@ -104,7 +104,7 @@ export const CusStickyMenu = styled(Box)({
   display: "block",
   top: 0,
   zIndex: 999,
-  width  : "100vw" ,  
+  width: "100vw",
   padding: "0.5rem  0",
 });
 export const CusThingsToDoPage = styled(Box)({
@@ -152,7 +152,7 @@ export const CusTravelerBox = styled(Box)({
   width: "400px",
   borderRadius: "0.5rem",
   marginTop: "1rem",
-  padding: "1rem", 
+  padding: "1rem",
   position: "absolute",
   zIndex: 99,
 });
@@ -202,7 +202,7 @@ export const DarkOverlay = () => {
         zIndex: 0,
         borderRadius: "0.5rem",
 
-        height : "100%"  ,  
+        height: "100%",
         width: "100%",
       }}
     />
@@ -241,8 +241,8 @@ export const CusRemoveBtn = styled(RemoveCircleOutlinedIcon)({
 export const CusBackOfSlider = styled(Box)({
   position: "absolute",
   width: "100%",
-  top : -30 ,
-  left : 30  ,   
+  top: -30,
+  left: 30,
   height: "100%",
   background: " #D9D3FB",
   boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
@@ -276,18 +276,31 @@ export const CusYellowCard = styled(Box)({
   borderRadius: "1rem",
 });
 
+export const CusSearchCard = styled(Box)({
+  backgroundColor: "#fff",
+  borderRadius: "0.5rem",
+  overflow: "hidden",
+  margin: "2rem  0 ",
+  boxShadow: "var(--main-shadow)",
+  ":hover": {
+    "& .titleHover": {
+      transition: "all  0.25s  ease",
+      opacity: 0.5,
+      borderBottom: "1px  solid  #444",
+    },
+  },
+});
 
-export  const CusSearchCard = styled (Box) ({
- backgroundColor  : "#fff"   ,
- borderRadius  : "0.5rem"    , 
- overflow : "hidden"  ,  
- margin : "2rem  0 " , 
- boxShadow :"var(--main-shadow)" ,  
-   ":hover" : {
-    "& .titleHover" : {
-      transition : "all  0.25s  ease"  ,  
-      opacity : 0.5  , 
-      borderBottom : "1px  solid  #444"
-    }
-   }
+
+export   const CusAutoComplete  =  styled(Box)  ({
+    backgroundColor : "#fff" ,  
+    boxShadow : "-1px 20px 22px 0px rgba(0,0,0,0.75)"  , 
+    padding : "1rem" ,  
+    display : "flex"  ,  
+    flexDirection  : 'column' , 
+    position : "absolute" , 
+    width  : "100%" ,  
+    zIndex : 99 ,  
+    borderBottomRightRadius : "1rem" ,
+    borderBottomLeftRadius : "1rem" ,
 })
