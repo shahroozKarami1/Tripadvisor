@@ -1,8 +1,12 @@
 import { FC } from "react";
 import { ITourWaysCardProps } from "../../types/intefaces";
-import { Box, Typography } from "@mui/material";
+import { Box, Rating, Typography } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { CusBoxIconHeart, CusCircleIcon } from "../../elements/CusComponets";
+import {
+  CusBoxIconHeart,
+  CusCircleIcon,
+  CusCircleOutLine,
+} from "../../elements/CusComponets";
 import { Link } from "react-router-dom";
 const TourWaysCard: FC<ITourWaysCardProps> = ({
   disc,
@@ -29,7 +33,7 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
             <FavoriteBorderIcon />
           </CusBoxIconHeart>
         </Box>
-        <Box sx={{ marginRight: "0.70rem" }}>
+        <Box sx={{ marginRight: "0.70rem", padding: "0.5rem 0 " }}>
           <Typography
             sx={{
               fontSize: "0.90rem",
@@ -40,12 +44,23 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
           >
             {disc}
           </Typography>
-          <Box  alignItems={"center"}  display={"flex"} sx={{ margin: "0.5rem  0" }}>
+          {/* <Box  alignItems={"center"}  display={"flex"} sx={{ margin: "0.5rem  0" }}>
             <CusCircleIcon />
             <CusCircleIcon />
             <CusCircleIcon />
             <CusCircleIcon />
             <Typography sx={{ marginRight: "0.25rem"  ,  color : "#444"}}>{score}</Typography>
+          </Box> */}
+          <Box display={"flex"} alignItems={"center"} gap={1}>
+            <Rating
+              sx={{ direction: "ltr", transform: "rotate(-180deg)" }}
+              readOnly
+              value={2.5}
+              precision={0.5}
+              emptyIcon={<CusCircleOutLine />}
+              icon={<CusCircleIcon />}
+            />
+            <Typography sx={{ color: "#444" }}>{score}</Typography>
           </Box>
           {isDetails && (
             <Typography sx={{ fontWeight: "bold", fontSize: "0.80rem" }}>

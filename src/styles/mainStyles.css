@@ -39,3 +39,12 @@ body,
   display: none;
 }
 
+.rmdp-day {
+  font-weight: bold;
+}
+.rmdp-range {
+  background-color:  var(--primary-color)  !important ;
+}
+.rmdp-week-day {
+  color: var(--primary-color)  !important  ;
+}

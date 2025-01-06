@@ -9,20 +9,19 @@ import { useMedia } from "../../context/MediaQueryContext";
 import { FC } from "react";
 // import type{Value} from "react-multi-date-picker"
 
-const DataPicker  : FC<{placeholder : string}> = ({placeholder}) => {
-  const  isXs  =  useMedia ()
+const DataPicker: FC<{ placeholder: string }> = ({ placeholder }) => {
+  const isXs = useMedia();
   return (
     <Box>
       <DatePicker
         range
         rangeHover
-
-        minDate={new DateObject ({calendar : persian})}
-        placeholder= {placeholder}
-        dateSeparator=" تا  "
+        minDate={new DateObject({ calendar: persian })}
+        placeholder={placeholder}
+        dateSeparator="   =>    "
         style={{
-          padding:   isXs ?   "2rem  6rem" :  " 1.75rem  2rem  ",
-          margin : isXs ? "1rem 0" :  0 , 
+          padding: isXs ? "2rem  6rem" : " 1.75rem  2rem  ",
+          margin: isXs ? "1rem 0" : 0,
           borderRadius: "2rem",
           border: "1px  solid  #000",
         }}
