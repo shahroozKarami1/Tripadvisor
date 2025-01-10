@@ -13,6 +13,7 @@ import WriterProfile from "../../components/CompBlogPage/WriterProfile";
 import SingleParagraph from "../../components/CompBlogPage/SingleParagraph";
 import AccordionChildren from "../../components/AccordionChildren/AccordionChildren";
 import ChipsBlog from "../../components/CompBlogPage/ChipsBlog";
+import MoreInterstedCard from "../../components/CompBlogPage/MoreInterstedCard";
 const CusInnerBlogBox = styled(Box)({
   boxShadow: "0 4px 5px 0 rgba(0,0,0,.09)",
   backgroundColor: "#fff",
@@ -134,8 +135,8 @@ const Blog = () => {
                 <Box display={"flex"} flexDirection={"column"} gap={1}>
                   <Box display={"flex"} alignItems={"center"} gap={2}>
                     <Typography>شهروز کرمی</Typography>
-                       ـ
-                    <Typography  sx={{color : "#444" ,  fontSize : "0.90rem"}}>55  مطلب</Typography>
+                    ـ
+                    <Typography sx={{ color: "#444", fontSize: "0.90rem" }}>55  مطلب</Typography>
                   </Box>
                   <Box>
                     <Typography sx={{ fontSize: "0.80rem", color: "#444" }}>
@@ -146,6 +147,25 @@ const Blog = () => {
                   </Box>
                 </Box>
               </Box>
+            </CusInnerBlogBox>
+            <CusInnerBlogBox>
+              <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} sx={{borderBottom : '1px solid  #444' ,  mb : "1rem"}}>
+                <MainTitle isSubTitle={false} title="ممکن است به این مطالب نیز علاقه‌مند باشید" />
+                <Typography sx={{ fontSize: "0.80rem", fontWeight: "bold" }}>مطالب بیشتر از این نویسنده   </Typography>
+              </Box>
+              <Grid container spacing={2}>
+
+                <Grid size={{ md: 4 }}>
+                  <MoreInterstedCard link="/" coverCard="/public/images/NextTrip/img7.jpg" markCard="استان مازندران" textCard="دریاچه لفور سوادکوه؛ ماجراجویی در جنگل‌های بکر مازندران" />
+                </Grid>
+                <Grid size={{ md: 4 }}>
+                  <MoreInterstedCard link="/" coverCard="/public/images/NextTrip/img8.jpg" markCard="استان مازندران" textCard="دریاچه لفور سوادکوه؛ ماجراجویی در جنگل‌های بکر مازندران" />
+                </Grid>
+                <Grid size={{ md: 4 }}>
+                  <MoreInterstedCard link="/" coverCard="/public/images/NextTrip/img3.jpg" markCard="استان مازندران" textCard="دریاچه لفور سوادکوه؛ ماجراجویی در جنگل‌های بکر مازندران" />
+                </Grid>
+              </Grid>
+
             </CusInnerBlogBox>
           </Grid>
           <Grid size={{ md: 3.5 }}>
