@@ -4,7 +4,7 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const AccordionChildren: FC<{
@@ -12,12 +12,12 @@ const AccordionChildren: FC<{
   titleAccordion: string;
   children: React.ReactNode;
 }> = ({ children, id, titleAccordion }) => {
-//   const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded, setExpanded] = useState<string | false>(false);
 
-//   const handleChange =
-//     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-//       setExpanded(isExpanded ? panel : false);
-//     };
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+      setExpanded(newExpanded ? panel : false);
+    };
   return (
     <Accordion
     defaultExpanded
@@ -27,8 +27,8 @@ const AccordionChildren: FC<{
         padding :  0  ,  
      }
     }}
-    //   expanded={expanded === `panel${id}`}
-    //   onChange={handleChange(`panel${id}`)}
+      expanded={expanded === `panel${id}`}
+      onChange={handleChange(`panel${id}`)}
     >
       <AccordionSummary   
         expandIcon={<ExpandMoreIcon />}

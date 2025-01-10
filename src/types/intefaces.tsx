@@ -456,9 +456,19 @@ export interface TInpsEditProfile {
   isTextArea: boolean;
 }
 
-export   interface  IAutoCompleteItemProps {
-  cover  ?: string  , 
-  name :  string   ,  
-  country ?:  string , 
-  IsNearby : boolean
+export interface IAutoCompleteItemProps {
+  cover?: string;
+  name: string;
+  country?: string;
+  IsNearby: boolean;
+}
+
+export interface IMainBlogCardProps {
+  cover: string;
+  Address: {
+    link: string;
+    text: string;
+  };
+  title: string;
+  paragrapth: string[];
 }

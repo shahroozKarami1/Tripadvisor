@@ -25,6 +25,7 @@ import TripBuilder from "./Pages/TripBuilder/TripBuilder";
 import VacationRentalDetails from "./Pages/VacationRentalDetails/VacationRentalDetails";
 import SearchPage from "./Pages/SearchPage/SearchPage";
 import Profile from "./Pages/Profile/Profile";
+import Blog from "./Pages/Blog/Blog";
 
 let routes = [
   {
@@ -138,6 +139,10 @@ let routes = [
   {
     element  :  <Profile/>  , 
     path : "/Profile"
+  }  , 
+  {
+    element  :  <Blog/>  , 
+    path : "/blog"
   }
 ];
 

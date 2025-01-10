@@ -103,6 +103,7 @@ export const CusStickyMenu = styled(Box)({
   position: "sticky",
   display: "block",
   top: 0,
+  height : "160px" ,   
   zIndex: 999,
   width: "100vw",
   padding: "0.5rem  0",

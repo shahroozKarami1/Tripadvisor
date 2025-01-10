@@ -19,7 +19,7 @@ const NavbarMenu: FC<INavbarMenuProps> = ({
     <>
       {NavBarMenuArr.map(({ icon, title, link, placeholder, textTitle }) => {
         return (
-          <ListItem key={id}>
+          <ListItem key={id} sx={{padding : " 0 0.75rem"}}>
             <Link to={link ? link : "/"}>
               <Button
                 onClick={() => {
@@ -36,8 +36,9 @@ const NavbarMenu: FC<INavbarMenuProps> = ({
                 sx={{
                   gap: 1,
                   padding: 0,
+                  margin :0 ,  
                   "&:hover": {
-                    borderBottom: "3px  solid  #000",
+                    borderBottom: "2px  solid  #000",
                   },
                 }}
                 style={{
