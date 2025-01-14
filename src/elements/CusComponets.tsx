@@ -6,7 +6,6 @@ import CircleIcon from "@mui/icons-material/Circle";
 import PanoramaFishEyeIcon from "@mui/icons-material/PanoramaFishEye";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import RemoveCircleOutlinedIcon from "@mui/icons-material/RemoveCircleOutlined";
-import { useMedia } from "../context/MediaQueryContext";
 
 export const CusMenuBtn = styled(Button)({
   backgroundColor: "transparent",
@@ -65,7 +64,7 @@ export const CusFirstBanner = styled(Box)({
 });
 
 export const CusSectionTitle = styled(Box)({
-  marginTop: "3rem ",
+  // marginTop: "3rem ",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
@@ -103,10 +102,9 @@ export const CusStickyMenu = styled(Box)({
   position: "sticky",
   display: "block",
   top: 0,
-  height : "160px" ,   
   zIndex: 999,
   width: "100vw",
-  padding: "0.5rem  0",
+  paddingTop  : "1rem"
 });
 export const CusThingsToDoPage = styled(Box)({
   background: `linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(${MainBanner})`,

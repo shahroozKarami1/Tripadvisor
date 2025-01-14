@@ -2,7 +2,6 @@ import { Box, Button, Typography } from "@mui/material";
 import { FC } from "react";
 import { ITitleSectionProps } from "../../types/intefaces";
 import { CusSectionTitle } from "../../elements/CusComponets";
-import { Link } from "react-router-dom";
 
 const TitleSection: FC<ITitleSectionProps> = ({
   isSubTitle,

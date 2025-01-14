@@ -1,49 +1,45 @@
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import React, { FC } from "react";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import Slider from "react-slick";
-import styled from "@emotion/styled";
 interface ISliderWrapperProps {
   children: React.ReactNode;
   numberOfShowSlider: number;
 }
-const CusRightArrow = styled(ArrowCircleRightIcon)({
-  display: "block",
-  top: " 133px",
-  right: "-53px",
-  // boxShadow :  `var(--main-shadow)`  ,
-  fontSize: "3rem",
-  "&.MuiSvgIcon-root  path": {
-    color: `var(--primary-color)`, 
-  },
-});
-const CusLeftArrow = styled(ArrowCircleLeftIcon)({
-  display: "block",
-  top: " 133px",
-  left: "-53px",
-  fontSize: "3rem",
-  "&.MuiSvgIcon-root  path": {
-    color: `var(--primary-color)`, 
-  },
-});
+const CusArrowForwardIcon = styled(ArrowCircleLeftIcon)({
+  fontSize: "2.5rem",
+  top: "50%",
+  left: -40,
+  "& path": {
+    color: "var(--primary-color)"
+
+  }
+})
+const CusArrowCircleRightIcon = styled(ArrowCircleRightIcon)({
+  fontSize: "2.5rem",
+  top: "50%",
+  right: -40,
+  "& path": {
+    color: "var(--primary-color)"
+
+  }
+})
 const SliderWrapper: FC<ISliderWrapperProps> = ({
   children,
   numberOfShowSlider,
 }) => {
   var settings = {
     dots: true,
-    infinite: true , 
+    infinite: true,
     speed: 1000,
     slidesToShow: numberOfShowSlider,
-    // autoplaySpeed: 7000,
-    // pauseOnHover: true,
     cssEase: "linear",
-    autoplay: true  ,  
+    autoplay: true,
     rtl: true,
     slidesToScroll: 1,
-    // nextArrow: <CusRightArrow />,
-    // prevArrow: <CusLeftArrow />,
+      nextArrow: <CusArrowCircleRightIcon />,
+          prevArrow: <CusArrowForwardIcon />,
     initialSlide: 0,
     responsive: [
       {
@@ -51,7 +47,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-  
+    
           infinite: true,
           dots: true,
         },
@@ -59,8 +55,8 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
       {
         breakpoint: 600,
         settings: {
-  
           slidesToShow: 2,
+
           slidesToScroll: 2,
           initialSlide: 1,
         },
@@ -69,6 +65,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+
           slidesToScroll: 1,
         },
       },

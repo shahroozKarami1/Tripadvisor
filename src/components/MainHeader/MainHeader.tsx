@@ -21,10 +21,10 @@ const MainHeader = () => {
       <CusStickyMenu>
         <Container>
           <Box display={"flex"} gap={3} alignItems={"center"}>
-            <Box sx={{ width: "150px", height: "80px" }}>
+            <Box sx={{width : '100px'}}>
               <Link to={"/"}>
                 <img
-                  src="/public/images/AllNewLogos/textLogo.svg"
+                  src="/public/images/AllNewLogos/singleLogo.svg"
                   alt=""
                   style={{
                     objectFit: "cover",

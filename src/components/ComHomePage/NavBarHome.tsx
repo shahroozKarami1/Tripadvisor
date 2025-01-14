@@ -39,7 +39,6 @@ const NavBarHome = () => {
   return (
     <Box
       sx={{
-        marginTop: "1rem",
         background: isXs
           ? "linear-gradient(180deg, rgba(241,90,41,1) 0%, rgba(255,255,255,1) 100%)"
           : "",

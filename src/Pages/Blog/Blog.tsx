@@ -14,6 +14,10 @@ import SingleParagraph from "../../components/CompBlogPage/SingleParagraph";
 import AccordionChildren from "../../components/AccordionChildren/AccordionChildren";
 import ChipsBlog from "../../components/CompBlogPage/ChipsBlog";
 import MoreInterstedCard from "../../components/CompBlogPage/MoreInterstedCard";
+
+import TitleSection from "../../components/ComHomePage/TitleSection";
+import CommentBody from "../../components/CompBlogPage/CommentBody";
+import FormComment from "../../components/CompBlogPage/FormComment";
 const CusInnerBlogBox = styled(Box)({
   boxShadow: "0 4px 5px 0 rgba(0,0,0,.09)",
   backgroundColor: "#fff",
@@ -149,26 +153,53 @@ const Blog = () => {
               </Box>
             </CusInnerBlogBox>
             <CusInnerBlogBox>
-              <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} sx={{borderBottom : '1px solid  #444' ,  mb : "1rem"}}>
+              <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} sx={{ borderBottom: '1px solid  #444', mb: "1rem" }}>
                 <MainTitle isSubTitle={false} title="ممکن است به این مطالب نیز علاقه‌مند باشید" />
                 <Typography sx={{ fontSize: "0.80rem", fontWeight: "bold" }}>مطالب بیشتر از این نویسنده   </Typography>
               </Box>
               <Grid container spacing={2}>
 
-                <Grid size={{ md: 4 }}>
+                <Grid size={{ md: 4   ,  xs :  6 }}>
                   <MoreInterstedCard link="/" coverCard="/public/images/NextTrip/img7.jpg" markCard="استان مازندران" textCard="دریاچه لفور سوادکوه؛ ماجراجویی در جنگل‌های بکر مازندران" />
                 </Grid>
-                <Grid size={{ md: 4 }}>
+                <Grid size={{ md: 4   ,  xs :  6 }}>
                   <MoreInterstedCard link="/" coverCard="/public/images/NextTrip/img8.jpg" markCard="استان مازندران" textCard="دریاچه لفور سوادکوه؛ ماجراجویی در جنگل‌های بکر مازندران" />
                 </Grid>
-                <Grid size={{ md: 4 }}>
+                <Grid size={{ md: 4   ,  xs :  6 }}>
                   <MoreInterstedCard link="/" coverCard="/public/images/NextTrip/img3.jpg" markCard="استان مازندران" textCard="دریاچه لفور سوادکوه؛ ماجراجویی در جنگل‌های بکر مازندران" />
                 </Grid>
               </Grid>
 
             </CusInnerBlogBox>
+
+            <CusInnerBlogBox>
+              <MainTitle isSubTitle={false} title="ارسال دیدگاه" />
+              <Box sx={{ borderTop: "1px  solid  #ccc", paddingTop: "0.75rem" }} display={"flex"} alignItems={"center"} justifyContent={"center"}>
+                <Typography sx={{ color: "#444", fontSize: "0.90rem", marginY: "1rem" }}>ایمیل شما منتشر نخواهد شد</Typography>
+              </Box>
+              <FormComment />
+
+              <TitleSection isSubTitle={false} mainTitle="40 دیدگاه" />
+              <CommentBody
+                isReplyComment={true}
+                replyComment={[{
+                  commentBody: `
+                هفت‌خوان مجموعه رستوران بسیار شیک و لوکسیه که قطعا تجربه هر طبقه‌ش متفاوته.
+بار اول که پریروز بود، رفتیم طبقه سنتی منفی یک- که چند خانم شیک ازش خارج می‌شدند و گفتند گردن و ماهیچه‌ش عالی بود، اما چون با فضاش ارتباط نگرفتیم نرفتیم. نمیدونم کدوم طبقه بود رستوران نوفل که شاتوبریان و یه جور کباب میکس سفارش دادیم، چون اذان و افطار نشده بود فکر کردم هنوز رستوران روشنایی‌ش رو تنظیم نکرده! به شدت تاریک و دلگیر!کافه‌های دنج با نور دیم‌لایت رو می‌شناسم اما این طراحی نورپردازی واقعا نامناسب بود. با کلی انتظار سیب‌زمینی تنوری آوردند خااااااام! لب‌و‌لوچه‌م بد آویزون بود که غذای اصلی رو آوردند … ناب‌ترین تجربه ما در زمینه استیک شد! عجب دورچینی: بروکلی، قارچ تازه گریل‌شده، پوره سیب‌زمینی رو گرد سوخاری کرده بودند، چه سس لذیذی به سبزیجات زده بودند، محشر! گوشت استیک و مرغ تازه و فوق‌العاده حرفه‌ای پخته شده بود. کلا به غذای دوم نرسیدیم و بردیمش هتل. یعنی دونفر با اون استیک کاملا سیر شدیم‌.
+                `
+                  ,
+                  commentDate: "2 مرداد ",
+                  name: "رضا فاطمی",
+                  profile: ""
+                }]}
+                commentBody="به نظر من می تونیم یکی از لوکس ترین و بهترین رستوران های شیراز رو باکویه معرفی کنیم چون مجموعه رستورانی هست و واسه هر سنی مناسب هست. رستوران غار که موسیقی زنده داره و غذاهای ایرانی رو سرو میکنن و چلو گردن و چلو ماهیچه عالی هست و یه کافه فوق العاده دارن که یه بالکن خیلی قشنگ رو به شهر داره که می نونید کل شهر ببینید و فست فود با یه دی جی عالی مخصوص کسایی که اهل موسیقس پاپ هستن. در کل من واقعا از این رستوران لذت بردم به شما هم پیشنهاد میکنم." commentDate="20 روز" name="شهروز" profile="" />
+              <CommentBody
+                isReplyComment={false}
+                commentBody="به نظر من می تونیم یکی از لوکس ترین و بهترین رستوران های شیراز رو باکویه معرفی کنیم چون مجموعه رستورانی هست و واسه هر سنی مناسب هست. رستوران غار که موسیقی زنده داره و غذاهای ایرانی رو سرو میکنن و چلو گردن و چلو ماهیچه عالی هست و یه کافه فوق العاده دارن که یه بالکن خیلی قشنگ رو به شهر داره که می نونید کل شهر ببینید و فست فود با یه دی جی عالی مخصوص کسایی که اهل موسیقس پاپ هستن. در کل من واقعا از این رستوران لذت بردم به شما هم پیشنهاد میکنم." commentDate="20 روز" name="شهروز" profile="" />
+            </CusInnerBlogBox>
+
           </Grid>
-          <Grid size={{ md: 3.5 }}>
+          <Grid size={{ md: 3.5  ,  xs  :  12 }}>
             <CusInnerBlogBox>
               <CusTitleRightSide>
                 راهنمای سفر به جای جای ایران
@@ -271,7 +302,7 @@ const Blog = () => {
               />
             </CusInnerBlogBox>
 
-            <CusInnerBlogBox sx={{ position: "sticky", top: 180 }}>
+            <CusInnerBlogBox sx={{ position: "sticky", top: 150 }}>
               <CusTitleRightSide>خدمات سندباد تریپ</CusTitleRightSide>
               <Box mt={"1.5rem"}>
                 <ServicesCard
