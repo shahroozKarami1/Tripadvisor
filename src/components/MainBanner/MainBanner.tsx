@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 const MainBanner: FC<IMainBannerProps> = ({ bannerUrl, children }) => {
   const CusMainBanner = styled(Box)({
     background: `url(${bannerUrl})`,
-    height: "70vh",
+    height: "80vh",
     // width: "100vw",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",

@@ -15,6 +15,7 @@ const CardInsidetext: FC<ICardInsideText> = ({
     position: "relative",
     borderRadius: "0.5rem",
     margin: "0.75rem 0",
+
   });
   const CusCardTextBox = styled(Box)({
     position: "absolute",

@@ -64,7 +64,7 @@ export const CusFirstBanner = styled(Box)({
 });
 
 export const CusSectionTitle = styled(Box)({
-  // marginTop: "3rem ",
+  marginTop: "3rem ",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",

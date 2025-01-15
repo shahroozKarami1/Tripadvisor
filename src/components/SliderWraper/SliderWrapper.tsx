@@ -3,32 +3,58 @@ import React, { FC } from "react";
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import Slider from "react-slick";
+
 interface ISliderWrapperProps {
   children: React.ReactNode;
   numberOfShowSlider: number;
 }
-const CusArrowForwardIcon = styled(ArrowCircleLeftIcon)({
-  fontSize: "2.5rem",
-  top: "50%",
-  left: -40,
-  "& path": {
-    color: "var(--primary-color)"
-
-  }
-})
-const CusArrowCircleRightIcon = styled(ArrowCircleRightIcon)({
-  fontSize: "2.5rem",
-  top: "50%",
-  right: -40,
-  "& path": {
-    color: "var(--primary-color)"
-
-  }
-})
 const SliderWrapper: FC<ISliderWrapperProps> = ({
   children,
   numberOfShowSlider,
 }) => {
+  const CusArrowForwardIcon = styled(ArrowCircleLeftIcon)(({ theme }) => ({
+
+    fontSize: "2.5rem",
+    top: "50%",
+    backgroundColor: "#000",
+    borderRadius: "50%",
+    position: "absolute",
+    [theme.breakpoints.down("sm")]: {
+      left: "0px",
+      zIndex: 99
+    },
+    left: -50,
+    "& path": {
+      color: "var(--primary-color)"
+    },
+  })
+  )
+  const CusArrowCircleRightIcon = styled(ArrowCircleRightIcon)(({ theme }) => ({
+    fontSize: "2.5rem",
+    backgroundColor: "#000",
+    position: "absolute",
+    borderRadius: "50%",
+    [theme.breakpoints.down("sm")]: {
+      right: "0px"
+    },
+    right: -50,
+    top: "50%",
+    "& path": {
+      color: "var(--primary-color)"
+
+    }
+  }))
+  function SampleArrow(props: any) {
+    const { children } = props;
+    return (
+      <div>
+        {
+          children
+        }
+      </div>
+    );
+  }
+
   var settings = {
     dots: true,
     infinite: true,
@@ -38,8 +64,12 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
     autoplay: true,
     rtl: true,
     slidesToScroll: 1,
-      nextArrow: <CusArrowCircleRightIcon />,
-          prevArrow: <CusArrowForwardIcon />,
+    nextArrow: <SampleArrow>
+      <CusArrowCircleRightIcon />
+    </SampleArrow>,
+    prevArrow: <SampleArrow>
+      <CusArrowForwardIcon />,
+    </SampleArrow>,
     initialSlide: 0,
     responsive: [
       {
@@ -47,7 +77,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-    
+
           infinite: true,
           dots: true,
         },
@@ -71,6 +101,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
       },
     ],
   };
+
   return (
     <Box>
       <div className="slider-container   mt-8  ">

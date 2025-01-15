@@ -55,8 +55,8 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
             <Rating
               sx={{ direction: "ltr", transform: "rotate(-180deg)" }}
               readOnly
-              value={2.5}
-              precision={0.5}
+              value={2.3}
+              precision={0.25}
               emptyIcon={<CusCircleOutLine />}
               icon={<CusCircleIcon />}
             />
