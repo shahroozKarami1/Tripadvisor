@@ -3,29 +3,35 @@ import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
 import CheckInOut from "../DataPicker/CheckInOut";
 import { useMedia } from "../../context/MediaQueryContext";
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
+import { useState } from "react";
+import AutoCompleteBox from "../AutoCompleteBox/AutoCompleteBox";
 const InpRental = () => {
-    let isXs  =  useMedia ()
+  let isXs = useMedia()
+  let [isOpenAutoCompleteBox, setIsOpenCompleteBox] = useState<boolean>(false)
   const CusSearchInpHotel = styled(Box)({
     backgroundColor: "#fff",
-    borderRadius: isXs ? 0 :  "3rem",
+    position : "relative" , 
+    borderRadius: isXs ? 0 : "3rem",
     boxShadow: `var(--primary-shadow)`,
     display: "flex",
     alignItems: "center",
-    justifyContent :"space-between" ,  
+    justifyContent: "space-between",
     flexDirection: isXs ? "column" : "row",
     gap: isXs ? 8 : 3,
-  height :  isXs  ? "100%" : " 60px",
-  padding  : isXs ? "1rem" : 0,
+    height: isXs ? "100%" : " 60px",
+    padding: isXs ? "1rem" : 0,
   });
   return (
     <CusSearchInpHotel>
       ‌
       <Box  >
         <Input
+          onFocus={() => setIsOpenCompleteBox(true)}
+          onBlur={() => setIsOpenCompleteBox(false)}
           fullWidth
-          placeholder=  "سوئیت ریاست جمهوری مقابل اقیانوس | استراحتگاه ساحلی، کی وست، فلوریدا"
+          placeholder="سوئیت ریاست جمهوری مقابل اقیانوس | استراحتگاه ساحلی، کی وست، فلوریدا"
           sx={{
-            width : "100%" ,  
+            width: "100%",
             ":before": {
               display: "none",
             },
@@ -35,7 +41,7 @@ const InpRental = () => {
           }}
           startAdornment={
             <InputAdornment position="start" sx={{ marginLeft: "0.5rem" }}>
-              <FmdGoodIcon sx={{"& path" :{ color : "var(--primary-color)"}}}/>
+              <FmdGoodIcon sx={{ "& path": { color: "var(--primary-color)" } }} />
             </InputAdornment>
           }
         />
@@ -56,6 +62,15 @@ const InpRental = () => {
         <CheckInOut />
       </Box>
       <PrimaryBtn text="پیدا کردن  تعطیلات" />
+      {/* {
+        isOpenAutoCompleteBox && (
+          <Box sx={{ position: "absolute", right: 0, bottom: 0, width: "100%" }}>
+
+            <AutoCompleteBox />
+
+          </Box>
+        )
+      } */}
     </CusSearchInpHotel>
   );
 };

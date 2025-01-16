@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import Slider from "react-slick";
-
+import SimpleSlider from "../SliderWithOutContainer/SimpleSlider";
 interface ISliderWrapperProps {
   children: React.ReactNode;
   numberOfShowSlider: number;
@@ -45,12 +45,10 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
     }
   }))
   function SampleArrow(props: any) {
-    const { children } = props;
+    const { children, onClick } = props;
     return (
-      <div>
-        {
-          children
-        }
+      <div onClick={onClick} style={{ cursor: 'pointer' }}>
+        {children}
       </div>
     );
   }
@@ -64,12 +62,8 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
     autoplay: true,
     rtl: true,
     slidesToScroll: 1,
-    nextArrow: <SampleArrow>
-      <CusArrowCircleRightIcon />
-    </SampleArrow>,
-    prevArrow: <SampleArrow>
-      <CusArrowForwardIcon />,
-    </SampleArrow>,
+    nextArrow: <SampleArrow><CusArrowCircleRightIcon /></SampleArrow>,
+    prevArrow: <SampleArrow><CusArrowForwardIcon /></SampleArrow>,
     initialSlide: 0,
     responsive: [
       {

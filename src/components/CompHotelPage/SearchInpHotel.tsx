@@ -12,17 +12,20 @@ import CheckInOut from "../DataPicker/CheckInOut";
 import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
 import { useMedia } from "../../context/MediaQueryContext";
 import BedIcon from "@mui/icons-material/Bed";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AddTravelerCard from "./AddTravelerCard";
+import AutoCompleteBox from "../AutoCompleteBox/AutoCompleteBox";
 const SearchInpHotel = () => {
+  const inpRef = useRef<HTMLInputElement>(null); // ایجاد ریفرنس
   let [isShowAddTraveler, setIsShowAddTraveler] = useState<boolean>(false);
   let [countOfRooms, setCountOfRooms] = useState(2);
   let [countOfAdults, setCountOfAdults] = useState(2);
+  let [isOpenAutoCompleteBox, setIsOpenAutoCompleteBox] = useState(false)
   let isXs = useMedia();
-
   const CusBtnAddTraveler = styled(Button)({
     display: "flex",
     alignItems: "center",
+    width: isXs ? "70%" : "auto",
     gap: 10,
     border: "1px solid  #ccc",
     borderRadius: "1rem",
@@ -31,7 +34,9 @@ const SearchInpHotel = () => {
   });
   const CusSearchInpHotel = styled(Box)({
     backgroundColor: "#fff",
-    borderRadius: "3rem",
+    borderRadius: isOpenAutoCompleteBox ? "0rem" : "2rem",
+    borderTopLeftRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
+    borderTopRightRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
     boxShadow: `var(--primary-shadow)`,
     display: "flex",
     alignItems: "center",
@@ -39,16 +44,29 @@ const SearchInpHotel = () => {
     gap: isXs ? 8 : 3,
     padding: "0.5rem",
     position: "relative",
-    width : "100%" ,  
+    width: "100%",
+
   });
 
+  const FocusHandler = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>) => {
+    e.preventDefault()
+    setTimeout(() => {
+      setIsOpenAutoCompleteBox(true)
+    }, 2000);
+    inpRef.current?.focus()
+  }
   return (
-    <CusSearchInpHotel>
+    <CusSearchInpHotel  >
       ‌
       <Box>
         <Input
+          ref={inpRef}
+          onFocus={(e) => FocusHandler(e)}
+          onBlur={() => setIsOpenAutoCompleteBox(false)}
           placeholder="اسم هتل یا مقصد"
           sx={{
+            position: 'relative',
+            width: "100%",
             ":before": {
               display: "none",
             },
@@ -101,6 +119,12 @@ const SearchInpHotel = () => {
         />
       )}
       <PrimaryBtn text="پیدا کردن هتل" />
+      {
+        isOpenAutoCompleteBox &&
+        <Box sx={{ position: "absolute", right: "0", bottom: 0, width: "100%" }}>
+          <AutoCompleteBox />
+        </Box>
+      }
     </CusSearchInpHotel>
   );
 };

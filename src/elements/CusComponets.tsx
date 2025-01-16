@@ -27,7 +27,6 @@ export const CusTitleHomePage = styled(Typography)({
 export const CusSearchInp = styled(Input)({
   border: 0,
   position: "relative",
-
   padding: "  0.75rem   1rem ",
   backgroundColor: "#fff",
   width: "100%",
@@ -303,3 +302,4 @@ export   const CusAutoComplete  =  styled(Box)  ({
     borderBottomRightRadius : "1rem" ,
     borderBottomLeftRadius : "1rem" ,
 })
+

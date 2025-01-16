@@ -99,7 +99,7 @@ const AddTravelerCard: FC<{
     position: "absolute",
     top: isXS ? 170 : 60,
     left: 120,
-    zIndex: 99,
+    zIndex: 400,
     backgroundColor: "#fff",
     borderRadius: "1rem",
     width: "250px",
