@@ -37,13 +37,13 @@ const Vacations = () => {
       </MainBanner>
       <Container sx={{ marginTop: "5rem" }}>
         <Grid container spacing={3}>
-          <Grid size={{ md: 6 }}>
+          <Grid size={{ md: 6, xs: 12 }}>
             <CardRental
               TopCover="/public/images/VacationRental/RentalCard/img1.png"
               textBody="از فضا و حریم خصوصی بیشتر در یک محیط خانه تمیز شده فقط با خانواده و دوستان خود لذت ببرید"
             />
           </Grid>
-          <Grid size={{ md: 6 }}>
+          <Grid size={{ md: 6, xs: 12 }}>
             <CardRental
               TopCover="/public/images/VacationRental/RentalCard/img2.png"
               textBody="نظرات مسافرانی که در آنجا اقامت داشته‌اند را بخوانید، تا بتوانید قبل از پیدا کردن، اعتماد به نفس داشته باشید"
