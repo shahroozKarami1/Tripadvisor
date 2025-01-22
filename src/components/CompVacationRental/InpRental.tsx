@@ -62,7 +62,7 @@ const InpRental = () => {
         <CheckInOut />
       </Box>
       <PrimaryBtn text="پیدا کردن  تعطیلات" />
-      {/* {
+      {
         isOpenAutoCompleteBox && (
           <Box sx={{ position: "absolute", right: 0, bottom: 0, width: "100%" }}>
 
@@ -70,7 +70,7 @@ const InpRental = () => {
 
           </Box>
         )
-      } */}
+      }
     </CusSearchInpHotel>
   );
 };

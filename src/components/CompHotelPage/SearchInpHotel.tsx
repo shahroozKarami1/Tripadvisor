@@ -48,20 +48,23 @@ const SearchInpHotel = () => {
 
   });
 
-  const FocusHandler = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>) => {
-    e.preventDefault()
-    setTimeout(() => {
-      setIsOpenAutoCompleteBox(true)
-    }, 2000);
-    inpRef.current?.focus()
-  }
+  useEffect(() => {
+    if (inpRef.current) {
+      inpRef.current.focus();
+    }
+  }, [isShowAddTraveler, countOfRooms, countOfAdults, isOpenAutoCompleteBox]);
+
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>) => {
+    e.preventDefault();
+    setIsOpenAutoCompleteBox(true);
+  };
   return (
     <CusSearchInpHotel  >
       ‌
       <Box>
         <Input
           ref={inpRef}
-          onFocus={(e) => FocusHandler(e)}
+          onFocus={handleFocus}
           onBlur={() => setIsOpenAutoCompleteBox(false)}
           placeholder="اسم هتل یا مقصد"
           sx={{
@@ -94,7 +97,7 @@ const SearchInpHotel = () => {
         <Typography
           sx={{ color: "#444", fontSize: "0.90rem", whiteSpace: "nowrap" }}
         >
-          وارد کردن روز ها :{" "}
+          وارد کردن روز ها :
         </Typography>
         <CheckInOut />
       </Box>
