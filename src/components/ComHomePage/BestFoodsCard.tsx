@@ -10,6 +10,7 @@ const BestFoodsCard: FC<IBestFoodsCardProps> = ({ img, name }) => {
   return (
     <CusCard>
       <img
+      
         src={img}
         alt=""
         className="rounded-lg"
