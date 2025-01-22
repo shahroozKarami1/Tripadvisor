@@ -32,6 +32,10 @@ import {
 import styled from "@emotion/styled";
 import TitleSection from "../../components/ComHomePage/TitleSection";
 import CardNearBy from "../../components/CompHotelDetails/CardNearBy";
+import MentionText from "../../components/CompHotelDetails/MentionText";
+import CircleRate from "../../components/CircleRate/CircleRate";
+import { Link } from "react-router-dom";
+import BoxSliderDetails from "../../components/CompHotelDetails/BoxSliderDetails";
 const HotelDetails = () => {
   var settings = {
     dots: true,
@@ -53,79 +57,109 @@ const HotelDetails = () => {
       lineHeight: 2,
     },
   }));
+
   return (
     <Box>
       <Container>
-        <Box
-          display={"flex"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          marginTop={"2rem"}
-        >
-          <Box display={"flex"} alignItems={"center"} gap={1}>
-            <Typography sx={{ fontWeight: "900", fontSize: "1.6rem" }}>
-              اسپیناس پالاس
-            </Typography>
-            <Box display={"flex"} alignItems={"center"}>
-              <Typography fontSize={"0.80rem"}>تایید شده</Typography>
-              <VerifiedOutlinedIcon
-                sx={{
-                  fontSize: "1rem",
-                  path: { color: `var(--primary-color)` },
-                }}
-              />
+        <Box display={"flex"} flexDirection={"column"}>
+          <Box
+            display={"flex"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+            marginTop={"2rem"}
+          >
+            <Box display={"flex"} alignItems={"center"} gap={1}>
+              <Typography sx={{ fontWeight: "900", fontSize: "1.6rem" }}>
+                اسپیناس پالاس
+              </Typography>
+              <Box display={"flex"} alignItems={"center"}>
+                <Typography fontSize={"0.80rem"}>تایید شده</Typography>
+                <VerifiedOutlinedIcon
+                  sx={{
+                    fontSize: "1rem",
+                    path: { color: `var(--primary-color)` },
+                  }}
+                />
+              </Box>
+            </Box>
+            <Box display={"flex"} gap={1}>
+              <IconButton>
+                <FileUploadOutlinedIcon />
+              </IconButton>
+              <SaveBtn />
             </Box>
           </Box>
-          <Box display={"flex"} gap={1}>
-            <IconButton>
-              <FileUploadOutlinedIcon />
-            </IconButton>
-            <SaveBtn />
+          <Box display={"flex"} alignItems={isXs ? "right" : "center"} gap={1} my={"1rem"} flexDirection={isXs ? "column" : "row"}>
+            <CircleRate isScoreText={false} scoreNum={3.6} />
+            <MentionText text="# 37.838 بازدید" />
+            <MentionText text="#3 از 25 کاری که  باید در هتل اسپیناس انجام داد" />
+            <MentionText text="# تهران / ایران" />
+            <MentionText text="#جزو 10 هتل برتر" />
+          </Box>
+          <Box>
+            <Link to={"/UserReview"} style={{ fontWeight: "bold", fontSize: "0.90rem", borderBottom: "1px  solid  #000" }}>نوشتن بررسی </Link>
           </Box>
         </Box>
       </Container>
-      <Box bgcolor={"#F2F2F2"}>
+      <Box bgcolor={"#F2F2F2"} sx={{ padding: "2rem  0", mt: "2rem" }}>
         <Container>
-          <Grid container spacing={1} marginTop={"2rem"}>
-            {!isXs && (
-              <Grid size={{ md: 2 }}>
-                <CardSlider
-                  count={118}
-                  coverImg="/public/images/HotelDetail/ImgSlider/img1.jpg"
-                  isMainImg={false}
-                  title="منو"
-                />
-                <CardSlider
-                  count={1965}
-                  coverImg="/public/images/HotelDetail/ImgSlider/img2.jpg"
-                  isMainImg={false}
-                  title="غذا"
-                />
-                <CardSlider
-                  count={15}
-                  coverImg="/public/images/HotelDetail/ImgSlider/img3.jpg"
-                  isMainImg={false}
-                  title="داخلی"
-                />
+
+
+          <Grid container spacing={3} alignItems={"flex-start"} flexDirection={isXs ? "column" : "row"} >
+            <Grid size={{ md: 8, xs: 12 }}>
+              <Grid container spacing={1} alignItems={"center"} height={"100%"}>
+                {!isXs && (
+                  <Grid size={{ md: 2 }}>
+                    <CardSlider
+                      count={118}
+                      coverImg="/public/images/HotelDetail/ImgSlider/img1.jpg"
+                      isMainImg={false}
+                      title="منو"
+                    />
+                    <CardSlider
+                      count={118}
+                      coverImg="/public/images/HotelDetail/ImgSlider/img1.jpg"
+                      isMainImg={false}
+                      title="منو"
+                    />
+                    <CardSlider
+                      count={1965}
+                      coverImg="/public/images/HotelDetail/ImgSlider/img2.jpg"
+                      isMainImg={false}
+                      title="غذا"
+                    />
+                    <CardSlider
+                      count={15}
+                      coverImg="/public/images/HotelDetail/ImgSlider/img3.jpg"
+                      isMainImg={false}
+                      title="داخلی"
+                    />
+                  </Grid>
+                )}
+                <Grid size={{ md: 10, xs: 12 }}>
+                  <Slider {...settings}>
+                    <CardSlider
+                      coverImg="/public/images/HotelDetail/ImgSlider/bigImg.jpg"
+                      isMainImg={true}
+                    />
+                    <CardSlider
+                      coverImg="/public/images/HotelDetail/ImgSlider/bigImg2.jpg"
+                      isMainImg={true}
+                    />
+                    <CardSlider
+                      coverImg="/public/images/HotelDetail/ImgSlider/bigImg.jpg"
+                      isMainImg={true}
+                    />
+                  </Slider>
+                </Grid>
               </Grid>
-            )}
-            <Grid size={{ md: 10, xs: 12 }}>
-              <Slider {...settings}>
-                <CardSlider
-                  coverImg="/public/images/HotelDetail/ImgSlider/bigImg.jpg"
-                  isMainImg={true}
-                />
-                <CardSlider
-                  coverImg="/public/images/HotelDetail/ImgSlider/bigImg2.jpg"
-                  isMainImg={true}
-                />
-                <CardSlider
-                  coverImg="/public/images/HotelDetail/ImgSlider/bigImg.jpg"
-                  isMainImg={true}
-                />
-              </Slider>
             </Grid>
+            <Grid size={{ md: 4, xs: 12 }}>
+              <BoxSliderDetails />
+            </Grid>
+
           </Grid>
+
           <Grid container spacing={2} marginTop={"5rem"}>
             <Grid size={{ md: 4, xs: 12 }}>
               <CardDetailsRating />

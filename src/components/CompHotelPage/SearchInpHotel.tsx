@@ -112,6 +112,7 @@ const SearchInpHotel = () => {
       </CusBtnAddTraveler>
       {isShowAddTraveler && (
         <AddTravelerCard
+
           adultsState={countOfAdults}
           roomState={countOfRooms}
           setAdult={setCountOfAdults}

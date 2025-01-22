@@ -4,6 +4,7 @@ import { IDistinationCardProps } from "../../types/intefaces";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import { useMedia } from "../../context/MediaQueryContext";
 const DistinationCard: FC<IDistinationCardProps> = ({
   img,
   item,
@@ -15,6 +16,7 @@ const DistinationCard: FC<IDistinationCardProps> = ({
             color : "red !important",
         }
     )
+    let  isXs = useMedia()
   return (
     <Box
       display={"flex"}
@@ -24,7 +26,7 @@ const DistinationCard: FC<IDistinationCardProps> = ({
       margin={"0  0.70rem"}
     >
       <Link to={"/"}>
-        <img src={img} alt="" className="rounded-lg  "  style={{height : "300px"}}  />
+        <img src={img} alt="" className="rounded-lg  "  style={{height :  isXs ?  "100%"  :  "300px"}}  />
       </Link>
       <Box
         display={"flex"}

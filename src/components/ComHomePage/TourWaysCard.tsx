@@ -1,13 +1,12 @@
 import { FC } from "react";
 import { ITourWaysCardProps } from "../../types/intefaces";
-import { Box, Rating, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import {
   CusBoxIconHeart,
-  CusCircleIcon,
-  CusCircleOutLine,
 } from "../../elements/CusComponets";
 import { Link } from "react-router-dom";
+import CircleRate from "../CircleRate/CircleRate";
 const TourWaysCard: FC<ITourWaysCardProps> = ({
   disc,
   img,
@@ -44,14 +43,8 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
           >
             {disc}
           </Typography>
-          {/* <Box  alignItems={"center"}  display={"flex"} sx={{ margin: "0.5rem  0" }}>
-            <CusCircleIcon />
-            <CusCircleIcon />
-            <CusCircleIcon />
-            <CusCircleIcon />
-            <Typography sx={{ marginRight: "0.25rem"  ,  color : "#444"}}>{score}</Typography>
-          </Box> */}
-          <Box display={"flex"} alignItems={"center"} gap={1}>
+
+          {/* <Box display={"flex"} alignItems={"center"} gap={1}>
             <Rating
               sx={{ direction: "ltr", transform: "rotate(-180deg)" }}
               readOnly
@@ -61,7 +54,9 @@ const TourWaysCard: FC<ITourWaysCardProps> = ({
               icon={<CusCircleIcon />}
             />
             <Typography sx={{ color: "#444" }}>{score}</Typography>
-          </Box>
+          </Box> */}
+          <CircleRate isScoreText={true} scoreNum={2.3} scoreText={score} />
+
           {isDetails && (
             <Typography sx={{ fontWeight: "bold", fontSize: "0.80rem" }}>
               از {price} دلار برای هر بزرگسال

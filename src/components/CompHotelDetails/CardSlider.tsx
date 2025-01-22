@@ -26,14 +26,13 @@ const CardSlider: FC<ICardSliderProps> = ({
   });
   const CusInnerBigBox = styled(Box)({
     width: "100%",
-    height: "442px",
-    margin: "0.5rem 0",
+    height: "400px",
   });
   return (
     <Box>
       {!isMainImg ? (
         <CusSmallImgBox>
-            <DarkOverlay/>
+          <DarkOverlay />
           <img src={coverImg} alt="" className="rounded-r-md" />
           <CusInnerBox>
             <Typography sx={{ fontWeight: "bold", color: "#fff" }}>
