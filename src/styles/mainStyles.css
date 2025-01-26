@@ -43,8 +43,24 @@ body,
   font-weight: bold;
 }
 .rmdp-range {
-  background-color:  var(--primary-color)  !important ;
+  background-color: var(--primary-color) !important ;
 }
 .rmdp-week-day {
-  color: var(--primary-color)  !important  ;
+  color: var(--primary-color) !important  ;
+}
+.rmdp-range-hover {
+  background-color:  #ccc !important  ;
+}
+.rmdp-today {
+  background-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+.rmdp-today .sd {
+  background-color: var(--primary-color) !important;
+}
+.rmdp-range-hover .sd {
+  color: #000 !important;
+}
+.rmdp-selected span {
+  background-color: var(--primary-color) !important;
 }

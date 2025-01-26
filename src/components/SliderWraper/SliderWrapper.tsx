@@ -25,7 +25,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
     },
     left: -50,
     "& path": {
-      color: "var(--primary-color)"
+      color:  "#fff"
     },
   })
   )
@@ -40,7 +40,7 @@ const SliderWrapper: FC<ISliderWrapperProps> = ({
     right: -50,
     top: "50%",
     "& path": {
-      color: "var(--primary-color)"
+      color:  "#fff"
 
     }
   }))
