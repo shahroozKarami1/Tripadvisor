@@ -12,10 +12,11 @@ import DataPicker from "../../DataPicker/DataPicker";
 import FlightTakeoffOutlinedIcon from "@mui/icons-material/FlightTakeoffOutlined";
 import PeopleOutlineOutlinedIcon from "@mui/icons-material/PeopleOutlineOutlined";
 import FlightLandOutlinedIcon from "@mui/icons-material/FlightLandOutlined";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TravelerBox from "../TravelerBox/TravelerBox";
 const FlightInp = () => {
   const [isShowTravelerBox, setIsShowTravelerBox] = useState<Boolean>(false);
+  let BoxRef = useRef<HTMLDivElement | null>(null)
   const CusBtnTraverler = styled(Button)({
     backgroundColor: "#fff",
     border: "1px  solid  #000",
@@ -24,10 +25,6 @@ const FlightInp = () => {
     gap: 5,
     whiteSpace: "nowrap",
   });
-  function HandlerTravelerBox() {
-    setIsShowTravelerBox(!isShowTravelerBox);
-
-  }
   const CusBtnSearch = styled(Button)({
     backgroundColor: `var(--primary-color)`,
     color: "#000",
@@ -37,6 +34,19 @@ const FlightInp = () => {
     padding: "1rem",
     whiteSpace: "nowrap",
   });
+  useEffect(() => {
+
+    const handlerCLoseOnDoc = (e: MouseEvent) => {
+      if (BoxRef.current && !BoxRef.current.contains(e.target as Node)) {
+        setIsShowTravelerBox(false)
+      }
+    }
+    document.addEventListener("mousedown", handlerCLoseOnDoc)
+    return () => {
+      document.removeEventListener("mousedown", handlerCLoseOnDoc)
+    }
+  }, [])
+  console.log(BoxRef)
   return (
     <Container sx={{ width: "100%" }}>
       <Grid container width={"100%"} spacing={1}>
@@ -80,8 +90,8 @@ const FlightInp = () => {
                 justifyContent={"flex-start"}
                 alignItems={"flex-start"}
               >
-                <Box position={"relative"}>
-                  <CusBtnTraverler onClick={() => HandlerTravelerBox()}  >
+                <Box position={"relative"} >
+                  <CusBtnTraverler onClick={() => setIsShowTravelerBox(true)}  >
                     <PeopleOutlineOutlinedIcon />
                     <Typography
                       sx={{ fontWeight: "bold", fontSize: "0.85rem" }}
@@ -89,7 +99,7 @@ const FlightInp = () => {
                       1 مسافر
                     </Typography>
                   </CusBtnTraverler>
-                  {isShowTravelerBox && <TravelerBox />}
+                  {isShowTravelerBox && <TravelerBox BoxRef={BoxRef} />}
                 </Box>
                 <CusBtnSearch>جست و جو </CusBtnSearch>
               </Box>

@@ -44,7 +44,7 @@ const Hotels = () => {
             mainTitle="انتخاب مسافران: استراحتگاه های فراگیر"
             isSeeAll={true}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%">
             <TourWaysCard
               link="/Hotels/HotelDetails"
               isDetails={false}
@@ -82,7 +82,7 @@ const Hotels = () => {
             mainTitle="انتخاب مسافران: هتل های برتر"
             isSeeAll={true}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%">
             <TourWaysCard
               isDetails={false}
               price={134}

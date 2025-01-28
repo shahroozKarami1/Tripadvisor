@@ -8,21 +8,17 @@ import AutoCompleteBox from "../AutoCompleteBox/AutoCompleteBox";
 const InpRental = () => {
   let isXs = useMedia()
   let [isOpenAutoCompleteBox, setIsOpenCompleteBox] = useState<boolean>(false)
-  const CusSearchInpHotel = styled(Box)({
-    backgroundColor: "#fff",
-    position : "relative" , 
-    borderRadius: isXs ? 0 : "3rem",
-    boxShadow: `var(--primary-shadow)`,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    flexDirection: isXs ? "column" : "row",
-    gap: isXs ? 8 : 3,
-    height: isXs ? "100%" : " 60px",
-    padding: isXs ? "1rem" : 0,
-  });
+
   return (
-    <CusSearchInpHotel>
+    <Box  className="vacation_inp_Wrapper "  sx={{
+      borderRadius: isOpenAutoCompleteBox ? "0rem" : "2rem",
+      borderTopLeftRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
+      borderTopRightRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
+      flexDirection: isXs ? "column" : "row",
+      gap: isXs ? 8 : 3,
+      height: isXs ? "100%" : " 60px",
+      padding: isXs ? "1rem" : 0,
+    }}>
       ‌
       <Box  >
         <Input
@@ -71,7 +67,7 @@ const InpRental = () => {
           </Box>
         )
       }
-    </CusSearchInpHotel>
+    </Box>
   );
 };
 

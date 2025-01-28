@@ -68,7 +68,7 @@ const ThingsToDo = () => {
         {/* section */}
         <Box sx={{ marginBottom: "1rem" }}>
           <TitleSection isSubTitle={false} mainTitle="اخیرا مشاهده شده است" />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%"> 
             <TourWaysCard
               link="/Attractions/AttractionsDetails"
               price={134}
@@ -116,7 +116,7 @@ const ThingsToDo = () => {
             isSubTitle={false}
             mainTitle="تجربیات برتر در منطقه خرس بزرگ"
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%">
             <TourWaysCard
               price={134}
               score={935}
@@ -159,7 +159,7 @@ const ThingsToDo = () => {
             isSubTitle={false}
             mainTitle="جاذبه های برتر در منطقه خرس بزرگ"
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%">
             <TourWaysCard
               price={134}
               score={935}
@@ -199,7 +199,7 @@ const ThingsToDo = () => {
         </Box>
         <Box sx={{ marginBottom: "1rem" }}>
           <TitleSection isSubTitle={false} mainTitle="مقاصد برتر جهانی" />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%">
             <TourWaysCard
               price={134}
               score={935}

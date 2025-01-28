@@ -4,7 +4,7 @@ import SliderWrapper from "../SliderWraper/SliderWrapper";
 const TourWaySection = () => {
   return (
     <Box sx={{ marginTop: "2rem" }}>
-      <SliderWrapper numberOfShowSlider={4}>
+      <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%">
         <TourWaysCard
           price={134}
           score={935}

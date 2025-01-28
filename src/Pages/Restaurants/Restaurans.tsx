@@ -62,7 +62,7 @@ const Restaurans = () => {
             mainTitle="رستوران های جدید و پرطرفدار در دبی"
             isSeeAll={true}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="35%">
             <CardWithReviewAndPlace
               cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
               countOfReviews={7500}
@@ -99,7 +99,7 @@ const Restaurans = () => {
             mainTitle="ناهار در دبی "
             isSeeAll={true}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4}  ArrowPosition="35%">
             <CardWithReviewAndPlace
               cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
               countOfReviews={7500}
@@ -136,7 +136,7 @@ const Restaurans = () => {
             mainTitle="شام در دبی"
             isSeeAll={true}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4}  ArrowPosition="35%">
             <CardWithReviewAndPlace
               cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
               countOfReviews={7500}
@@ -173,7 +173,7 @@ const Restaurans = () => {
             mainTitle="صبحانه در دبی"
             isSeeAll={true}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4}  ArrowPosition="35%">
             <CardWithReviewAndPlace
               cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
               countOfReviews={7500}
@@ -210,7 +210,7 @@ const Restaurans = () => {
             mainTitle="خوردنی های ارزان در دبی"
             isSeeAll={true}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4}  ArrowPosition="35%">
             <CardWithReviewAndPlace
               cardCover="/public/images/ResturantImgs/otherImgs/img1.jpg"
               countOfReviews={7500}

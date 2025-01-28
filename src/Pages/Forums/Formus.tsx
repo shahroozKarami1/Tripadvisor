@@ -132,7 +132,7 @@ const Formus = () => {
         <Box>
           <TitleSection isSubTitle ={false}  mainTitle="به بحث بپیوندید" isSeeAll ={false}  />
           <Typography  fontWeight={"bold"}   fontSize={"2.5rem"}>انجمن های محبوب مقصد</Typography>
-          <SliderWrapper numberOfShowSlider={3}>
+          <SliderWrapper numberOfShowSlider={3} ArrowPosition="35%">
             <PopularFourmsCard
               name="شهر نیویورک"
               coverImg="/public/images/Formus/popularFormus/img1.jpg"

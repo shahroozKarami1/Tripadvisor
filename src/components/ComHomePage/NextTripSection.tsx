@@ -12,7 +12,7 @@ const NextTripSection: FC<IPorpsNextTrip> = ({
       <Typography sx={{ fontSize: "1rem", fontWeight: "bold"  ,  marginBottom : "1rem"}}>
         {mainTitle}
       </Typography>
-      <SliderWrapper  numberOfShowSlider={4}>
+      <SliderWrapper  numberOfShowSlider={4} ArrowPosition="40%">
       {dataNextTripArr.map(({ img, title } ,  index) => {
           return (
             <Box  key = {index}>

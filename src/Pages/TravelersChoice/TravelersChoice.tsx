@@ -93,7 +93,7 @@ const TravelersChoice = () => {
           mainTitle="همه دسته بندی های بهترین ها را کاوش کنید"
         />
 
-        <SliderWrapper numberOfShowSlider={5}>
+        <SliderWrapper numberOfShowSlider={5}   ArrowPosition="40%">
           <AiCardPlanning text="لندن" img="/public/images/NextTrip/img1.jpg" />
           <AiCardPlanning
             text="امارات"

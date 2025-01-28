@@ -10,7 +10,7 @@ import {
 import Grid from "@mui/material/Grid2";
 import RangeOfPeople from "./RangeOfPeople";
 import styled from "@emotion/styled";
-const TravelerBox: FC<ITravelerBoxProps> = ({}) => {
+const TravelerBox: FC<ITravelerBoxProps> = ({BoxRef}) => {
   const CusListItem = styled(ListItem)({
     marginBottom: "1rem  ",
     display: "flex",
@@ -21,7 +21,7 @@ const TravelerBox: FC<ITravelerBoxProps> = ({}) => {
     <CusTravelerBox sx= {{left : {
       xs : undefined  ,  
       md  :  "0rem"
-    }}}>
+    }}} ref={BoxRef}>
       <Grid container>
         <Grid size={{ md: 6 }}>
           <List sx={{ display: "flex", flexDirection: "column" }}>

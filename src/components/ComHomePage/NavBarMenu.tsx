@@ -21,11 +21,11 @@ const NavbarMenu: FC<INavbarMenuProps> = ({
         return (
           <ListItem key={id} sx={{
             padding: " 0 0.75rem", "&:hover": {
-              borderBottom: "2px  solid  #000",
             },
           }}>
             <Link to={link ? link : "/"}>
               <Button
+
                 onClick={() => {
 
                   if (HandlerBtn) {
@@ -41,7 +41,9 @@ const NavbarMenu: FC<INavbarMenuProps> = ({
                   gap: 1,
                   padding: 0,
                   margin: 0,
-
+                  "&:hover": {
+                    borderBottom: "3px  solid  #000"
+                  }
                 }}
                 style={{
                   paddingBottom: "0.5rem",

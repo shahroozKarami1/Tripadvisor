@@ -671,7 +671,7 @@ const Tourism = () => {
             mainTitle="چه زمانی  باید بازدید کرد "
             isSeeAll={false}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="30%">
             <WhenToVisitCard
               countOfRainDay={11}
               temperature={45}
@@ -733,7 +733,7 @@ const Tourism = () => {
         </Box>
 
         <Box marginTop={"5rem"}>
-          <SliderWrapper numberOfShowSlider={3}>
+          <SliderWrapper numberOfShowSlider={3} ArrowPosition="35%">
             <CardCenterTextFooter
               img="/public/images/Tourism/Slider/img7.jpg"
               link="/"
@@ -758,7 +758,7 @@ const Tourism = () => {
             mainTitle="راهنمای مسافران"
             isSeeAll={false}
           />
-          <SliderWrapper numberOfShowSlider={3}>
+          <SliderWrapper numberOfShowSlider={3} ArrowPosition="30%">
             <CardItemProfileFooter
               link="/"
               countOfIem={10}
@@ -821,7 +821,7 @@ const Tourism = () => {
               </Box>
             </Grid>
             <Grid size={{ md: 9 }}>
-              <SimpleSlider countOfSlider={3}>
+              <SimpleSlider countOfSlider={3} >
                 <CardFooterDics
                   link="/"
                   countLike={54}
@@ -856,7 +856,7 @@ const Tourism = () => {
             isSeeAll={false}
             subTitle="درباره کارهایی که باید انجام دهید، ببینید و بخورید ایده بگیرید"
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="40%">
             <CollectionCard
               TopCover="/public/images/Tourism/CollectionCard/img1.jpg"
               footerText="ببینید چه چیزی این مکان را در این فصل از سال بسیار جادویی می کند"
@@ -892,7 +892,7 @@ const Tourism = () => {
             mainTitle="پایتخت های فرهنگی بیشتر بریتانیا"
             isSeeAll={false}
           />
-          <SliderWrapper numberOfShowSlider={4}>
+          <SliderWrapper numberOfShowSlider={4} ArrowPosition="40%">
             <CardSingleText
               heightCard="300px"
               TopCover="/public/images/Tourism/Slider/img12.jpg"

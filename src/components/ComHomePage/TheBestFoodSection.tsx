@@ -4,7 +4,7 @@ import SliderWrapper from "../SliderWraper/SliderWrapper";
 const TheBestFoodSection = () => {
   return (
     // <Box display={"flex"} gap={2} sx={{ marginTop: "2rem" }}>
-    <SliderWrapper  numberOfShowSlider={4}>
+    <SliderWrapper  numberOfShowSlider={4 } ArrowPosition="42%">
       <BestFoodsCard
         img="/public/images/TheBastFood/image1.jpg"
         name="ماکارونی"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { RefObject } from "react";
 
 export interface IDarkBtnProps {
   children: string | React.ReactNode;
@@ -113,7 +113,9 @@ export interface ICardSingleTextProps {
   link?: string;
 }
 
-export interface ITravelerBoxProps {}
+export interface ITravelerBoxProps {
+  BoxRef  :  React.RefObject <HTMLDivElement>
+}
 
 export interface IRangeOfPeopleProps {
   range: string;

@@ -86,7 +86,7 @@ const MainHeader = () => {
           ‌
           <Grid container>
             <Box>
-              <List sx={{ display: "flex" }}>
+              <List sx={{ display: "flex"   ,  alignItems : "center" ,   height :  "40px"}}>
                 <NavbarMenu
                 id={0}
                   fontSize="0.9rem"

@@ -102,7 +102,7 @@ function Article() {
           isSeeAll={false}
           subTitle="چگونه فصل را در خانه و دور انجام دهیم"
         />
-        <SliderWrapper numberOfShowSlider={3}>
+        <SliderWrapper numberOfShowSlider={3}  ArrowPosition="35%">
           <MoreExploreCard
             disc="7 بهترین سفر با قطار پاییزی در ایالات متحده"
             img="/public/images/Articles/CardHeartIcon/img1.jpg"
@@ -195,7 +195,7 @@ function Article() {
           subTitle="تجربیات فراگیر رهبران محلی خبره سفر بعدی خود را با Intrepid الهام بخش کنید."
         />
 
-        <SliderWrapper numberOfShowSlider={3}>
+        <SliderWrapper numberOfShowSlider={3}  ArrowPosition="35%">
           <CardTextFooter
             link="/Articles/ArticleDetails"
             img="/public/images/Articles/interpidCard/img1.jpg"
@@ -222,7 +222,7 @@ function Article() {
           isSeeAll={false}
           subTitle="مکان جدیدی را از روی صندلی راننده ببینید"
         />
-        <SliderWrapper numberOfShowSlider={3}>
+        <SliderWrapper numberOfShowSlider={3}  ArrowPosition="35%">
           <MoreExploreCard
             disc="7 بهترین سفر با قطار پاییزی در ایالات متحده"
             img="/public/images/Articles/CardHeartIcon/img1.jpg"

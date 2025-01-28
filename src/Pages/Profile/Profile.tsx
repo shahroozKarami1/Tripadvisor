@@ -52,7 +52,7 @@ function CustomTabPanel(props: TabPanelProps) {
 
 const Profile = () => {
   const [value, setValue] = useState(0);
-  let [openEditForm, setOpenEditForm] = useState<boolean>(true);
+  let [openEditForm, setOpenEditForm] = useState<boolean>(false);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
