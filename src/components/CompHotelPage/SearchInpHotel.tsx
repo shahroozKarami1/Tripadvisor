@@ -16,12 +16,12 @@ import { useEffect, useRef, useState } from "react";
 import AddTravelerCard from "./AddTravelerCard";
 import AutoCompleteBox from "../AutoCompleteBox/AutoCompleteBox";
 const SearchInpHotel = () => {
-  const inpRef = useRef<HTMLInputElement>(null); // ایجاد ریفرنس
   let [isShowAddTraveler, setIsShowAddTraveler] = useState<boolean>(false);
   let [countOfRooms, setCountOfRooms] = useState(2);
   let [countOfAdults, setCountOfAdults] = useState(2);
   let [isOpenAutoCompleteBox, setIsOpenAutoCompleteBox] = useState(false)
   let isXs = useMedia();
+  let BoxTravelerRef = useRef<HTMLDivElement | null>(null)
   const CusBtnAddTraveler = styled(Button)({
     display: "flex",
     alignItems: "center",
@@ -29,42 +29,36 @@ const SearchInpHotel = () => {
     gap: 10,
     border: "1px solid  #ccc",
     borderRadius: "1rem",
-    padding: "0.5rem",
+    padding: " 0.5rem   1rem",
     position: "relative",
   });
-  const CusSearchInpHotel = styled(Box)({
-    backgroundColor: "#fff",
-    borderRadius: isOpenAutoCompleteBox ? "0rem" : "2rem",
-    borderTopLeftRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
-    borderTopRightRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
-    boxShadow: `var(--primary-shadow)`,
-    display: "flex",
-    alignItems: "center",
-    flexDirection: isXs ? "column" : "row",
-    gap: isXs ? 8 : 3,
-    padding: "0.5rem",
-    position: "relative",
-    width: "100%",
-
-  });
-
   useEffect(() => {
-    if (inpRef.current) {
-      inpRef.current.focus();
+    const handlerClickOutSide = (e: MouseEvent) => {
+      if (BoxTravelerRef.current && !BoxTravelerRef.current.contains(e.target as Node)) {
+        setIsShowAddTraveler(false);
+      }
     }
-  }, [isShowAddTraveler, countOfRooms, countOfAdults, isOpenAutoCompleteBox]);
+    document.addEventListener("mousedown", handlerClickOutSide)
+    return () => {
+      document.removeEventListener("mousedown", handlerClickOutSide)
+    }
+  }, [])
 
-  const handleFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>) => {
-    e.preventDefault();
-    setIsOpenAutoCompleteBox(true);
-  };
   return (
-    <CusSearchInpHotel  >
-      ‌
+
+    <Box
+
+      className="hotel_inp_Wrapper" sx={{
+        borderRadius: isOpenAutoCompleteBox ? "0rem" : "2rem",
+        gap: 3,
+        flexDirection: isXs ? "column" : "row",
+        borderTopLeftRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
+        borderTopRightRadius: isOpenAutoCompleteBox ? "1rem" : "2rem",
+      }}>
+
       <Box>
         <Input
-          ref={inpRef}
-          onFocus={handleFocus}
+          onClick={() => setIsOpenAutoCompleteBox(true)}
           onBlur={() => setIsOpenAutoCompleteBox(false)}
           placeholder="اسم هتل یا مقصد"
           sx={{
@@ -115,7 +109,7 @@ const SearchInpHotel = () => {
       </CusBtnAddTraveler>
       {isShowAddTraveler && (
         <AddTravelerCard
-
+          BoxRef={BoxTravelerRef }
           adultsState={countOfAdults}
           roomState={countOfRooms}
           setAdult={setCountOfAdults}
@@ -129,7 +123,10 @@ const SearchInpHotel = () => {
           <AutoCompleteBox />
         </Box>
       }
-    </CusSearchInpHotel>
+
+
+    </Box>
+
   );
 };
 

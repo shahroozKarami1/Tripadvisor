@@ -298,7 +298,7 @@ export   const CusAutoComplete  =  styled(Box)  ({
     flexDirection  : 'column' , 
     position : "absolute" , 
     width  : "100%" ,  
-    zIndex : 99 ,  
+    zIndex : 200 ,  
     borderBottomRightRadius : "1rem" ,
     borderBottomLeftRadius : "1rem" ,
 })

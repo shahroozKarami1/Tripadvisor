@@ -472,3 +472,11 @@ export interface IMainBlogCardProps {
   title: string;
   paragrapth: string[];
 }
+
+export interface  IAddTravlerBox  {
+  roomState: number;
+  adultsState: number;
+  BoxRef : React.RefObject<HTMLDivElement>  ;  
+  setAdult: React.Dispatch<React.SetStateAction<number>>;
+  setRoom: React.Dispatch<React.SetStateAction<number>>;
+}

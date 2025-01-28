@@ -10,6 +10,7 @@ import {
 import { FC, useState } from "react";
 import { useMedia } from "../../context/MediaQueryContext";
 import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
+import { IAddTravlerBox } from "../../types/intefaces";
 
 const PlusRemoveBoxes: FC<{
   title: string;
@@ -88,12 +89,7 @@ const BoxOfChildrenAge: FC<{ state: number }> = ({ state }) => {
     </ListItem>
   );
 };
-const AddTravelerCard: FC<{
-  roomState: number;
-  adultsState: number;
-  setAdult: React.Dispatch<React.SetStateAction<number>>;
-  setRoom: React.Dispatch<React.SetStateAction<number>>;
-}> = ({ adultsState, roomState  ,setAdult , setRoom}) => {
+const AddTravelerCard: FC<IAddTravlerBox> = ({ adultsState, roomState, setAdult, setRoom , BoxRef }) => {
   let isXS = useMedia();
   const CusBoxAddTraveler = styled(Box)({
     position: "absolute",
@@ -103,7 +99,7 @@ const AddTravelerCard: FC<{
     backgroundColor: "#fff",
     borderRadius: "1rem",
     width: "250px",
-padding : "0.5rem"  ,  
+    padding: "0.5rem",
     boxShadow: "var(--main-shadow)",
   });
   // let [countOfRooms, setCountOfRooms] = useState(2);
@@ -193,7 +189,7 @@ padding : "0.5rem"  ,
   };
 
   return (
-    <CusBoxAddTraveler>
+    <CusBoxAddTraveler ref={BoxRef}>
       <List sx={{ display: "flex", flexDirection: "column" }}>
         <PlusRemoveBoxes
           handlerFuncs={handlerRooms}
@@ -217,7 +213,7 @@ padding : "0.5rem"  ,
         ))}
       </List>
       <Box  >
-      <PrimaryBtn text="بروزرسانی"/>
+        <PrimaryBtn text="بروزرسانی" />
 
       </Box>
     </CusBoxAddTraveler>

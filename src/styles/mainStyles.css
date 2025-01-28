@@ -64,3 +64,13 @@ body,
 .rmdp-selected span {
   background-color: var(--primary-color) !important;
 }
+
+.hotel_inp_Wrapper {
+  background-color: #fff ; 
+  box-shadow : var(--primary-shadow)  ;
+  display: flex ; 
+  align-items: center ;
+  padding: 0.5rem ;
+  position: relative  ;
+  width: 100%  ;
+}
