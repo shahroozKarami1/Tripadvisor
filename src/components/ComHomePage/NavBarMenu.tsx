@@ -42,7 +42,7 @@ const NavbarMenu: FC<INavbarMenuProps> = ({
                   padding: 0,
                   margin: 0,
                   "&:hover": {
-                    borderBottom: "3px  solid  #000"
+                    borderBottom: !isXs ?  "3px  solid  #000"  : "none"
                   }
                 }}
                 style={{

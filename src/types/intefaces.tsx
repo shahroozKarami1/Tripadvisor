@@ -1,4 +1,4 @@
-import React, { RefObject } from "react";
+import React from "react";
 
 export interface IDarkBtnProps {
   children: string | React.ReactNode;
